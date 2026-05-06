@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-<!-- Webcraftiq v2.1 | 2026-05-06 | Stef Weyts -->
+<!-- Webcraftiq v2.2 | 2026-05-06 | Stef Weyts -->
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -1500,6 +1500,76 @@ section { padding: 120px 0; position: relative; }
    CONTACT — multi-step
    ============================================================ */
 .contact-section { background: var(--bg); }
+
+/* CONTACT TEASER (V2.2 — form moved to /contact) */
+.contact-teaser { padding: 100px 0; background: var(--bg); border-top: 1px solid var(--line); }
+@media (max-width: 768px) { .contact-teaser { padding: 70px 0; } }
+.contact-teaser-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 60px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.contact-teaser-card::before {
+  content: "";
+  position: absolute;
+  top: -200px; left: 50%;
+  transform: translateX(-50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.05), transparent 60%);
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .contact-teaser-card { padding: 44px 26px; border-radius: 18px; }
+}
+.contact-teaser-content {
+  position: relative;
+  max-width: 580px;
+  margin: 0 auto;
+}
+.contact-teaser-h {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+.contact-teaser-h em {
+  font-style: italic;
+  color: var(--accent-deep);
+  font-variation-settings: "wdth" 85;
+}
+.contact-teaser-p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-3);
+  margin-bottom: 28px;
+}
+.contact-teaser-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.contact-teaser-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+.contact-teaser-sep { color: var(--line-2); }
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -2742,7 +2812,7 @@ details[open] .faq-toggle {
       <span></span><span></span><span></span>
     </span>
   </button>
-  <a href="/#contact" class="nav-cta">Plan een call →</a>
+  <a href="/contact" class="nav-cta">Contacteer ons →</a>
 </nav>
 
 <!-- MOBILE MENU OVERLAY -->
@@ -2755,7 +2825,7 @@ details[open] .faq-toggle {
     <li><a href="/over">Over ons<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></li>
   </ul>
   <div class="mobile-menu-cta">
-    <a href="/#contact">Plan een call →</a>
+    <a href="/contact">Contacteer ons →</a>
   </div>
   <div class="mobile-menu-foot">
     <span>info@webcraftiq.be</span>
@@ -2816,7 +2886,7 @@ details[open] .faq-toggle {
         Wij ontwerpen en bouwen volledige websites voor Belgische KMO's met slimme conversie-features die zichzelf terugbetalen — multi-step formulieren, booking-flows, CRM-integraties. Eén vaste prijs, 14 dagen levertijd. Werkend in heel Vlaanderen — Antwerpen, Gent, Brussel, Hasselt en daarbuiten. <a href="/website-laten-maken" style="color: var(--accent-deep); border-bottom: 1px solid var(--accent-line);">Bekijk hoe we een website laten maken</a>.
       </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">
+        <a href="/contact" class="btn btn-primary">
           Start je project
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
@@ -3080,7 +3150,7 @@ details[open] .faq-toggle {
       <p style="font-size: 16px; color: var(--ink-3); max-width: 520px; margin: 0 auto 28px; line-height: 1.6;">
         Webcraftiq is jong en bouwt aan zijn portfolio. Bovenstaande projecten zijn gemaakt — er is plaats voor 3 nieuwe klanten in juni 2026. Eerste projecten krijgen een launch-tarief.
       </p>
-      <a href="#contact" class="btn btn-primary" style="display: inline-flex;">
+      <a href="/contact" class="btn btn-primary" style="display: inline-flex;">
         Plan een intake-call
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
@@ -3205,7 +3275,7 @@ details[open] .faq-toggle {
         <span class="eyebrow eyebrow-amber">— Wat we precies bouwen</span>
         <h2 class="section-h" style="margin-top: 18px;">Volledige websites op maat,<br /><em>handgemaakt</em>.</h2>
       </div>
-      <a href="#contact" class="btn btn-secondary">Vraag voorstel →</a>
+      <a href="/contact" class="btn btn-secondary">Vraag voorstel →</a>
     </div>
 
     <div class="svc-grid reveal">
@@ -3314,7 +3384,7 @@ details[open] .faq-toggle {
             <span>Aanvraag landt direct in jouw mail én CRM</span>
           </li>
         </ul>
-        <a href="#contact" class="btn btn-primary">
+        <a href="/contact" class="btn btn-primary">
           Probeer hem onderaan
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
         </a>
@@ -3507,7 +3577,7 @@ details[open] .faq-toggle {
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Standaard contactformulier</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>1u training</li>
         </ul>
-        <a href="#contact" class="btn btn-secondary" style="justify-content: center;">Kies Essential</a>
+        <a href="/contact" class="btn btn-secondary" style="justify-content: center;">Kies Essential</a>
       </div>
 
       <div class="price-card featured reveal" data-delay="1">
@@ -3524,7 +3594,7 @@ details[open] .faq-toggle {
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>SEO-optimalisatie + content advies</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>2u training + handleiding</li>
         </ul>
-        <a href="#contact" class="btn btn-amber" style="justify-content: center;">Kies Pro →</a>
+        <a href="/contact" class="btn btn-amber" style="justify-content: center;">Kies Pro →</a>
       </div>
 
       <div class="price-card reveal" data-delay="2">
@@ -3540,7 +3610,7 @@ details[open] .faq-toggle {
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Multi-language setup</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Dedicated support</li>
         </ul>
-        <a href="#contact" class="btn btn-secondary" style="justify-content: center;">Vraag offerte</a>
+        <a href="/contact" class="btn btn-secondary" style="justify-content: center;">Vraag offerte</a>
       </div>
     </div>
 
@@ -3569,77 +3639,31 @@ details[open] .faq-toggle {
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
+<!-- CONTACT TEASER (form moved to /contact) -->
+<section class="contact-teaser" id="contact">
   <div class="container">
-    <div class="contact-grid">
-      <div class="contact-side reveal">
-        <span class="eyebrow eyebrow-amber">— Start je project</span>
-        <h2 class="contact-h">Vraag <em>vrijblijvend</em><br />je offerte aan.</h2>
-        <p class="contact-p">
-          Vul het formulier rechts in. Eén van ons komt persoonlijk terug binnen 24 uur — vaak sneller. Geen chatbot, geen sales-agent in een ander continent.
+    <div class="contact-teaser-card reveal">
+      <div class="contact-teaser-content">
+        <span class="eyebrow eyebrow-amber" style="display: inline-block; margin-bottom: 16px;">— Klaar om te bouwen?</span>
+        <h2 class="contact-teaser-h">Vraag <em>vrijblijvend</em> een voorstel aan.</h2>
+        <p class="contact-teaser-p">
+          Vier korte vragen op een eigen contactpagina — daarna krijg je binnen 24 uur een persoonlijk antwoord van Stef. Geen chatbot, geen sales-tactieken, geen verplichting.
         </p>
-
-        <div class="contact-side-info">
-          <div class="contact-side-row">
-            <div class="contact-side-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <div class="contact-side-label">Reactietijd</div>
-              <div class="contact-side-val">Binnen 24u op werkdagen</div>
-            </div>
-          </div>
-          <div class="contact-side-row">
-            <div class="contact-side-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <div class="contact-side-label">Email</div>
-              <div class="contact-side-val">info@webcraftiq.be</div>
-            </div>
-          </div>
-          <div class="contact-side-row">
-            <div class="contact-side-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <div class="contact-side-label">Locatie</div>
-              <div class="contact-side-val">Antwerpen, BE</div>
-            </div>
-          </div>
+        <div class="contact-teaser-actions">
+          <a href="/contact" class="btn btn-primary">
+            Contacteer ons
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="mailto:info@webcraftiq.be" class="btn btn-secondary">Of mail rechtstreeks</a>
         </div>
-
-        <div style="margin-top: 32px; padding: 16px 18px; background: var(--accent-soft); border: 1px solid var(--accent-line); border-radius: 12px; font-size: 13px; color: var(--accent-deep); line-height: 1.5;">
-          <strong style="display: block; margin-bottom: 4px;">↓ Dit is een live demo</strong>
-          Het formulier hiernaast is exact wat we voor jou bouwen. Probeer het.
+        <div class="contact-teaser-meta">
+          <span>Reactietijd 24u</span>
+          <span class="contact-teaser-sep">·</span>
+          <span>Vrijblijvend</span>
+          <span class="contact-teaser-sep">·</span>
+          <span>info@webcraftiq.be</span>
         </div>
       </div>
-
-      <form class="msform reveal" data-delay="1" id="msform" autocomplete="off">
-        <div class="ms-stepper">
-          <div class="ms-step active" data-step="1">
-            <div class="ms-step-row"><div class="ms-step-num">1</div><span class="ms-step-label">Project</span></div>
-            <span class="ms-step-sub">Wat heb je nodig?</span>
-          </div>
-          <div class="ms-step" data-step="2">
-            <div class="ms-step-row"><div class="ms-step-num">2</div><span class="ms-step-label">Details</span></div>
-            <span class="ms-step-sub">Vertel meer</span>
-          </div>
-          <div class="ms-step" data-step="3">
-            <div class="ms-step-row"><div class="ms-step-num">3</div><span class="ms-step-label">Gegevens</span></div>
-            <span class="ms-step-sub">Hoe contacteren?</span>
-          </div>
-        </div>
-
-        <div class="ms-content" id="msContent"></div>
-
-        <div class="ms-nav" id="msNav">
-          <button type="button" class="btn btn-secondary" id="msBack" style="display: none;">‹ Terug</button>
-          <span class="ms-warn" id="msWarn">Selecteer een optie om verder te gaan</span>
-          <button type="button" class="btn btn-primary" id="msNext">Volgende stap →</button>
-        </div>
-      </form>
     </div>
   </div>
 </section>
@@ -3734,9 +3758,9 @@ details[open] .faq-toggle {
       <h2 class="cta-display">Klaar voor een<br />site die <em>werkt</em>?</h2>
       <p class="cta-sub">Eén intake-call van 45 minuten. Concreet voorstel binnen 48 uur. Geen verplichting, geen sales-tactieken.</p>
       <div class="cta-actions">
-        <a href="#contact" class="btn btn-amber">
-          Vul het formulier in
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12l-7 7-7-7M12 5v14"/></svg>
+        <a href="/contact" class="btn btn-amber">
+          Contacteer ons
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
         <a href="mailto:info@webcraftiq.be" class="btn btn-secondary" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); color: var(--bg);">Of stuur een mail</a>
       </div>
@@ -3769,7 +3793,7 @@ details[open] .faq-toggle {
           <li><a href="/over">Over ons</a></li>
           <li><a href="/blog">Blog</a></li>
           <li><a href="#pricing">Tarieven</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
       <div>

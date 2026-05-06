@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+<!-- Webcraftiq v2.2 | 2026-05-06 | Stef Weyts -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Contact · Plan je project | Webcraftiq</title>
+<meta name="description" content="Klaar om je website te laten maken of bestaande site te laten herbouwen? Vul het formulier in en je krijgt binnen 24u een persoonlijk antwoord van Stef." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://webcraftiq.be/contact" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="nl_BE" />
+<meta property="og:site_name" content="Webcraftiq" />
+<meta property="og:url" content="https://webcraftiq.be/contact" />
+<meta property="og:title" content="Contact · Plan je project | Webcraftiq" />
+<meta property="og:description" content="Vul het formulier in — binnen 24u krijg je een persoonlijk antwoord." />
+
+<meta name="theme-color" content="#f5f1ea" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141414'/%3E%3Cpath d='M7 11h3l1.5 7L13 12l1.5 6L16 11h3M19 18l3-7' stroke='%23d97706' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Webcraftiq",
+  "url": "https://webcraftiq.be/contact",
+  "mainEntity": {
+    "@type": "ProfessionalService",
+    "@id": "https://webcraftiq.be/#organization",
+    "name": "Webcraftiq",
+    "email": "info@webcraftiq.be",
+    "vatID": "BE0803343103",
+    "founder": {"@type": "Person", "name": "Stef Weyts"},
+    "address": {"@type": "PostalAddress", "addressLocality": "Antwerpen", "addressCountry": "BE"}
+  }
+}
+</script>
+
+<style>
+:root {
+  --bg: #f5f1ea;
+  --bg-soft: #faf7f1;
+  --bg-card: #ffffff;
+  --ink: #141414;
+  --ink-2: #2a2a28;
+  --ink-3: #56524d;
+  --ink-4: #888378;
+  --line: #e6dfd0;
+  --line-2: #d6cdb8;
+  --accent: #d97706;
+  --accent-deep: #b45309;
+  --accent-soft: #fef3e6;
+  --accent-line: #f4d8a8;
+  --green: #166534;
+  --red: #b91c1c;
+  --dark-bg: #0e0e0d;
+  --dark-fg: #f5f1ea;
+  --dark-fg-2: #a8a29c;
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); font-size: 17px; line-height: 1.65; color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--accent); color: #fff; }
+.scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: var(--accent); width: 0%; z-index: 200; transition: width 0.1s linear; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+.prose { max-width: 720px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 768px) { .container, .prose { padding: 0 22px; } }
+
+/* NAV */
+.nav { position: fixed; top: 12px; left: 50%; transform: translateX(-50%); z-index: 100; width: calc(100% - 24px); max-width: 1200px; background: rgba(245, 241, 234, 0.78); backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px); border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px 10px 22px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.nav-brand { display: flex; align-items: center; gap: 10px; }
+.brand-mark { width: 26px; height: 26px; border-radius: 7px; background: var(--ink); display: flex; align-items: center; justify-content: center; }
+.brand-text { font-family: var(--font-display); font-weight: 600; font-size: 18px; letter-spacing: -0.025em; }
+.brand-text .ink { color: var(--ink); }
+.brand-text .accent { color: var(--accent); font-style: italic; font-variation-settings: "wdth" 90; }
+.nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--ink-3); }
+.nav-links a { transition: color 0.2s; }
+.nav-links a:hover { color: var(--ink); }
+.nav-links a.active { color: var(--ink); font-weight: 500; }
+.nav-cta { background: var(--ink); color: var(--bg); padding: 9px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+.nav-cta:hover { background: var(--accent-deep); }
+
+/* HAMBURGER */
+.nav-burger { display: none; width: 38px; height: 38px; border: 0; background: transparent; border-radius: 999px; cursor: pointer; align-items: center; justify-content: center; padding: 0; margin-left: 4px; flex-shrink: 0; }
+.nav-burger:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav-burger-icon { position: relative; width: 18px; height: 14px; }
+.nav-burger-icon span { display: block; position: absolute; left: 0; right: 0; height: 2px; background: var(--ink); border-radius: 1px; transition: transform 0.3s var(--ease), opacity 0.3s var(--ease), top 0.3s var(--ease); }
+.nav-burger-icon span:nth-child(1) { top: 0; }
+.nav-burger-icon span:nth-child(2) { top: 6px; }
+.nav-burger-icon span:nth-child(3) { top: 12px; }
+body.menu-open .nav-burger-icon span:nth-child(1) { top: 6px; transform: rotate(45deg); }
+body.menu-open .nav-burger-icon span:nth-child(2) { opacity: 0; }
+body.menu-open .nav-burger-icon span:nth-child(3) { top: 6px; transform: rotate(-45deg); }
+.mobile-menu { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg); z-index: 99; opacity: 0; visibility: hidden; transition: opacity 0.35s var(--ease), visibility 0.35s var(--ease); display: flex; flex-direction: column; padding: 80px 28px 32px; overflow-y: auto; }
+body.menu-open .mobile-menu { opacity: 1; visibility: visible; }
+.mobile-menu-list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin: 24px 0; flex: 1; }
+.mobile-menu-list li { opacity: 0; transform: translateY(20px); transition: opacity 0.4s var(--ease), transform 0.4s var(--ease); }
+body.menu-open .mobile-menu-list li { opacity: 1; transform: translateY(0); }
+body.menu-open .mobile-menu-list li:nth-child(1) { transition-delay: 0.08s; }
+body.menu-open .mobile-menu-list li:nth-child(2) { transition-delay: 0.13s; }
+body.menu-open .mobile-menu-list li:nth-child(3) { transition-delay: 0.18s; }
+body.menu-open .mobile-menu-list li:nth-child(4) { transition-delay: 0.23s; }
+body.menu-open .mobile-menu-list li:nth-child(5) { transition-delay: 0.28s; }
+.mobile-menu-list a { display: flex; justify-content: space-between; align-items: center; padding: 18px 4px; font-family: var(--font-display); font-size: 26px; font-weight: 400; letter-spacing: -0.025em; color: var(--ink); border-bottom: 1px solid var(--line); transition: color 0.2s, padding-left 0.3s var(--ease); }
+.mobile-menu-list a:hover, .mobile-menu-list a:focus-visible { color: var(--accent-deep); padding-left: 12px; outline: none; }
+.mobile-menu-list a.active { color: var(--accent-deep); font-style: italic; font-variation-settings: "wdth" 90; }
+.mobile-menu-list a svg { opacity: 0.4; transition: transform 0.3s var(--ease), opacity 0.2s; }
+.mobile-menu-list a:hover svg { opacity: 1; transform: translateX(4px); }
+.mobile-menu-cta { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; padding-top: 28px; border-top: 1px solid var(--line); }
+.mobile-menu-cta a { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--ink); color: var(--bg); padding: 16px 20px; border-radius: 999px; font-size: 15px; font-weight: 500; transition: background 0.2s; }
+.mobile-menu-cta a:hover { background: var(--accent-deep); }
+.mobile-menu-foot { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--ink-4); text-transform: uppercase; display: flex; flex-direction: column; gap: 6px; text-align: center; }
+@media (max-width: 1080px) { .nav-links { display: none; } .nav { padding-left: 18px; } .nav-burger { display: flex; } }
+@media (min-width: 1081px) { .mobile-menu { display: none !important; } }
+
+/* HEADER */
+.contact-header { padding: 160px 0 60px; text-align: center; position: relative; overflow: hidden; }
+.contact-header::before { content: ""; position: absolute; top: 30%; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(217, 119, 6, 0.06), transparent 60%); pointer-events: none; z-index: -1; }
+.contact-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-deep); background: var(--accent-soft); border: 1px solid var(--accent-line); padding: 8px 16px; border-radius: 999px; margin-bottom: 28px; }
+.contact-eyebrow-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.contact-h1 { font-family: var(--font-display); font-size: clamp(2.4rem, 6vw, 4.8rem); font-weight: 400; letter-spacing: -0.045em; line-height: 1; margin-bottom: 24px; max-width: 920px; margin-left: auto; margin-right: auto; }
+.contact-h1 em { font-style: italic; font-variation-settings: "wdth" 85; color: var(--accent-deep); }
+.contact-sub { font-size: clamp(17px, 1.8vw, 21px); line-height: 1.55; color: var(--ink-3); max-width: 600px; margin: 0 auto 32px; }
+.contact-meta { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-4); }
+.contact-meta-item { display: inline-flex; align-items: center; gap: 8px; }
+.contact-meta-item::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+
+/* MULTI-STEP FORM */
+.form-section { padding: 60px 0 100px; }
+.form-wrapper { max-width: 720px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 768px) { .form-wrapper { padding: 0 22px; } }
+.form-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: 22px; padding: 40px 36px; box-shadow: 0 4px 20px -10px rgba(20, 20, 20, 0.05); }
+@media (max-width: 600px) { .form-card { padding: 28px 22px; border-radius: 18px; } }
+
+.progress-bar { display: flex; gap: 8px; margin-bottom: 32px; }
+.progress-step { flex: 1; height: 4px; background: var(--line); border-radius: 999px; transition: background 0.3s var(--ease); }
+.progress-step.done { background: var(--accent); }
+.progress-step.current { background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+.step-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 10px; }
+.step-h { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 6px; }
+.step-h em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+.step-sub { font-size: 14px; color: var(--ink-3); margin-bottom: 28px; line-height: 1.5; }
+
+.step { display: none; }
+.step.active { display: block; animation: fadeIn 0.4s var(--ease); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* OPTION CARDS — radio-style large tappable cards */
+.option-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+.option-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  background: var(--bg);
+}
+.option-card:hover { border-color: var(--accent-line); background: var(--bg-soft); }
+.option-card input[type="radio"], .option-card input[type="checkbox"] { display: none; }
+.option-card input[type="radio"]:checked ~ .option-content,
+.option-card input[type="checkbox"]:checked ~ .option-content { color: var(--ink); }
+.option-card.selected { border-color: var(--accent); background: var(--accent-soft); box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.08); }
+
+.option-radio { flex-shrink: 0; width: 22px; height: 22px; border: 2px solid var(--line-2); border-radius: 50%; margin-top: 2px; transition: all 0.2s var(--ease); position: relative; }
+.option-card.selected .option-radio { border-color: var(--accent); }
+.option-card.selected .option-radio::after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 10px; height: 10px; background: var(--accent); border-radius: 50%; }
+
+.option-checkbox { flex-shrink: 0; width: 22px; height: 22px; border: 2px solid var(--line-2); border-radius: 6px; margin-top: 2px; transition: all 0.2s var(--ease); position: relative; }
+.option-card.selected .option-checkbox { border-color: var(--accent); background: var(--accent); }
+.option-card.selected .option-checkbox::after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); width: 10px; height: 5px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; margin-top: -1px; }
+
+.option-content { flex: 1; }
+.option-title { font-family: var(--font-display); font-size: 16px; font-weight: 500; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 2px; line-height: 1.3; }
+.option-desc { font-size: 13px; color: var(--ink-3); line-height: 1.5; }
+
+/* TEXT INPUTS */
+.field { margin-bottom: 18px; }
+.field-label { display: block; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px; }
+.field-label .req { color: var(--accent-deep); }
+.field-label .opt { color: var(--ink-4); font-weight: normal; text-transform: none; letter-spacing: 0; font-family: var(--font-body); font-size: 12px; }
+.field-input,
+.field-textarea,
+.field-select {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.field-input:focus,
+.field-textarea:focus,
+.field-select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.field-textarea { resize: vertical; min-height: 110px; line-height: 1.5; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 540px) { .field-row { grid-template-columns: 1fr; } }
+.field-help { font-size: 12px; color: var(--ink-4); margin-top: 6px; line-height: 1.4; }
+
+.checkbox-field { display: flex; align-items: flex-start; gap: 12px; padding: 16px 18px; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
+.checkbox-field input { margin-top: 3px; flex-shrink: 0; accent-color: var(--accent); }
+.checkbox-field label { font-size: 13px; color: var(--ink-3); line-height: 1.5; cursor: pointer; }
+.checkbox-field a { color: var(--accent-deep); border-bottom: 1px solid var(--accent-line); }
+
+/* NAV BUTTONS */
+.form-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--line); }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-size: 14px; font-weight: 500; transition: all 0.2s var(--ease); white-space: nowrap; cursor: pointer; border: 0; font-family: inherit; }
+.btn-primary { background: var(--ink); color: var(--bg); }
+.btn-primary:hover { background: var(--accent-deep); transform: translateY(-1px); }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+.btn-amber { background: var(--accent); color: #fff; }
+.btn-amber:hover { background: var(--accent-deep); }
+.btn-amber:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--line-2); }
+.btn-secondary:hover { background: var(--bg-soft); border-color: var(--ink); }
+.btn-ghost { background: transparent; color: var(--ink-3); }
+.btn-ghost:hover { color: var(--ink); }
+
+.error-msg { color: var(--red); font-size: 13px; margin-top: 6px; display: none; }
+.error-msg.show { display: block; }
+
+/* SUCCESS STATE */
+.form-success { display: none; text-align: center; padding: 40px 0; }
+.form-success.show { display: block; animation: fadeIn 0.4s var(--ease); }
+.success-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--accent-soft); border: 2px solid var(--accent-line); color: var(--accent-deep); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+.success-h { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 500; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 12px; }
+.success-h em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+.success-p { font-size: 16px; color: var(--ink-3); line-height: 1.6; margin-bottom: 24px; }
+.success-p strong { color: var(--ink); }
+
+/* PRICING SECTION */
+.pricing-section { padding: 80px 0; border-top: 1px solid var(--line); background: var(--bg-soft); }
+.pricing-head { text-align: center; max-width: 640px; margin: 0 auto 50px; padding: 0 32px; }
+.pricing-eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.15em; color: var(--accent-deep); text-transform: uppercase; margin-bottom: 16px; display: inline-block; }
+.pricing-h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 400; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 14px; }
+.pricing-h2 em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+.pricing-sub { font-size: 16px; color: var(--ink-3); line-height: 1.55; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 520px; } }
+@media (max-width: 768px) { .pricing-grid { padding: 0 22px; } }
+.tier-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: 18px; padding: 32px 28px; display: flex; flex-direction: column; }
+.tier-card.featured { background: var(--ink); color: var(--dark-fg); border-color: var(--ink); position: relative; }
+.tier-card.featured::before { content: "Meest gekozen"; position: absolute; top: -10px; right: 22px; background: var(--accent); color: #fff; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; font-weight: 600; }
+.tier-name { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 10px; }
+.tier-card.featured .tier-name { color: var(--accent); }
+.tier-h { font-family: var(--font-display); font-size: 28px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 8px; }
+.tier-h em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+.tier-card.featured .tier-h em { color: var(--accent); }
+.tier-tagline { font-size: 13px; color: var(--ink-3); margin-bottom: 22px; line-height: 1.5; }
+.tier-card.featured .tier-tagline { color: var(--dark-fg-2); }
+.tier-price { font-family: var(--font-display); font-size: 38px; font-weight: 400; letter-spacing: -0.04em; line-height: 1; margin-bottom: 6px; }
+.tier-price em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+.tier-card.featured .tier-price em { color: var(--accent); }
+.tier-price-detail { font-size: 12px; color: var(--ink-4); font-family: var(--font-mono); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 24px; }
+.tier-card.featured .tier-price-detail { color: var(--dark-fg-2); }
+.tier-features { list-style: none; flex: 1; display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
+.tier-features li { font-size: 14px; line-height: 1.5; display: flex; gap: 10px; align-items: flex-start; }
+.tier-features li::before { content: ""; flex-shrink: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--accent-soft); border: 1px solid var(--accent-line); margin-top: 2px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b45309' stroke-width='3'><polyline points='20 6 9 17 4 12'/></svg>"); background-position: center; background-size: 10px; background-repeat: no-repeat; }
+.tier-card.featured .tier-features li { color: var(--dark-fg-2); }
+.tier-card.featured .tier-features li::before { background-color: rgba(217, 119, 6, 0.18); border-color: rgba(217, 119, 6, 0.4); background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d97706' stroke-width='3'><polyline points='20 6 9 17 4 12'/></svg>"); }
+
+/* FOOTER */
+.footer { background: var(--bg); padding: 60px 0 40px; border-top: 1px solid var(--line); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+.footer-brand { font-family: var(--font-display); font-size: 24px; font-weight: 600; letter-spacing: -0.025em; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.footer-tag { font-size: 14px; color: var(--ink-3); max-width: 320px; line-height: 1.55; }
+.footer-h { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 14px; }
+.footer-list { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--ink-2); }
+.footer-list a:hover { color: var(--ink); }
+.footer-bottom { padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: var(--ink-4); font-family: var(--font-mono); }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-brand">
+    <div class="brand-mark">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+      </svg>
+    </div>
+    <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/aanpak">Onze aanpak</a>
+    <a href="/website-laten-maken">Website laten maken</a>
+    <a href="/redesign">Redesign</a>
+    <a href="/cases">Portfolio</a>
+    <a href="/over">Over ons</a>
+  </div>
+  <button class="nav-burger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" id="navBurger">
+    <span class="nav-burger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+  <a href="/contact" class="nav-cta">Contacteer ons →</a>
+</nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Hoofdmenu" aria-modal="true">
+  <ul class="mobile-menu-list">
+    <li><a href="/aanpak">Onze aanpak<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/website-laten-maken">Website laten maken<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/redesign">Redesign<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/cases">Portfolio<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/over">Over ons<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></li>
+  </ul>
+  <div class="mobile-menu-cta">
+    <a href="/contact">Contacteer ons →</a>
+  </div>
+  <div class="mobile-menu-foot">
+    <span>info@webcraftiq.be</span>
+    <span>BTW BE0803.343.103</span>
+    <span>Antwerpen, BE</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="contact-header">
+  <div class="container">
+    <div class="contact-eyebrow">
+      <span class="contact-eyebrow-dot"></span>
+      Contact · Beschikbaar voor projecten
+    </div>
+    <h1 class="contact-h1">Tijd om te <em>bouwen</em>?</h1>
+    <p class="contact-sub">
+      Vul het formulier in — vier stappen, geen verkooppraat. Binnen 24 uur krijg je een persoonlijk antwoord van Stef met een eerste voorstel of vervolgvragen.
+    </p>
+    <div class="contact-meta">
+      <div class="contact-meta-item">Reactietijd 24u</div>
+      <div class="contact-meta-item">Vrijblijvend</div>
+      <div class="contact-meta-item">Vaste prijs vanaf €2.495</div>
+    </div>
+  </div>
+</header>
+
+<!-- MULTI-STEP FORM -->
+<section class="form-section">
+  <div class="form-wrapper">
+    <div class="form-card">
+
+      <!-- Progress Bar -->
+      <div class="progress-bar" id="progressBar">
+        <div class="progress-step current"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+        <div class="progress-step"></div>
+      </div>
+
+      <!-- Form -->
+      <form id="contactForm" action="https://formspree.io/f/JOUW_FORMSPREE_ID" method="POST" novalidate>
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" />
+
+        <!-- ==================== STEP 1 ==================== -->
+        <div class="step active" data-step="1">
+          <div class="step-label">Stap 1 van 4</div>
+          <h2 class="step-h">Wat heb je <em>nodig</em>?</h2>
+          <p class="step-sub">Kies wat het best past — we passen de volgende vragen daarop aan.</p>
+
+          <div class="option-grid" data-field="project_type">
+            <label class="option-card">
+              <input type="radio" name="project_type" value="nieuwe_site" />
+              <span class="option-radio"></span>
+              <span class="option-content">
+                <span class="option-title">Ik heb nog geen website</span>
+                <span class="option-desc">Een nieuwe site bouwen vanaf nul — voor een nieuwe zaak of bestaande die nog niets online heeft.</span>
+              </span>
+            </label>
+
+            <label class="option-card">
+              <input type="radio" name="project_type" value="redesign" />
+              <span class="option-radio"></span>
+              <span class="option-content">
+                <span class="option-title">Ik heb een website maar die werkt niet</span>
+                <span class="option-desc">Bestaande site die geen leads brengt, traag is, mobiel slecht werkt of gewoon verouderd oogt.</span>
+              </span>
+            </label>
+
+            <label class="option-card">
+              <input type="radio" name="project_type" value="anders" />
+              <span class="option-radio"></span>
+              <span class="option-content">
+                <span class="option-title">Iets anders</span>
+                <span class="option-desc">Webshop, landing page, integratie, advies — leg uit wat je in gedachten hebt.</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="error-msg" id="error1">Kies één van de bovenstaande opties om verder te gaan.</div>
+
+          <div class="form-nav">
+            <a href="/" class="btn btn-ghost">← Terug naar home</a>
+            <button type="button" class="btn btn-primary" data-action="next">
+              Volgende
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================== STEP 2A — NIEUWE SITE ==================== -->
+        <div class="step" data-step="2" data-flow="nieuwe_site">
+          <div class="step-label">Stap 2 van 4</div>
+          <h2 class="step-h">Welk pakket past je <em>voorkeur</em>?</h2>
+          <p class="step-sub">Dit is een eerste indicatie — we kunnen later nog samen kijken wat het beste past.</p>
+
+          <div class="option-grid" data-field="package">
+            <label class="option-card">
+              <input type="radio" name="package" value="essential" />
+              <span class="option-radio"></span>
+              <span class="option-content">
+                <span class="option-title">Essential — €2.495</span>
+                <span class="option-desc">Basis website, 5-8 pagina's, contactformulier, mobiele optimalisatie. 14 dagen levertijd.</span>
+              </span>
+            </label>
+
+            <label class="option-card">
+              <input type="radio" name="package" value="pro" />
+              <span class="option-radio"></span>
+              <span class="option-content">
+                <span class="option-title">Pro — €4.500</span>
+                <span class="option-desc">Inclusief multi-step formulier, CRM-integratie, geavanceerde conversie-features. 21 dagen levertijd.</span>
+              </span>
+            </label>
+
+            <label class="option-card">
+              <input type="radio" name="package" value="custom" />
+              <span class="option-radio"></span>
+              <span class="option-content">
+                <span class="option-title">Custom — vanaf €7.995</span>
+                <span class="option-desc">Webshop, complexe integraties of specifieke functionaliteit op maat. 4-6 weken levertijd.</span>
+              </span>
+            </label>
+
+            <label class="option-card">
+              <input type="radio" name="package" value="onbekend" />
+              <span class="option-radio"></span>
+              <span class="option-content">
+                <span class="option-title">Weet ik nog niet</span>
+                <span class="option-desc">We kijken samen wat past op basis van je situatie en doelen.</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="error-msg" id="error2a">Kies een optie om verder te gaan.</div>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn-secondary" data-action="prev">← Vorige</button>
+            <button type="button" class="btn btn-primary" data-action="next">
+              Volgende
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================== STEP 2B — REDESIGN ==================== -->
+        <div class="step" data-step="2" data-flow="redesign">
+          <div class="step-label">Stap 2 van 4</div>
+          <h2 class="step-h">Wat werkt er momenteel <em>niet</em>?</h2>
+          <p class="step-sub">Vink alle problemen aan die je herkent — meerdere antwoorden mogen.</p>
+
+          <div class="option-grid" data-field="problems">
+            <label class="option-card">
+              <input type="checkbox" name="problems" value="geen_leads" />
+              <span class="option-checkbox"></span>
+              <span class="option-content">
+                <span class="option-title">Mijn site brengt geen leads binnen</span>
+                <span class="option-desc">Het contactformulier wordt amper ingevuld, mensen klikken weg.</span>
+              </span>
+            </label>
+
+            <label class="option-card">
+              <input type="checkbox" name="problems" value="verouderd" />
+              <span class="option-checkbox"></span>
+              <span class="option-content">
+                <span class="option-title">De site oogt verouderd</span>
+                <span class="option-desc">Het ontwerp dateert van enkele jaren geleden en geeft geen professionele indruk meer.</span>
+              </span>
+            </label>
+
+            <label class="option-card">
+              <input type="checkbox" name="problems" value="mobiel" />
+              <span class="option-checkbox"></span>
+              <span class="option-content">
+                <span class="option-title">Mobiel werkt slecht</span>
+                <span class="option-desc">Knoppen overlappen, tekst loopt door foto's, formulieren werken niet op smartphones.</span>
+              </span>
+            </label>
+
+            <label class="option-card">
+              <input type="checkbox" name="problems" value="plugin_chaos" />
+              <span class="option-checkbox"></span>
+              <span class="option-content">
+                <span class="option-title">Plug-in chaos en onderhoudskosten</span>
+                <span class="option-desc">Maandelijkse plugin-kosten, updates die de site breken, traag reagerende onderhouder.</span>
+              </span>
+            </label>
+
+            <label class="option-card">
+              <input type="checkbox" name="problems" value="content_aanpassen" />
+              <span class="option-checkbox"></span>
+              <span class="option-content">
+                <span class="option-title">Ik kan zelf geen content aanpassen</span>
+                <span class="option-desc">Een tekst wijzigen vraagt elke keer hulp van een externe — onhoudbaar.</span>
+              </span>
+            </label>
+
+            <label class="option-card">
+              <input type="checkbox" name="problems" value="seo_traag" />
+              <span class="option-checkbox"></span>
+              <span class="option-content">
+                <span class="option-title">Trage laadtijd en slechte SEO</span>
+                <span class="option-desc">Site laadt traag, lage Google ranking, concurrenten staan boven mij.</span>
+              </span>
+            </label>
+
+            <label class="option-card">
+              <input type="checkbox" name="problems" value="onbekend" />
+              <span class="option-checkbox"></span>
+              <span class="option-content">
+                <span class="option-title">Weet ik niet precies</span>
+                <span class="option-desc">Ik voel dat het niet werkt maar kan niet uitleggen waarom — daarom wil ik een audit.</span>
+              </span>
+            </label>
+          </div>
+
+          <div class="error-msg" id="error2b">Vink minstens één optie aan.</div>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn-secondary" data-action="prev">← Vorige</button>
+            <button type="button" class="btn btn-primary" data-action="next">
+              Volgende
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================== STEP 2C — ANDERS ==================== -->
+        <div class="step" data-step="2" data-flow="anders">
+          <div class="step-label">Stap 2 van 4</div>
+          <h2 class="step-h">Vertel ons <em>wat</em> je in gedachten hebt.</h2>
+          <p class="step-sub">Kort verhaal volstaat — we komen er via mail op terug met vervolgvragen.</p>
+
+          <div class="field">
+            <label class="field-label" for="anders_omschrijving">Omschrijving <span class="req">*</span></label>
+            <textarea class="field-textarea" id="anders_omschrijving" name="anders_omschrijving" placeholder="Bijvoorbeeld: 'webshop met 50 producten en betaalkoppeling', 'landing page voor lancering nieuw product', 'advies over SEO-aanpak voor mijn bestaande site'..." rows="5"></textarea>
+          </div>
+
+          <div class="error-msg" id="error2c">Vul een korte omschrijving in.</div>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn-secondary" data-action="prev">← Vorige</button>
+            <button type="button" class="btn btn-primary" data-action="next">
+              Volgende
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================== STEP 3 — PROJECT DETAILS ==================== -->
+        <div class="step" data-step="3">
+          <div class="step-label">Stap 3 van 4</div>
+          <h2 class="step-h">Vertel meer over je <em>project</em>.</h2>
+          <p class="step-sub">Hoe meer context, hoe beter we kunnen voorbereiden.</p>
+
+          <div class="field">
+            <label class="field-label" for="company">Bedrijfsnaam <span class="req">*</span></label>
+            <input type="text" class="field-input" id="company" name="company" placeholder="bv. Voltrix" />
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="sector">Sector <span class="opt">(optioneel)</span></label>
+            <input type="text" class="field-input" id="sector" name="sector" placeholder="bv. Elektriciteitswerken, Horeca, Maatwerk-interieur..." />
+          </div>
+
+          <div class="field" id="currentSiteField">
+            <label class="field-label" for="current_url">Link huidige website <span class="opt">(optioneel)</span></label>
+            <input type="url" class="field-input" id="current_url" name="current_url" placeholder="https://..." />
+            <div class="field-help">Geen domein? Geen probleem — laat leeg.</div>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Wanneer wil je live? <span class="req">*</span></label>
+            <div class="option-grid" data-field="timeline">
+              <label class="option-card">
+                <input type="radio" name="timeline" value="asap" />
+                <span class="option-radio"></span>
+                <span class="option-content">
+                  <span class="option-title">Zo snel mogelijk</span>
+                  <span class="option-desc">Binnen 2-4 weken — er is een opportuniteit waar ik niet langer kan wachten.</span>
+                </span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="timeline" value="1_3_maand" />
+                <span class="option-radio"></span>
+                <span class="option-content">
+                  <span class="option-title">Binnen 1 tot 3 maanden</span>
+                  <span class="option-desc">Plan ruimte in voor een degelijke aanpak zonder te haasten.</span>
+                </span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="timeline" value="3plus_maand" />
+                <span class="option-radio"></span>
+                <span class="option-content">
+                  <span class="option-title">Over 3 maanden of meer</span>
+                  <span class="option-desc">Aan het oriënteren — wil eerst rustig nadenken voor te starten.</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="description">Aanvullende beschrijving <span class="opt">(optioneel)</span></label>
+            <textarea class="field-textarea" id="description" name="description" placeholder="Specifieke doelen, voorbeelden van sites die je goed vindt, andere context die nuttig kan zijn..."></textarea>
+          </div>
+
+          <div class="error-msg" id="error3">Vul de verplichte velden in om verder te gaan.</div>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn-secondary" data-action="prev">← Vorige</button>
+            <button type="button" class="btn btn-primary" data-action="next">
+              Volgende
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================== STEP 4 — CONTACT ==================== -->
+        <div class="step" data-step="4">
+          <div class="step-label">Stap 4 van 4</div>
+          <h2 class="step-h">Hoe <em>bereiken</em> we je?</h2>
+          <p class="step-sub">Bijna klaar. We reageren binnen 24 uur op werkdagen.</p>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label" for="name">Naam <span class="req">*</span></label>
+              <input type="text" class="field-input" id="name" name="name" placeholder="Voor- en achternaam" />
+            </div>
+            <div class="field">
+              <label class="field-label" for="phone">Telefoon <span class="opt">(optioneel)</span></label>
+              <input type="tel" class="field-input" id="phone" name="phone" placeholder="+32 ..." />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="email">E-mail <span class="req">*</span></label>
+            <input type="email" class="field-input" id="email" name="email" placeholder="naam@bedrijf.be" />
+          </div>
+
+          <div class="field">
+            <div class="checkbox-field">
+              <input type="checkbox" id="gdpr" name="gdpr_consent" value="ja" />
+              <label for="gdpr">
+                Ik ga akkoord met het verwerken van mijn gegevens volgens het <a href="/privacy">privacybeleid</a>. Mijn gegevens worden enkel gebruikt om mijn aanvraag te beantwoorden en niet gedeeld met derden. <span class="req">*</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="error-msg" id="error4">Vul alle verplichte velden in en accepteer het privacybeleid.</div>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn-secondary" data-action="prev">← Vorige</button>
+            <button type="submit" class="btn btn-amber" id="submitBtn">
+              Verstuur aanvraag
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Success State -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h2 class="success-h">Aanvraag <em>ontvangen</em>!</h2>
+        <p class="success-p" id="successMessage">Bedankt. We nemen contact op binnen <strong>24 uur</strong> op werkdagen — vaak sneller.</p>
+        <a href="/" class="btn btn-secondary">Terug naar home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING RECAP -->
+<section class="pricing-section" id="pricing">
+  <div class="pricing-head">
+    <span class="pricing-eyebrow">— Tarieven</span>
+    <h2 class="pricing-h2">Vaste prijzen, <em>zonder verrassingen</em>.</h2>
+    <p class="pricing-sub">Drie pakketten met vaste prijs en levertijd. Geen meerwerk-discussies achteraf.</p>
+  </div>
+
+  <div class="pricing-grid">
+    <!-- Essential -->
+    <div class="tier-card">
+      <div class="tier-name">Essential</div>
+      <h3 class="tier-h">Snel <em>online</em>.</h3>
+      <p class="tier-tagline">Voor wie eerst online wil staan met een professionele basis.</p>
+      <div class="tier-price"><em>€</em>2.495</div>
+      <div class="tier-price-detail">Excl. BTW · 14 dagen levertijd</div>
+      <ul class="tier-features">
+        <li>5-8 pagina's op maat</li>
+        <li>Mobiel-geoptimaliseerd</li>
+        <li>Contactformulier</li>
+        <li>Lokale SEO-basis</li>
+        <li>Cookies + privacy</li>
+      </ul>
+    </div>
+
+    <!-- Pro (featured) -->
+    <div class="tier-card featured">
+      <div class="tier-name">Pro</div>
+      <h3 class="tier-h">Voor <em>actieve verkoop</em>.</h3>
+      <p class="tier-tagline">Site die actief leads binnenhaalt en werk uit handen neemt.</p>
+      <div class="tier-price"><em>€</em>4.500</div>
+      <div class="tier-price-detail">Excl. BTW · 21 dagen levertijd</div>
+      <ul class="tier-features">
+        <li>Alles van Essential</li>
+        <li>Multi-step formulier</li>
+        <li>CRM-integratie</li>
+        <li>Geavanceerde SEO</li>
+        <li>Conversie-tracking</li>
+        <li>Eerste maand support</li>
+      </ul>
+    </div>
+
+    <!-- Custom -->
+    <div class="tier-card">
+      <div class="tier-name">Custom</div>
+      <h3 class="tier-h">Op <em>maat</em>.</h3>
+      <p class="tier-tagline">Webshop, complexe integraties of specifieke functionaliteit.</p>
+      <div class="tier-price">Vanaf <em>€</em>7.995</div>
+      <div class="tier-price-detail">Excl. BTW · 4-6 weken levertijd</div>
+      <ul class="tier-features">
+        <li>Alles van Pro</li>
+        <li>Webshop / complexe flows</li>
+        <li>API integraties</li>
+        <li>Custom componenten</li>
+        <li>Dedicated support</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="brand-mark">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+            </svg>
+          </div>
+          <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+        </div>
+        <p class="footer-tag">Premium webdesign voor Belgische KMO's. Volledige sites op maat ontworpen, met slimme conversie-features.</p>
+      </div>
+      <div>
+        <div class="footer-h">Pagina's</div>
+        <ul class="footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/aanpak">Onze aanpak</a></li>
+          <li><a href="/website-laten-maken">Website laten maken</a></li>
+          <li><a href="/redesign">Redesign</a></li>
+          <li><a href="/cases">Portfolio</a></li>
+          <li><a href="/over">Over ons</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Contact</div>
+        <ul class="footer-list">
+          <li>info@webcraftiq.be</li>
+          <li>BTW BE0803.343.103</li>
+          <li>Antwerpen, BE</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Legal</div>
+        <ul class="footer-list">
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/voorwaarden">Voorwaarden</a></li>
+          <li><a href="/cookies">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Webcraftiq · Stef Weyts · BTW BE0803.343.103</span>
+      <span>Built in Belgium · Made with care</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// HAMBURGER
+(function() {
+  const burger = document.getElementById('navBurger');
+  const menu = document.getElementById('mobileMenu');
+  if (!burger || !menu) return;
+  function toggle(force) {
+    const isOpen = force !== undefined ? force : !document.body.classList.contains('menu-open');
+    document.body.classList.toggle('menu-open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    burger.setAttribute('aria-label', isOpen ? 'Sluit menu' : 'Open menu');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function() { toggle(); });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { toggle(false); });
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.body.classList.contains('menu-open')) toggle(false);
+  });
+})();
+
+// SCROLL PROGRESS
+const sp = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  sp.style.width = ((scrolled / docHeight) * 100) + '%';
+});
+
+// MULTI-STEP FORM
+(function() {
+  const form = document.getElementById('contactForm');
+  const successEl = document.getElementById('formSuccess');
+  const progressSteps = document.querySelectorAll('.progress-step');
+
+  let currentStep = 1;
+  let currentFlow = null; // 'nieuwe_site' | 'redesign' | 'anders'
+
+  function getActiveStepEl() {
+    if (currentStep === 2 && currentFlow) {
+      return form.querySelector(`.step[data-step="2"][data-flow="${currentFlow}"]`);
+    }
+    return form.querySelector(`.step[data-step="${currentStep}"]:not([data-flow])`);
+  }
+
+  function showStep(step) {
+    form.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    let el;
+    if (step === 2 && currentFlow) {
+      el = form.querySelector(`.step[data-step="2"][data-flow="${currentFlow}"]`);
+    } else {
+      el = form.querySelector(`.step[data-step="${step}"]:not([data-flow])`);
+    }
+    if (el) el.classList.add('active');
+    currentStep = step;
+    updateProgress();
+    window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
+  }
+
+  function updateProgress() {
+    progressSteps.forEach((s, i) => {
+      s.classList.remove('current', 'done');
+      if (i + 1 < currentStep) s.classList.add('done');
+      else if (i + 1 === currentStep) s.classList.add('current');
+    });
+  }
+
+  // Option card click handlers
+  form.querySelectorAll('.option-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+      const input = card.querySelector('input');
+      if (!input) return;
+      
+      if (input.type === 'radio') {
+        // Single select — clear siblings
+        const groupName = input.name;
+        form.querySelectorAll(`input[name="${groupName}"]`).forEach(other => {
+          other.closest('.option-card').classList.remove('selected');
+        });
+        card.classList.add('selected');
+        input.checked = true;
+      } else if (input.type === 'checkbox') {
+        // Multi-select — toggle
+        if (input.checked) {
+          card.classList.remove('selected');
+          input.checked = false;
+        } else {
+          card.classList.add('selected');
+          input.checked = true;
+        }
+      }
+      
+      // Hide error if any
+      card.closest('.step').querySelector('.error-msg')?.classList.remove('show');
+    });
+  });
+
+  function showError(stepEl, errorId) {
+    const err = document.getElementById(errorId);
+    if (err) err.classList.add('show');
+  }
+
+  function hideError(stepEl) {
+    stepEl.querySelector('.error-msg')?.classList.remove('show');
+  }
+
+  function validateStep(step) {
+    const stepEl = getActiveStepEl();
+    hideError(stepEl);
+
+    if (step === 1) {
+      const selected = form.querySelector('input[name="project_type"]:checked');
+      if (!selected) {
+        showError(stepEl, 'error1');
+        return false;
+      }
+      currentFlow = selected.value;
+      return true;
+    }
+
+    if (step === 2) {
+      if (currentFlow === 'nieuwe_site') {
+        if (!form.querySelector('input[name="package"]:checked')) {
+          showError(stepEl, 'error2a');
+          return false;
+        }
+      } else if (currentFlow === 'redesign') {
+        if (!form.querySelector('input[name="problems"]:checked')) {
+          showError(stepEl, 'error2b');
+          return false;
+        }
+      } else if (currentFlow === 'anders') {
+        const desc = form.querySelector('#anders_omschrijving');
+        if (!desc.value.trim()) {
+          showError(stepEl, 'error2c');
+          return false;
+        }
+      }
+      return true;
+    }
+
+    if (step === 3) {
+      const company = form.querySelector('#company').value.trim();
+      const timeline = form.querySelector('input[name="timeline"]:checked');
+      if (!company || !timeline) {
+        showError(stepEl, 'error3');
+        return false;
+      }
+      return true;
+    }
+
+    if (step === 4) {
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      const gdpr = form.querySelector('#gdpr').checked;
+      const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (!name || !validEmail || !gdpr) {
+        showError(stepEl, 'error4');
+        return false;
+      }
+      return true;
+    }
+
+    return true;
+  }
+
+  // Next / Prev buttons
+  form.querySelectorAll('[data-action="next"]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      if (validateStep(currentStep)) {
+        showStep(currentStep + 1);
+      }
+    });
+  });
+
+  form.querySelectorAll('[data-action="prev"]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      showStep(currentStep - 1);
+    });
+  });
+
+  // Form submit
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!validateStep(4)) return;
+
+    // Honeypot check
+    if (form.querySelector('[name="_gotcha"]').value) return;
+
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Versturen...';
+
+    // Check if Formspree is configured
+    const action = form.getAttribute('action');
+    if (action.includes('JOUW_FORMSPREE_ID')) {
+      // Placeholder mode — show success without actually submitting
+      setTimeout(function() {
+        showSuccess();
+      }, 600);
+      return;
+    }
+
+    // Real submission via Formspree
+    const formData = new FormData(form);
+    fetch(action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        showSuccess();
+      } else {
+        throw new Error('Submission failed');
+      }
+    })
+    .catch(err => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'Verstuur aanvraag';
+      alert('Er ging iets mis. Probeer opnieuw of mail naar info@webcraftiq.be.');
+    });
+  });
+
+  function showSuccess() {
+    form.style.display = 'none';
+    document.getElementById('progressBar').style.display = 'none';
+    successEl.classList.add('show');
+    
+    // Personalize success message
+    const name = form.querySelector('#name')?.value.trim();
+    const successMsg = document.getElementById('successMessage');
+    if (name && successMsg) {
+      const firstName = name.split(' ')[0];
+      successMsg.innerHTML = `Bedankt, <strong>${firstName}</strong>. We nemen contact op binnen <strong>24 uur</strong> op werkdagen — vaak sneller.`;
+    }
+    
+    window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
+  }
+})();
+</script>
+
+</body>
+</html>

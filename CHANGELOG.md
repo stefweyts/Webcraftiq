@@ -4,9 +4,45 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.1 — 6 mei 2026 ✅ ACTIEF
+## V2.2 — 6 mei 2026 ✅ ACTIEF
 
-**Status:** Mobile menu fix.
+**Status:** Dedicated /contact pagina met multi-step formulier.
+
+### Nieuwe features
+- ✅ **Nieuwe `/contact` pagina** — alle CTA's leiden hier naartoe
+- ✅ **Multi-step formulier** met conditionele branching:
+  - **Stap 1**: Type project (Nieuwe website / Redesign / Anders)
+  - **Stap 2A** (nieuw): Pakket-voorkeur (Essential €2.495 / Pro €4.500 / Custom / weet niet)
+  - **Stap 2B** (redesign): Wat werkt niet? (multi-select: geen leads / verouderd / mobiel / plug-ins / SEO / weet niet)
+  - **Stap 2C** (anders): Vrije omschrijving
+  - **Stap 3**: Project-details (bedrijf, sector, huidige URL, tijdlijn, beschrijving)
+  - **Stap 4**: Contactgegevens (naam, e-mail, telefoon, GDPR)
+- ✅ **Pricing recap** onderaan /contact (zelfde 3 pakketten als homepage)
+- ✅ **JSON-LD ContactPage schema** op /contact
+- ✅ **Honeypot field** tegen spam
+- ✅ **Inline validatie** met Nederlandstalige errors
+- ✅ **Personaliseerde succesmelding** met voornaam
+
+### Wijzigingen
+- ✅ **Menu-CTA** "Plan een call" → "Contacteer ons" (alle 15 pagina's)
+- ✅ **Alle CTA's** leiden nu naar `/contact` ipv `#contact` of mailto
+- ✅ **Homepage formulier verwijderd** — vervangen met korte teaser-CTA "Vraag vrijblijvend een voorstel aan"
+- ✅ **Prijzen blijven op homepage** (`#pricing` anchor) en zijn ook beschikbaar op /contact
+- ✅ **Footer "Pagina's"** krijgt /contact-link op alle 13 pagina's
+
+### Formspree integratie
+- ⏳ **Formulier verstuurt nog niet** — placeholder `JOUW_FORMSPREE_ID` in `<form action>`
+- ⏳ Bij submit toont het succes-state na 600ms (preview-modus)
+- ⏳ **TODO**: Stef levert Formspree-ID, dan wordt het echt verstuurd
+
+### Versie-marker
+- ✅ Alle 15 pagina's bijgewerkt naar `<!-- Webcraftiq v2.2 | 2026-05-06 | Stef Weyts -->`
+
+---
+
+## V2.1 — 6 mei 2026
+
+**Status:** Mobile menu fix. Vervangen door V2.2.
 
 ### Critical fix
 - ✅ **Hamburger-menu** toegevoegd op alle 14 pagina's — was kritieke bug in V2.0 waardoor mobile users vastgepind zaten op de homepage
