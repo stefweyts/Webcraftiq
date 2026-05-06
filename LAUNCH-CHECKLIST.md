@@ -1,89 +1,120 @@
-# 🚀 Webcraftiq Launch Checklist
+# Webcraftiq V1 — Launch Checklist
 
-Deze lijst doorlopen = site live + geoptimaliseerd.
-
----
-
-## ⏱️ Vandaag (1 uur werk)
-
-- [ ] **Domein registreren** op combell.com of gandi.net (`webcraftiq.be`, ~€15)
-- [ ] **Netlify-account** aanmaken op netlify.com (gratis)
-- [ ] **Site uploaden** door folder te slepen naar Netlify deploy
-- [ ] **Custom domein koppelen** in Netlify settings
-- [ ] **Site checken** op je telefoon — alles werkt?
+Wat moet je nog doen voordat de site echt productie-klaar is.
 
 ---
 
-## ⏱️ Deze week (3 uur werk)
+## ✅ Al klaar (in V1)
 
-### Content aanpassen
-- [ ] Telefoonnummer overal vervangen (zoek: `+32 470 12 34 56`)
-- [ ] Email overal vervangen (zoek: `hallo@webcraftiq.be`)
-- [ ] Echte LinkedIn URL invullen in footer
-- [ ] Beschikbaarheid in hero badge updaten
-
-### Formulier werkend maken
-- [ ] Formspree account aanmaken (gratis)
-- [ ] Form endpoint aan formulier koppelen
-- [ ] Test-aanvraag versturen — komt het binnen?
-
-### SEO basis
-- [ ] **Google Search Console** account aanmaken
-- [ ] Site verifiëren + sitemap submitten
-- [ ] **Open Graph image** maken (1200x630px, op canva.com)
-- [ ] og-image.jpg uploaden naar root van site
-
-### Wettelijk
-- [ ] Privacyverklaring genereren (iubenda.com of ChatGPT)
-- [ ] Algemene voorwaarden schrijven
-- [ ] Footer aanvullen met BTW + KBO nummer
-- [ ] Cookie-banner toevoegen (als je analytics gebruikt)
+- [x] Alle pagina's gebouwd en gevalideerd
+- [x] Echte cases: Voltrix + Gevanti
+- [x] Identiteit overal correct: Stef Weyts + BTW + email
+- [x] Wettelijke pagina's: privacy, voorwaarden, cookies (GDPR)
+- [x] Geen fake content (alle cases, stats, telefoonnummers gecheckt)
+- [x] Site live op staging: webcraftiq.pages.dev
+- [x] Versie-marker V1.0 in alle bestanden
 
 ---
 
-## ⏱️ Deze maand (lopend)
+## 🔥 Cruciaal — voor je echt live gaat
 
-### Marketing setup
-- [ ] **LinkedIn-pagina** voor Webcraftiq aanmaken
-- [ ] **Instagram-handle** claimen (@webcraftiq)
-- [ ] **Google Business Profile** aanmaken voor lokale SEO
-- [ ] Eerste blog-post schrijven (als je dat doet)
+### Domein & DNS
+- [ ] **Registreer webcraftiq.be** bij combell.be of gandi.net (~€15/jaar)
+- [ ] **Koppel domein aan Cloudflare**: dashboard → project → "Custom domains" → "Set up a custom domain"
+- [ ] **Wacht op SSL** (~5 min na koppeling)
+- [ ] Test: `https://webcraftiq.be` werkt
 
-### Outreach starten
-- [ ] Eerste 50 prospects in Google Sheet
-- [ ] Eerste 10 cold emails versturen (Script 1 uit playbook)
-- [ ] Eerste 10 LinkedIn-connectieverzoeken
-- [ ] Calendly-link instellen voor intake calls
+### Contactformulier (anders kan niemand contact opnemen!)
+- [ ] **Maak Formspree account** op formspree.io (gratis voor 50 submissions/maand)
+- [ ] Maak een nieuw formulier aan, kopieer het ID (vb. `xpzajklw`)
+- [ ] Open `index.html` in editor → zoek `JOUW_FORMSPREE_ID` → vervang met je ID
+- [ ] Push naar GitHub
+- [ ] Test: vul het formulier in op live site, check of je een mail krijgt
 
-### Social proof verzamelen
-- [ ] Eerste klant?  Vraag testimonial + Google review
-- [ ] Foto's van het werk verzamelen voor portfolio
-- [ ] Logo's van clients in toestemming voor de strip
-
----
-
-## 🎯 Maandelijks bijhouden
-
-- [ ] Performance check op pagespeed.web.dev (>95 score)
-- [ ] Google Search Console queries reviewen
-- [ ] Conversie-rate van het formulier tracken
-- [ ] Sitemap updaten als je pagina's toevoegt
-- [ ] Portfolio uitbreiden met nieuwe cases
+### Calendly link voor "Plan intake-call"
+- [ ] **Maak Calendly account** (gratis tier)
+- [ ] Maak event "Intake-call (45 min)" met je beschikbaarheid
+- [ ] Kopieer publieke URL (vb. `calendly.com/stefweyts/intake`)
+- [ ] Open `index.html` → zoek `#contact` bij CTA-knoppen → vervang met je Calendly URL
+- [ ] Test: knop opent Calendly correct
 
 ---
 
-## 🚨 Wat NIET vergeten
+## 📊 Belangrijk — voor data en groei
 
-1. **Backup**: zet een kopie van alle bestanden op je computer + cloud
-2. **Domein-renewal**: zet automatische verlenging aan (anders verlies je je domein)
-3. **SSL**: check dat https:// werkt — bij Netlify automatisch, anders manueel aanvragen
-4. **Mobiel testen**: minimaal 50% van je bezoekers is mobiel — test op iPhone én Android
+### Analytics
+- [ ] **Plausible Analytics** (€9/maand, EU servers, GDPR-conform)
+  OF **Google Analytics 4** (gratis, maar privacy-implicaties)
+- [ ] Snippet toevoegen aan alle HTML pagina's (in `<head>`)
+- [ ] Dashboard checken na 24u: zie je bezoekers binnenkomen?
+
+### Google Search Console
+- [ ] Account aanmaken op search.google.com/search-console
+- [ ] **Verify ownership** via DNS-record of HTML-tag
+- [ ] **Submit sitemap**: `https://webcraftiq.be/sitemap.xml`
+- [ ] Wacht 1-2 weken voor eerste indexering
+- [ ] Check welke queries je krijgt impressies voor
+
+### LinkedIn / Social
+- [ ] Webcraftiq company page op LinkedIn aanmaken
+- [ ] Eerste post: "Webcraftiq is live!"
+- [ ] Verbind je persoonlijk LinkedIn met de page
+- [ ] Eerste outreach via LinkedIn DM (volgens je eerdere outreach playbook)
 
 ---
 
-## 💡 Pro-tips
+## 🎨 Cosmetisch — voor professionele uitstraling
 
-- **First impression matters**: deel je site eerst met 3 vrienden voor je hem gaat promoten
-- **Speed wins**: hoe sneller de site, hoe beter de conversie. Test maandelijks.
-- **Content > design**: een lelijke site met echte case studies converteert beter dan een mooie zonder
-- **Keep it simple**: weersta de drang om "nog meer features" toe te voegen — focus op leads krijgen
+### Open Graph image (voor link previews)
+- [ ] Maak in Canva: 1200×630 px, met logo + tagline
+- [ ] Sla op als `og-image.jpg`
+- [ ] Upload naar GitHub repo (in root)
+- [ ] Test op opengraph.xyz: deel `webcraftiq.be` URL → zie je de image?
+
+### Favicon variants
+- [ ] **apple-touch-icon.png** (180×180) — voor iOS bookmarks
+- [ ] **favicon-32x32.png** — moderne browsers
+- [ ] **favicon-192x192.png** — Android Chrome
+
+Kan je in 5 min maken op realfavicongenerator.net.
+
+---
+
+## 🧪 Testen — voor lancering
+
+- [ ] **Desktop**: open in Chrome, Firefox, Safari (Mac) of Edge (Windows)
+- [ ] **Mobiel iOS**: open op iPhone (Safari + Chrome)
+- [ ] **Mobiel Android**: open op Android (Chrome)
+- [ ] **PageSpeed test**: pagespeed.web.dev → mobiel + desktop, mikken op 90+
+- [ ] **Mobile-friendly test**: search.google.com/test/mobile-friendly
+- [ ] **Werken alle links?** Klik door menu's, footer, CTA's
+- [ ] **Werkt formulier?** Test echte submission
+- [ ] **Werkt 404?** Ga naar webcraftiq.be/iets-wat-niet-bestaat
+- [ ] **Werken redirects?** webcraftiq.be/manifest → moet naar /aanpak gaan
+
+---
+
+## 📣 Lanceringsdag
+
+- [ ] **LinkedIn post** met link
+- [ ] **Persoonlijke mail** naar 10 contacten met link + uitleg
+- [ ] **Voltrix en Gevanti** bedanken + delen op hun social
+- [ ] **Updates aan vrienden/familie** via WhatsApp
+- [ ] **Eerste outreach mail** naar 5 prospects volgens je outreach playbook
+
+---
+
+## 🚦 Wanneer is V1 echt "live productie-klaar"?
+
+Pas als al deze 4 minimums klaar zijn:
+1. ✅ Domein webcraftiq.be is gekoppeld
+2. ✅ Contactformulier werkt en stuurt mail naar info@webcraftiq.be
+3. ✅ Analytics is actief
+4. ✅ Search Console is actief
+
+Pas dan kan je starten met **outreach naar prospects**.
+Daarvoor: het is een staging/preview site die je intern kan testen.
+
+---
+
+**Volgende mijlpaal:** zie ROADMAP.md voor V1.1 en V2.0 plannen.

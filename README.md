@@ -1,24 +1,37 @@
-# Webcraftiq — Production Site
+# Webcraftiq — V1.0
 
-Premium webdesign voor Belgische KMO's. Volledige sites op maat met multi-step formulieren, lokale SEO en CRM-integraties.
+Premium webdesign voor Belgische KMO's. Volledige sites op maat met multi-step formulieren en lokale SEO.
 
-**Live URL:** https://webcraftiq.be (of webcraftiq.pages.dev voor staging)
+**Versie:** V1.0 (6 mei 2026)
+**Live URL:** https://webcraftiq.be (zodra domein gekoppeld)
+**Staging:** https://webcraftiq.pages.dev
 
 ---
 
-## 📁 Structuur
+## 📁 Belangrijke documenten
+
+| Bestand | Wat staat erin |
+|---------|----------------|
+| **CHANGELOG.md** | Versie-geschiedenis: wat zat in V0.1 → V1.0 |
+| **ROADMAP.md** | Wat komt er in V1.1, V2.0, V3.0 |
+| **LAUNCH-CHECKLIST.md** | To-do lijst voor je live gaat |
+| **README.md** | Dit document |
+
+---
+
+## 🌳 Site-structuur
 
 ```
 webcraftiq/
 ├── index.html                  # Homepage
 ├── website-laten-maken.html    # SEO landing page (top keyword)
-├── aanpak.html                 # Manifest / werkmethode
+├── aanpak.html                 # Werkmethode
 ├── over.html                   # Over Stef Weyts
 ├── cases.html                  # Portfolio overzicht
-│   ├── cases/voltrix.html      # Voltrix case study
-│   └── cases/gevanti.html      # Gevanti BV case study
+│   ├── cases/voltrix.html      # Voltrix case study (echt)
+│   └── cases/gevanti.html      # Gevanti BV case study (echt)
 ├── blog.html                   # Blog overzicht
-│   └── blog/multi-step-...html # Blog post
+│   └── blog/multi-step-...html # Blog post over conversie
 ├── 404.html                    # Error page
 ├── privacy.html                # GDPR privacybeleid
 ├── voorwaarden.html            # Algemene voorwaarden
@@ -33,90 +46,61 @@ webcraftiq/
 
 ---
 
-## 🚀 Deployment
+## 🚀 Hoe deze site werken
 
-### Methode 1: Cloudflare Pages directe upload (snelst, zonder Git)
+**Tech:** pure HTML/CSS — geen build step, geen framework, geen Node.js.
 
-1. Pak deze ZIP uit op je computer
-2. Login op [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages**
-3. **Create** → tab **Pages** → **Upload assets**
-4. Projectnaam: `webcraftiq`
-5. Sleep alle losse bestanden (niet de map!) in de upload-zone
-6. **Deploy site**
+**Hosting:** Cloudflare Pages (gratis tier, automatische deploys via GitHub).
 
-### Methode 2: GitHub + Cloudflare Pages (voor automatische deploys)
-
-**A. GitHub repo aanmaken:**
-1. Ga naar [github.com/new](https://github.com/new)
-2. Repository name: `webcraftiq-site`
-3. Visibility: **Private** aanbevolen
-4. **Niet** "Initialize with README" aanvinken
-5. **Create repository**
-
-**B. Bestanden uploaden — gebruik GitHub Desktop (betrouwbaarst):**
-
-GitHub.com drag-and-drop is onbetrouwbaar voor mappen. Veel beter:
-
-1. Download GitHub Desktop: [desktop.github.com](https://desktop.github.com)
-2. Login met je GitHub account
-3. **File** → **Clone repository** → kies je nieuwe `webcraftiq-site` repo
-4. Open de gekloonde folder in Finder/Explorer
-5. **Kopieer alle bestanden** uit deze ZIP naar die folder
-6. Terug in GitHub Desktop: zie je dat alle bestanden zijn toegevoegd
-7. Schrijf commit message: `Initial commit — Webcraftiq site`
-8. Klik **Commit to main** → daarna **Push origin**
-
-**C. Koppelen aan Cloudflare:**
-1. Cloudflare → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
-2. Selecteer je `webcraftiq-site` repo
-3. Build settings:
-   - Build command: **leeg laten**
-   - Build output directory: **/** (root)
-4. **Save and Deploy**
-
-Vanaf nu deployt elke `git push` automatisch een nieuwe versie.
+**Workflow:**
+1. Wijzig HTML lokaal (in editor)
+2. Push naar GitHub via GitHub Desktop
+3. Cloudflare deployt automatisch in 30-60 seconden
+4. Test op staging URL (incognito!)
+5. Tag in CHANGELOG.md welke versie
 
 ---
 
-## 🔧 Aanpassingen maken
+## ✏️ Hoe maak je wijzigingen
 
 ### Tekst wijzigen
-Open het juiste `.html` bestand in een editor (VS Code, Sublime, of zelfs Notepad). Zoek de tekst, pas aan, sla op.
+Open `.html` bestand in editor (VS Code, Sublime, Notepad). Zoek tekst, pas aan, opslaan, push.
 
-### Nieuwe blogpost toevoegen
+### Nieuwe blog post
 1. Kopieer `blog/multi-step-formulier-vs-klassiek.html` als template
 2. Hernoem naar `blog/jouw-nieuwe-post.html`
 3. Pas titel, content, meta-tags aan
-4. Voeg toe aan `blog.html` (overzicht) en `sitemap.xml`
+4. Voeg toe aan `blog.html` overzicht
+5. Voeg URL toe aan `sitemap.xml`
+6. Update versie-marker bovenaan
+7. Update CHANGELOG.md
 
-### Nieuwe case toevoegen
+### Nieuwe case
 1. Kopieer `cases/voltrix.html` als template
-2. Hernoem naar `cases/jouw-klant.html`
+2. Hernoem naar `cases/klant-naam.html`
 3. Pas alle content aan met echte info
-4. Voeg toe aan `cases.html` en homepage `index.html`
+4. Voeg toe aan `cases.html` + `index.html`
 5. Update `sitemap.xml`
+6. Update versie-marker
+7. Update CHANGELOG.md
 
 ---
 
-## 📋 Voor je live gaat — checklist
+## 🏷️ Versie-systeem
 
-Zie `LAUNCH-CHECKLIST.md` voor de volledige to-do lijst.
+Elke pagina heeft bovenaan in `<head>`:
+```html
+<!-- Webcraftiq v1.0 | 2026-05-06 | Stef Weyts -->
+```
 
-**Cruciaal:**
-- [ ] Domein webcraftiq.be registreren
-- [ ] Contact-formulier koppelen (Formspree ID in `index.html`)
-- [ ] OG-image (`og-image.jpg`, 1200×630px) maken
-- [ ] Google Search Console + sitemap submitten
-- [ ] Calendly link instellen voor intake-call
+Open de live site → rechtsklik → "Bron weergeven" → je ziet welke versie live staat.
 
----
+**Versie-bumping**:
+- `V1.x` voor kleine fixes en content
+- `V2.x` voor design-wijzigingen of nieuwe pagina's
+- `V3.x` voor structurele wijzigingen (CMS, framework migratie, etc.)
 
-## 🛠 Tech Stack
-
-- **Pure HTML/CSS** — geen build step, geen frameworks
-- **Custom design** in Bricolage Grotesque + DM Sans + JetBrains Mono
-- **Lokaal SEO** geoptimaliseerd voor "website laten maken" en Belgische steden
-- **Schema.org JSON-LD** structured data op alle pagina's
+Zie `CHANGELOG.md` voor de volledige versie-geschiedenis.
 
 ---
 
