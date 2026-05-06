@@ -1,0 +1,14 @@
+{
+  "name": "Webcraftiq",
+  "short_name": "Webcraftiq",
+  "description": "Premium webdesign voor Belgische KMO's. Custom code, multi-step offerteformulieren, klaar in 14 dagen.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f1ea",
+  "theme_color": "#141414",
+  "lang": "nl-BE",
+  "dir": "ltr",
+  "scope": "/",
+  "orientation": "portrait-primary",
+  "categories": ["business", "design", "productivity"]
+}

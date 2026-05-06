@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gevanti BV · Case Study | Webcraftiq</title>
+<meta name="description" content="Hoe we voor Gevanti BV — maatwerk keukens en interieur in provincie Antwerpen — een visuele portfolio-website ontwikkelden die het ambacht laat spreken." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://webcraftiq.be/cases/gevanti" />
+
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="nl_BE" />
+<meta property="og:url" content="https://webcraftiq.be/cases/gevanti" />
+<meta property="og:title" content="Gevanti BV · Case Study | Webcraftiq" />
+<meta property="og:description" content="Visuele portfolio-website voor maatwerk-interieur in provincie Antwerpen." />
+
+<meta name="theme-color" content="#f5f1ea" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141414'/%3E%3Cpath d='M7 11h3l1.5 7L13 12l1.5 6L16 11h3M19 18l3-7' stroke='%23d97706' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+
+<style>
+.case-header { padding: 160px 0 60px; background: var(--bg); }
+.case-meta-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 30px; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--line); }
+@media (max-width: 768px) { .case-meta-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+.case-meta-item .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 8px; }
+.case-meta-item .value { font-family: var(--font-display); font-size: 18px; font-weight: 500; letter-spacing: -0.02em; }
+
+.case-preview { background: var(--bg-soft); padding: 80px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.case-preview-frame { background: #faf6ed; border-radius: 16px; overflow: hidden; aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center; padding: 40px; color: var(--ink); position: relative; box-shadow: 0 24px 60px -20px rgba(20, 20, 20, 0.15); border: 1px solid var(--line); }
+.preview-content { width: 100%; height: 100%; display: flex; flex-direction: column; }
+.preview-bar { display: flex; align-items: center; gap: 16px; padding-bottom: 22px; border-bottom: 1px solid rgba(20,20,20,0.08); margin-bottom: 30px; }
+.preview-logo { font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: -0.02em; }
+.preview-logo em { color: #8b6914; }
+.preview-menu { display: flex; gap: 22px; font-family: var(--font-mono); font-size: 11px; color: rgba(20,20,20,0.45); letter-spacing: 0.05em; text-transform: uppercase; }
+.preview-cta { margin-left: auto; background: var(--ink); color: var(--bg); padding: 8px 16px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+.preview-hero { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.preview-hero-tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8b6914; margin-bottom: 18px; }
+.preview-hero-h { font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 400; letter-spacing: -0.04em; line-height: 0.95; margin-bottom: 20px; max-width: 80%; }
+.preview-hero-h em { font-style: italic; color: #8b6914; font-variation-settings: "wdth" 85; }
+.preview-hero-sub { font-size: 14px; color: rgba(20,20,20,0.6); max-width: 60%; margin-bottom: 24px; line-height: 1.5; }
+.preview-buttons { display: flex; gap: 10px; }
+.preview-btn-1 { background: var(--ink); color: var(--bg); padding: 10px 18px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+.preview-btn-2 { border: 1px solid rgba(20,20,20,0.2); color: var(--ink); padding: 10px 18px; border-radius: 999px; font-size: 13px; font-weight: 500; }
+
+section.story-section { padding: 100px 0; border-bottom: 1px solid var(--line); }
+@media (max-width: 768px) { section.story-section { padding: 70px 0; } }
+
+.story-h { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; letter-spacing: -0.04em; line-height: 1; margin-bottom: 32px; }
+.story-h em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+
+.prose-content p { font-size: 17px; line-height: 1.7; color: var(--ink-2); margin-bottom: 22px; }
+.prose-content p strong { font-weight: 600; color: var(--ink); }
+.prose-content p em { font-style: italic; color: var(--ink); }
+.prose-content a { color: var(--accent-deep); border-bottom: 1px solid var(--accent-line); }
+
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 50px 0; }
+@media (max-width: 768px) { .feature-grid { grid-template-columns: 1fr; } }
+.feat-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; padding: 32px 28px; }
+.feat-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); border: 1px solid var(--accent-line); display: flex; align-items: center; justify-content: center; color: var(--accent-deep); margin-bottom: 22px; }
+.feat-h { font-family: var(--font-display); font-size: 19px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.2; }
+.feat-p { font-size: 14px; color: var(--ink-3); line-height: 1.6; }
+
+.next-case-section { background: var(--bg); padding: 80px 0; border-bottom: 1px solid var(--line); }
+.next-case-row { display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; }
+.next-case-h { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; letter-spacing: -0.03em; }
+.next-case-h em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+.next-case-link { display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500; }
+.next-case-link:hover { color: var(--accent-deep); }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="nav">
+  <a href="/" class="nav-brand">
+    <div class="brand-mark">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+      </svg>
+    </div>
+    <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/cases" class="active">Werk</a>
+    <a href="/aanpak">Aanpak</a>
+    <a href="/over">Over</a>
+    <a href="/blog">Blog</a>
+    <a href="/#pricing">Prijzen</a>
+  </div>
+  <a href="/#contact" class="nav-cta">Start project →</a>
+</nav>
+
+<header class="case-header">
+  <div class="container-narrow">
+    <div class="reveal" style="margin-bottom: 32px;">
+      <a href="/cases" style="font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em; color: var(--ink-3); display: inline-flex; align-items: center; gap: 6px;">
+        ← Alle cases
+      </a>
+    </div>
+
+    <div class="reveal" data-delay="1">
+      <span class="eyebrow eyebrow-amber" style="display: inline-block; margin-bottom: 18px;">— Case study · 2026</span>
+      <h1 class="page-header-h">Gevanti BV · Een portfolio-site voor <em>maatwerk-interieur</em>.</h1>
+      <p class="page-header-sub">
+        Gevanti BV realiseert hoogwaardige keukens, inbouwkasten en interieurprojecten in provincie Antwerpen. We bouwden een visuele portfolio-website waar het ambacht het verhaal vertelt — en waar prospects rechtstreeks een kennismakingsgesprek kunnen plannen.
+      </p>
+    </div>
+
+    <div class="case-meta-grid reveal" data-delay="2">
+      <div class="case-meta-item">
+        <div class="label">— Klant</div>
+        <div class="value">Gevanti BV</div>
+      </div>
+      <div class="case-meta-item">
+        <div class="label">— Sector</div>
+        <div class="value">Maatwerk-interieur</div>
+      </div>
+      <div class="case-meta-item">
+        <div class="label">— Locatie</div>
+        <div class="value">Rijkevorsel, BE</div>
+      </div>
+      <div class="case-meta-item">
+        <div class="label">— Live URL</div>
+        <div class="value"><a href="https://gevanti.be" target="_blank" rel="noopener" style="color: var(--accent-deep); border-bottom: 1px solid var(--accent-line);">gevanti.be ↗</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="case-preview">
+  <div class="container">
+    <div class="reveal">
+      <div class="case-preview-frame">
+        <div class="preview-content">
+          <div class="preview-bar">
+            <div class="preview-logo">Gevanti<em> bv</em></div>
+            <div class="preview-menu">
+              <span>Maatwerk</span>
+              <span>Projecten</span>
+              <span>Over ons</span>
+            </div>
+            <div class="preview-cta">CONTACT</div>
+          </div>
+          <div class="preview-hero">
+            <div class="preview-hero-tag">— MAATWERK INTERIEUR · PROVINCIE ANTWERPEN</div>
+            <div class="preview-hero-h">Keukens en interieur <em>op maat</em>.</div>
+            <div class="preview-hero-sub">Hoogwaardige keukens, inbouwkasten en interieurprojecten met doordacht ontwerp en perfecte afwerking.</div>
+            <div class="preview-buttons">
+              <span class="preview-btn-1">Plan kennismakingsgesprek</span>
+              <span class="preview-btn-2">Bekijk projecten</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="prose">
+    <div class="reveal">
+      <span class="eyebrow eyebrow-amber" style="display: block; margin-bottom: 16px;">— De uitdaging</span>
+      <h2 class="story-h">Voor maatwerk verkoop je <em>geen producten</em>.</h2>
+      <div class="prose-content">
+        <p>
+          Voor een maatwerk-interieurbouwer is de website fundamenteel anders dan voor een webshop of dienstverlener. Je verkoopt geen catalogus, geen prijslijst, geen pakket. <strong>Je verkoopt vakmanschap, vertrouwen en het idee dat de eindklant na 6 maanden nog steeds blij gaat zijn met de keuze.</strong>
+        </p>
+        <p>
+          Dat betekent: de site moet het werk laten spreken. Foto's van keukens, dressings en maatkasten — niet stockfoto's, eigen realisaties. Klanten moeten kunnen zien wat de afwerking is, hoe een schuiflade sluit, hoe een handgrepen-detail eruit ziet. <em>Tactiel materiaal in pixels.</em>
+        </p>
+        <p>
+          De site moest dus visueel sterk zijn, maar ook praktisch — een offerteformulier voor een keuken op maat heeft weinig zin. Mensen willen eerst praten, dan tekenen, dan offreren. De site moet uitnodigen tot een gesprek, niet tot een bestelling.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story-section" style="background: var(--bg-soft);">
+  <div class="prose">
+    <div class="reveal">
+      <span class="eyebrow eyebrow-amber" style="display: block; margin-bottom: 16px;">— Onze aanpak</span>
+      <h2 class="story-h">Het werk centraal, de woorden <em>op de tweede plaats</em>.</h2>
+    </div>
+
+    <div class="feature-grid reveal" data-delay="1">
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+        </div>
+        <h3 class="feat-h">Visuele portfolio-grid</h3>
+        <p class="feat-p">Editorial layout waarbij grote foto's van realisaties het hart van de site zijn. Geen stockfoto's — alleen eigen werk uit eigen atelier.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3 class="feat-h">Kennismakings-CTA</h3>
+        <p class="feat-p">Geen "vraag offerte" maar "plan een kennismakingsgesprek". Past bij de aard van het werk — vertrouwen voor verkoop.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="feat-h">Lokaal vindbaar</h3>
+        <p class="feat-p">SEO-geoptimaliseerd voor "keukens op maat provincie Antwerpen" en gerelateerde long-tail zoektermen, met focus op de Kempen-regio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="next-case-section">
+  <div class="container">
+    <div class="next-case-row">
+      <div>
+        <div class="eyebrow" style="margin-bottom: 8px;">— Vorige case</div>
+        <h3 class="next-case-h">Voltrix · <em>elektricien uit Antwerpen</em></h3>
+      </div>
+      <a href="/cases/voltrix" class="next-case-link">
+        Lees Voltrix case
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2 class="cta-h">Word de <em>volgende</em>?</h2>
+    <p class="cta-sub">
+      3 plekken open in juni 2026. Plan een vrijblijvende intake-call van 45 minuten.
+    </p>
+    <div class="cta-actions">
+      <a href="/#contact" class="btn btn-amber">
+        Plan een intake-call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/aanpak" class="btn btn-ghost-dark">Lees onze aanpak</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="brand-mark">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+            </svg>
+          </div>
+          <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+        </div>
+        <p class="footer-tag">Premium webdesign voor Belgische KMO's. Volledige sites, op maat ontworpen, met slimme conversie-features.</p>
+      </div>
+      <div>
+        <div class="footer-h">Pagina's</div>
+        <ul class="footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/website-laten-maken">Website laten maken</a></li>
+          <li><a href="/cases">Werk</a></li>
+          <li><a href="/aanpak">Aanpak</a></li>
+          <li><a href="/over">Over</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Contact</div>
+        <ul class="footer-list">
+          <li>info@webcraftiq.be</li>
+          <li>BTW BE0803.343.103</li>
+          <li>Antwerpen, BE</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Legal</div>
+        <ul class="footer-list">
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/voorwaarden">Voorwaarden</a></li>
+          <li><a href="/cookies">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Webcraftiq · Stef Weyts · BTW BE0803.343.103</span>
+      <span>Built in Belgium · Made with care</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+reveals.forEach((el) => io.observe(el));
+
+const sp = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  sp.style.width = ((scrolled / docHeight) * 100) + '%';
+});
+</script>
+
+</body>
+</html>

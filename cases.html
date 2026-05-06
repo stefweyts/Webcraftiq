@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Werk · Webcraftiq Portfolio | Belgische KMO websites</title>
+<meta name="description" content="Bekijk onze portfolio: premium websites op maat voor installateurs, restaurants, ateliers, architecten en B2B consultants in België. Echte cases." />
+<meta name="keywords" content="webdesign portfolio België, KMO websites, webcraftiq werk, premium websites Vlaanderen, webdesign cases" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://webcraftiq.be/cases" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="nl_BE" />
+<meta property="og:url" content="https://webcraftiq.be/cases" />
+<meta property="og:title" content="Werk · Webcraftiq Portfolio" />
+<meta property="og:description" content="Premium websites op maat voor Belgische KMO's. Bekijk onze recente projecten." />
+
+<meta name="theme-color" content="#f5f1ea" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141414'/%3E%3Cpath d='M7 11h3l1.5 7L13 12l1.5 6L16 11h3M19 18l3-7' stroke='%23d97706' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+
+<style>
+section { padding: 100px 0; border-bottom: 1px solid var(--line); }
+@media (max-width: 768px) { section { padding: 70px 0; } }
+
+/* Filter pills */
+.filter-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.filter-pill {
+  padding: 8px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+.filter-pill:hover { border-color: var(--ink-3); color: var(--ink); }
+.filter-pill.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+/* Cases grid - mix of sizes */
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.cases-grid.three { grid-template-columns: 1fr 1fr 1fr; gap: 18px; margin-top: 24px; }
+@media (max-width: 900px) { .cases-grid, .cases-grid.three { grid-template-columns: 1fr; } }
+
+.case-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+  text-decoration: none;
+  color: inherit;
+}
+.case-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 48px -16px rgba(20, 20, 20, 0.15);
+  border-color: var(--line-2);
+}
+
+.case-thumb {
+  aspect-ratio: 16/10;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.case-info {
+  padding: 24px 26px;
+}
+.case-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 8px;
+}
+.case-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.case-desc {
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+.case-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-4);
+  letter-spacing: 0.05em;
+}
+.case-arrow {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  color: var(--ink-2);
+}
+.case-card:hover .case-arrow {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: rotate(-45deg);
+}
+
+/* Mini-site mockup styling — matches index.html */
+.mini-site {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px;
+}
+.ms-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 16px;
+}
+.ms-logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+.ms-logo em { font-style: italic; color: var(--accent); }
+.ms-menu {
+  display: flex;
+  gap: 14px;
+  font-size: 10px;
+  color: rgba(255,255,255,0.5);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.ms-cta-mini {
+  background: var(--accent);
+  color: var(--ink);
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+}
+.ms-hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ms-hero-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.ms-hero-h {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  margin-bottom: 12px;
+}
+.ms-hero-h em {
+  font-style: italic;
+  color: var(--accent);
+  font-variation-settings: "wdth" 88;
+}
+.ms-hero-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.4;
+  max-width: 80%;
+  margin-bottom: 16px;
+}
+.ms-buttons { display: flex; gap: 6px; }
+.ms-btn-1 {
+  background: var(--accent);
+  color: var(--ink);
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.ms-btn-2 {
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Themes */
+.theme-dark { background: var(--ink); color: var(--bg); padding: 0; }
+.theme-cream { background: #faf6ed; color: var(--ink); padding: 0; }
+.theme-cream .ms-nav-bar { border-bottom-color: rgba(20,20,20,0.08); }
+.theme-cream .ms-menu { color: rgba(20,20,20,0.45); }
+.theme-cream .ms-logo em { color: #8b6914; }
+.theme-cream .ms-cta-mini { background: var(--ink); color: var(--bg); }
+.theme-cream .ms-hero-tag { color: #8b6914; }
+.theme-cream .ms-hero-sub { color: rgba(20,20,20,0.6); }
+.theme-cream .ms-hero-h em { color: #8b6914; }
+.theme-cream .ms-btn-1 { background: var(--ink); color: var(--bg); }
+.theme-cream .ms-btn-2 { border-color: rgba(20,20,20,0.15); color: var(--ink); }
+
+.theme-green { background: #1c3329; color: var(--bg); padding: 0; }
+.theme-green .ms-hero-h em { color: #d4b06a; }
+.theme-green .ms-hero-tag { color: #d4b06a; }
+.theme-green .ms-cta-mini { background: #d4b06a; color: #1c3329; }
+.theme-green .ms-btn-1 { background: #d4b06a; color: #1c3329; }
+
+.theme-wine { background: #ede4d3; color: var(--ink); padding: 0; }
+.theme-wine .ms-logo em { color: #7a2018; }
+.theme-wine .ms-cta-mini { background: #7a2018; color: #fff; }
+.theme-wine .ms-hero-h em { color: #7a2018; }
+.theme-wine .ms-hero-tag { color: #7a2018; }
+.theme-wine .ms-hero-sub { color: rgba(20,20,20,0.6); }
+.theme-wine .ms-nav-bar { border-bottom-color: rgba(20,20,20,0.08); }
+.theme-wine .ms-menu { color: rgba(20,20,20,0.5); }
+.theme-wine .ms-btn-1 { background: #7a2018; color: #fff; }
+.theme-wine .ms-btn-2 { border-color: rgba(20,20,20,0.15); color: var(--ink); }
+
+.theme-leaf { background: #f0ebde; color: var(--ink); padding: 0; }
+.theme-leaf .ms-logo em { color: #4a6b3a; }
+.theme-leaf .ms-cta-mini { background: #4a6b3a; color: #fff; }
+.theme-leaf .ms-hero-h em { color: #4a6b3a; }
+.theme-leaf .ms-hero-tag { color: #4a6b3a; }
+.theme-leaf .ms-hero-sub { color: rgba(20,20,20,0.6); }
+.theme-leaf .ms-nav-bar { border-bottom-color: rgba(20,20,20,0.08); }
+.theme-leaf .ms-menu { color: rgba(20,20,20,0.5); }
+.theme-leaf .ms-btn-1 { background: #4a6b3a; color: #fff; }
+.theme-leaf .ms-btn-2 { border-color: rgba(20,20,20,0.15); color: var(--ink); }
+
+.theme-warm { background: #2d1b15; color: var(--bg); padding: 0; }
+.theme-warm .ms-logo em { color: #e8a87c; }
+.theme-warm .ms-cta-mini { background: #e8a87c; color: #2d1b15; }
+.theme-warm .ms-hero-h em { color: #e8a87c; }
+.theme-warm .ms-hero-tag { color: #e8a87c; }
+.theme-warm .ms-hero-sub { color: rgba(255,255,255,0.65); }
+.theme-warm .ms-nav-bar { border-bottom-color: rgba(255,255,255,0.1); }
+.theme-warm .ms-btn-1 { background: #e8a87c; color: #2d1b15; }
+
+.theme-klei { background: #1a1a1a; color: var(--bg); padding: 0; }
+.theme-klei .ms-logo em { color: #c9a96e; }
+.theme-klei .ms-cta-mini { background: #c9a96e; color: var(--ink); }
+.theme-klei .ms-hero-h em { color: #c9a96e; }
+.theme-klei .ms-hero-tag { color: #c9a96e; }
+.theme-klei .ms-hero-sub { color: rgba(255,255,255,0.6); }
+.theme-klei .ms-btn-1 { background: #c9a96e; color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-brand">
+    <div class="brand-mark">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+      </svg>
+    </div>
+    <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/cases" class="active">Werk</a>
+    <a href="/aanpak">Aanpak</a>
+    <a href="/over">Over</a>
+    <a href="/blog">Blog</a>
+    <a href="/#pricing">Prijzen</a>
+  </div>
+  <a href="/#contact" class="nav-cta">Start project →</a>
+</nav>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow eyebrow-amber page-header-eyebrow">— Selected work · 2024–2026</span>
+      <h1 class="page-header-h">Sites die <em>werken</em>.<br />Voor Belgische KMO's.</h1>
+      <p class="page-header-sub">
+        Recente projecten gelanceerd in 2026 — van Antwerpse elektriciens tot maatwerk-interieurbouwers. Nog 3 plekken open in juni 2026 voor nieuwe projecten.
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- CASES -->
+<section style="background: var(--bg);">
+  <div class="container">
+    <div class="filter-row reveal">
+      <button class="filter-pill active">Alle projecten</button>
+      <button class="filter-pill">Bouw &amp; installatie</button>
+      <button class="filter-pill">Hospitality</button>
+      <button class="filter-pill">B2B &amp; consultancy</button>
+      <button class="filter-pill">Retail &amp; webshops</button>
+      <button class="filter-pill">Ambacht &amp; ateliers</button>
+    </div>
+
+    <!-- Echte cases -->
+    <div class="cases-grid reveal">
+      <a href="https://voltrix.be" target="_blank" rel="noopener" class="case-card">
+        <div class="case-thumb theme-dark">
+          <div class="mini-site">
+            <div class="ms-nav-bar">
+              <div class="ms-logo">voltrix<em>.</em></div>
+              <div class="ms-menu"><span>Diensten</span><span>Werk</span><span>Over</span></div>
+              <div class="ms-cta-mini">Offerte →</div>
+            </div>
+            <div class="ms-hero-content">
+              <div class="ms-hero-tag">— ELEKTRICIEN · ANTWERPEN</div>
+              <div class="ms-hero-h">Een elektricien die het <em>verschil maakt</em>.</div>
+              <div class="ms-hero-sub">Toekomstgerichte installaties — AREI-conform, klaar voor laadpalen en domotica.</div>
+              <div class="ms-buttons">
+                <span class="ms-btn-1">Offerte in 3 stappen</span>
+                <span class="ms-btn-2">WhatsApp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="case-info">
+          <div class="case-tag">Bouw &amp; installatie · 2026</div>
+          <div class="case-name">Voltrix</div>
+          <div class="case-desc">Lokale SEO-optimalisatie, multi-step offerteformulier en WhatsApp-integratie voor een Antwerpse elektricien gespecialiseerd in zekeringkasten, AREI-keuringen en laadpalen.</div>
+          <div class="case-meta">
+            <span>VOLTRIX.BE ↗</span>
+            <div class="case-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://gevanti.be" target="_blank" rel="noopener" class="case-card">
+        <div class="case-thumb theme-cream">
+          <div class="mini-site">
+            <div class="ms-nav-bar">
+              <div class="ms-logo">Gevanti<em> bv</em></div>
+              <div class="ms-menu"><span>Maatwerk</span><span>Projecten</span></div>
+              <div class="ms-cta-mini">Contact</div>
+            </div>
+            <div class="ms-hero-content">
+              <div class="ms-hero-tag">— MAATWERK INTERIEUR · RIJKEVORSEL</div>
+              <div class="ms-hero-h">Keukens en interieur <em>op maat</em>.</div>
+              <div class="ms-hero-sub">Hoogwaardige keukens, inbouwkasten en interieurprojecten in provincie Antwerpen.</div>
+              <div class="ms-buttons">
+                <span class="ms-btn-1">Bespreek project</span>
+                <span class="ms-btn-2">Projecten</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="case-info">
+          <div class="case-tag">Ambacht &amp; ateliers · 2026</div>
+          <div class="case-name">Gevanti BV</div>
+          <div class="case-desc">Visuele portfolio-website met focus op maatwerk-realisaties. Editorial layout om keukens, dressings en interieurprojecten te presenteren aan klanten in provincie Antwerpen.</div>
+          <div class="case-meta">
+            <span>GEVANTI.BE ↗</span>
+            <div class="case-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Honest placeholder section -->
+    <div class="reveal" style="margin-top: 40px; padding: 60px 40px; background: var(--bg-soft); border: 1px dashed var(--line-2); border-radius: 22px; text-align: center;">
+      <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 18px;">— Beschikbaar in juni 2026</div>
+      <h3 style="font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 18px;">3 plekken open voor <em style="font-style: italic; color: var(--accent-deep); font-variation-settings: 'wdth' 85;">nieuwe projecten</em>.</h3>
+      <p style="font-size: 16px; color: var(--ink-3); max-width: 540px; margin: 0 auto 28px; line-height: 1.6;">
+        Webcraftiq is jong en bouwt aan zijn portfolio. Bovenstaande projecten zijn live — er is plaats voor 3 nieuwe klanten in juni 2026. Eerste klanten krijgen een launch-tarief en uitgebreide aandacht.
+      </p>
+      <a href="/#contact" class="btn btn-primary" style="display: inline-flex;">
+        Plan een intake-call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="cta-h">Word de <em>volgende case</em>?</h2>
+    <p class="cta-sub">
+      We hebben in juni 3 plaatsen open. Plan een vrijblijvende intake-call van 45 minuten en we bekijken samen of we een match zijn.
+    </p>
+    <div class="cta-actions">
+      <a href="/#contact" class="btn btn-amber">
+        Plan een intake-call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/aanpak" class="btn btn-ghost-dark">Lees onze aanpak</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="brand-mark">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+            </svg>
+          </div>
+          <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+        </div>
+        <p class="footer-tag">Premium webdesign voor Belgische KMO's. Volledige sites, op maat ontworpen, met slimme conversie-features.</p>
+      </div>
+      <div>
+        <div class="footer-h">Pagina's</div>
+        <ul class="footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/website-laten-maken">Website laten maken</a></li>
+          <li><a href="/cases">Werk</a></li>
+          <li><a href="/aanpak">Aanpak</a></li>
+          <li><a href="/over">Over</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Contact</div>
+        <ul class="footer-list">
+          <li>info@webcraftiq.be</li>
+          <li>BTW BE0803.343.103</li>
+          <li>Antwerpen, BE</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Legal</div>
+        <ul class="footer-list">
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/voorwaarden">Voorwaarden</a></li>
+          <li><a href="/cookies">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Webcraftiq · Stef Weyts · BTW BE0803.343.103</span>
+      <span>Built in Belgium · Made with care</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+reveals.forEach((el) => io.observe(el));
+
+const sp = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  sp.style.width = ((scrolled / docHeight) * 100) + '%';
+});
+
+// Filter pills (visual only for now, no functionality)
+document.querySelectorAll('.filter-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>

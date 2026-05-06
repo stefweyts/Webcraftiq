@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Multi-step formulier vs klassiek contactformulier · Webcraftiq</title>
+<meta name="description" content="Waarom een gestructureerd multi-step formulier 3-5x meer (en betere) leads oplevert dan een klassiek tekstvak. Onderbouwd met cijfers uit conversie-onderzoek en Belgische praktijk." />
+<meta name="keywords" content="multi-step formulier, contactformulier conversie, lead generatie KMO, formulier optimalisatie België, conversie webdesign" />
+<meta name="author" content="Webcraftiq" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://webcraftiq.be/blog/multi-step-formulier-vs-klassiek" />
+
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="nl_BE" />
+<meta property="og:site_name" content="Webcraftiq" />
+<meta property="og:url" content="https://webcraftiq.be/blog/multi-step-formulier-vs-klassiek" />
+<meta property="og:title" content="Multi-step formulier vs klassiek contactformulier: de cijfers" />
+<meta property="og:description" content="Waarom een gestructureerd formulier 3-5x meer leads oplevert dan een tekstvak. Onderbouwd met cijfers uit conversie-onderzoek." />
+<meta property="og:image" content="https://webcraftiq.be/og-blog-formulier.jpg" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Multi-step formulier vs klassiek contactformulier: de cijfers" />
+<meta name="twitter:description" content="Waarom een gestructureerd formulier 3-5x meer leads oplevert. Echte data." />
+
+<meta name="theme-color" content="#f5f1ea" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141414'/%3E%3Cpath d='M7 11h3l1.5 7L13 12l1.5 6L16 11h3M19 18l3-7' stroke='%23d97706' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Multi-step formulier vs klassiek contactformulier: de cijfers liegen niet",
+  "description": "Waarom een gestructureerd multi-step formulier 3-5x meer (en betere) leads oplevert dan een klassiek tekstvak. Onderbouwd met cijfers uit conversie-onderzoek en Belgische praktijk.",
+  "author": {
+    "@type": "Organization",
+    "name": "Webcraftiq",
+    "url": "https://webcraftiq.be"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Webcraftiq",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://webcraftiq.be/logo.png"
+    }
+  },
+  "datePublished": "2026-05-04",
+  "dateModified": "2026-05-04",
+  "inLanguage": "nl-BE",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://webcraftiq.be/blog/multi-step-formulier-vs-klassiek"
+  }
+}
+</script>
+
+<style>
+/* Post header */
+.post-header {
+  padding: 160px 0 60px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.post-tag-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.post-cat {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.post-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--ink-4);
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+.post-meta-item { display: inline-flex; align-items: center; gap: 6px; }
+.post-meta-item::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+
+.post-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 24px;
+  max-width: 880px;
+}
+.post-h1 em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+
+.post-lede {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.8vw, 22px);
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--ink-3);
+  max-width: 720px;
+  letter-spacing: -0.01em;
+}
+
+.author-row {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.author-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+}
+.author-info .name { font-weight: 500; font-size: 14px; }
+.author-info .role { font-size: 12px; color: var(--ink-3); }
+
+/* Post body */
+.post-body {
+  padding: 80px 0;
+  background: var(--bg);
+}
+.post-body .prose-content { max-width: 720px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 768px) { .post-body .prose-content { padding: 0 22px; } }
+
+.post-body h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+.post-body h2 em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+
+.post-body h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-top: 36px;
+  margin-bottom: 14px;
+}
+
+.post-body p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin-bottom: 22px;
+}
+.post-body p strong { font-weight: 600; color: var(--ink); }
+.post-body p em { font-style: italic; color: var(--ink); }
+
+.post-body ul, .post-body ol {
+  margin: 0 0 26px 0;
+  padding-left: 22px;
+}
+.post-body ul li, .post-body ol li {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin-bottom: 8px;
+  padding-left: 6px;
+}
+.post-body ul li::marker { color: var(--accent); }
+.post-body ol li::marker { color: var(--accent-deep); font-weight: 600; }
+
+.post-body a {
+  color: var(--accent-deep);
+  border-bottom: 1px solid var(--accent-line);
+  transition: all 0.2s;
+}
+.post-body a:hover { background: var(--accent-soft); }
+
+/* Special blocks */
+.callout {
+  margin: 36px 0;
+  padding: 24px 28px;
+  background: var(--bg-card);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 14px 14px 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+.callout-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.stat-block {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 700px) { .stat-block { grid-template-columns: 1fr; } }
+.stat-cell {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+}
+.stat-cell-num {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-cell-num em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+.stat-cell-label {
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.4;
+}
+
+/* Form comparison visual */
+.forms-compare {
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+@media (max-width: 700px) { .forms-compare { grid-template-columns: 1fr; } }
+.form-mock {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+}
+.form-mock-bad { background: #fef6f6; border-color: #fbdcdc; }
+.form-mock-good { background: var(--accent-soft); border-color: var(--accent-line); }
+
+.form-mock-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.form-mock-bad .form-mock-tag { color: var(--red); }
+.form-mock-good .form-mock-tag { color: var(--accent-deep); }
+
+.form-mock-input {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--ink-4);
+}
+.form-mock-textarea {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--ink-4);
+  height: 60px;
+}
+.form-mock-step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--accent-deep);
+  margin-bottom: 14px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+.form-mock-progress {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+.form-mock-progress .seg {
+  flex: 1;
+  height: 4px;
+  background: rgba(217, 119, 6, 0.2);
+  border-radius: 2px;
+}
+.form-mock-progress .seg.active { background: var(--accent); }
+
+.form-mock-options {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.form-mock-option {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+.form-mock-option.selected { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+.form-mock-btn {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 4px;
+}
+.form-mock-good .form-mock-btn { background: var(--accent-deep); }
+
+/* Comparison table */
+.comp-table {
+  margin: 36px 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg-card);
+}
+.comp-table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  border-bottom: 1px solid var(--line);
+}
+.comp-table-row:last-child { border-bottom: 0; }
+.comp-table-row.header {
+  background: var(--bg-soft);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.comp-table-cell {
+  padding: 14px 18px;
+  font-size: 14px;
+  border-right: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+}
+.comp-table-cell:last-child { border-right: 0; }
+.comp-table-cell.bad { color: var(--ink-3); }
+.comp-table-cell.good { color: var(--ink); font-weight: 500; }
+
+@media (max-width: 700px) {
+  .comp-table-row { grid-template-columns: 1.4fr 1fr 1fr; }
+  .comp-table-cell { font-size: 12px; padding: 10px 12px; }
+}
+
+/* Related posts */
+.related-section {
+  background: var(--bg-soft);
+  padding: 80px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.related-h {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin-bottom: 30px;
+}
+.related-h em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+
+.related-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+@media (max-width: 700px) { .related-grid { grid-template-columns: 1fr; } }
+
+.related-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 26px;
+  transition: all 0.3s var(--ease);
+}
+.related-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -16px rgba(20, 20, 20, 0.1);
+  border-color: var(--line-2);
+}
+.related-card-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 12px;
+}
+.related-card-h {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.related-card-p {
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.55;
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-brand">
+    <div class="brand-mark">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+      </svg>
+    </div>
+    <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/cases">Werk</a>
+    <a href="/aanpak">Aanpak</a>
+    <a href="/over">Over</a>
+    <a href="/blog" class="active">Blog</a>
+    <a href="/#pricing">Prijzen</a>
+  </div>
+  <a href="/#contact" class="nav-cta">Start project →</a>
+</nav>
+
+<!-- POST HEADER -->
+<header class="post-header">
+  <div class="container-narrow">
+    <div class="reveal" style="margin-bottom: 30px;">
+      <a href="/blog" style="font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em; color: var(--ink-3); display: inline-flex; align-items: center; gap: 6px;">
+        ← Terug naar blog
+      </a>
+    </div>
+
+    <div class="reveal" data-delay="1">
+      <div class="post-tag-row">
+        <span class="post-cat">Conversie · Cijfers</span>
+        <div class="post-meta">
+          <span class="post-meta-item">7 min lezen</span>
+          <span class="post-meta-item">4 mei 2026</span>
+        </div>
+      </div>
+
+      <h1 class="post-h1">Multi-step formulier vs klassiek contactformulier: de <em>cijfers liegen niet</em>.</h1>
+
+      <p class="post-lede">
+        70% van je contactformulier-aanvragen komt onvolledig binnen. Je verspilt uren aan mailtjes-pingpong. En 9 op 10 bezoekers vraagt überhaupt niks aan. Hier is wat we leerden uit onderzoek en eigen praktijk — en wat je morgen kan veranderen.
+      </p>
+
+      <div class="author-row">
+        <div class="author-avatar">W</div>
+        <div class="author-info">
+          <div class="name">Webcraftiq</div>
+          <div class="role">Webdesign agency · Antwerpen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- POST BODY -->
+<article class="post-body">
+  <div class="prose-content reveal">
+
+    <p>
+      Stel je voor: je bent installateur. Iemand wil een laadpaal laten plaatsen. Hij googelt, vindt jouw site, scrolt door je werk, en wil een offerte vragen. Wat krijgt hij?
+    </p>
+
+    <p>
+      <strong>In 90% van de gevallen: een tekstvak.</strong>
+    </p>
+
+    <div class="forms-compare">
+      <div class="form-mock form-mock-bad">
+        <div class="form-mock-tag">— De klassieke aanpak</div>
+        <div class="form-mock-input">Naam</div>
+        <div class="form-mock-input">Email</div>
+        <div class="form-mock-input">Telefoon</div>
+        <div class="form-mock-textarea">Bericht...</div>
+        <span class="form-mock-btn">Verstuur</span>
+      </div>
+      <div class="form-mock form-mock-good">
+        <div class="form-mock-tag">— Multi-step</div>
+        <div class="form-mock-progress">
+          <div class="seg active"></div>
+          <div class="seg active"></div>
+          <div class="seg"></div>
+        </div>
+        <div class="form-mock-step">Stap 2/3 · Type installatie</div>
+        <div class="form-mock-options">
+          <span class="form-mock-option selected">Laadpaal</span>
+          <span class="form-mock-option">Zonnepanelen</span>
+          <span class="form-mock-option">Industrieel</span>
+        </div>
+        <div class="form-mock-step" style="margin-top: 14px;">Welk type wagen?</div>
+        <div class="form-mock-options">
+          <span class="form-mock-option selected">Tesla</span>
+          <span class="form-mock-option">VW ID.4</span>
+          <span class="form-mock-option">Anders</span>
+        </div>
+        <span class="form-mock-btn">Volgende →</span>
+      </div>
+    </div>
+
+    <p>
+      Het verschil voelt cosmetisch aan. Het is alles behalve dat. Hier zijn cijfers uit conversie-onderzoek (onder andere via Formstack en HubSpot benchmarks) en wat we zelf zien bij Belgische KMO-sites die we bouwen:
+    </p>
+
+    <div class="stat-block">
+      <div class="stat-cell">
+        <div class="stat-cell-num"><em>3,5</em>x</div>
+        <div class="stat-cell-label">Hogere conversie van bezoeker naar aanvraag</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell-num">9<em>4</em>%</div>
+        <div class="stat-cell-label">Aanvragen komen volledig ingevuld binnen</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell-num"><em>−</em>78%</div>
+        <div class="stat-cell-label">Minder tijd per aanvraag tot offerte</div>
+      </div>
+    </div>
+
+    <h2>Waarom <em>klassieke</em> formulieren falen</h2>
+
+    <p>
+      Een typisch contactformulier op een KMO-website is een tekstvak met "naam, email, bericht". Het ziet er onschuldig uit. Maar voor iemand die overweegt om een aanvraag te doen, is het een psychologische barrière.
+    </p>
+
+    <p>De reden dat ze falen, valt uiteen in vier mechanismen:</p>
+
+    <h3>1. Decision fatigue van een leeg tekstvak</h3>
+
+    <p>
+      Een open tekstvak vraagt aan de bezoeker: <em>"vertel ons wat je nodig hebt"</em>. Klinkt vriendelijk, maar voor de meeste mensen voelt het overweldigend. Ze weten niet wat ze moeten typen. Welke details geef je? Hoe formeel? Te kort en je krijgt geen reactie, te lang en je voelt je dom.
+    </p>
+
+    <p>
+      Het resultaat: <strong>de bezoeker stelt het uit.</strong> "Ik bel hen wel later." Spoiler: dat doen ze niet.
+    </p>
+
+    <h3>2. De "ik weet niet wat ze nodig hebben" angst</h3>
+
+    <p>
+      Stel: je wil een laadpaal laten plaatsen. Wat moet de installateur weten? Type wagen? Afstand tot meterkast? Vermogen? De bezoeker weet het niet. Hij vreest dat hij verkeerde info geeft of belangrijke details mist. <strong>Dus geeft hij liever helemaal niks dan iets fouts.</strong>
+    </p>
+
+    <h3>3. Geen voortgang, geen commitment</h3>
+
+    <p>
+      Onderzoek toont dat mensen taken eerder afmaken als ze voortgang zien. Een leeg tekstvak heeft 0% voortgang — het is "alles of niks". Dat is psychologisch zwaar. Een multi-step met progressbalkjes (33%, 66%, 100%) gebruikt het <a href="https://en.wikipedia.org/wiki/Sunk_cost" target="_blank" rel="noopener">commitment-principe</a>: <em>"ik ben al aan stap 2, ik maak het af"</em>.
+    </p>
+
+    <h3>4. Geen bevestiging dat je aanvraag relevant is</h3>
+
+    <p>
+      Bij een open formulier weet de bezoeker niet of zijn aanvraag <em>past bij wat jij doet</em>. Een multi-step formulier dat begint met "Welke dienst zoek je?" en opties geeft (laadpaal, zonnepanelen, industrieel) bevestigt direct: <strong>"ja, deze installateur doet wat ik nodig heb"</strong>.
+    </p>
+
+    <h2>Waarom multi-step <em>wel</em> werkt</h2>
+
+    <p>
+      Een goed multi-step formulier verlaagt de drempel op elke stap én verzamelt ondertussen veel meer relevante info. Het werkt op vier niveaus tegelijk:
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">— De vier mechanismen</div>
+      <p style="margin-bottom: 12px;"><strong>1. Microcommitments.</strong> Stap 1 is altijd makkelijk (één klik op "laadpaal"). Eens iemand begint, maakt 80% het af.</p>
+      <p style="margin-bottom: 12px;"><strong>2. Geleide ervaring.</strong> Bezoeker hoeft niet zelf te bedenken wat relevant is. Jij stelt de vragen, hij hoeft enkel te antwoorden.</p>
+      <p style="margin-bottom: 12px;"><strong>3. Conditionele logica.</strong> Vragen passen zich aan op het antwoord. Iemand die "zonnepanelen" kiest, krijgt andere vragen dan iemand die "laadpaal" kiest. Geen overbodige velden.</p>
+      <p style="margin-bottom: 0;"><strong>4. Kwaliteit van data.</strong> Je krijgt gestructureerde info terug die je 1-op-1 in je offerte kan zetten. Geen mailtjes-pingpong meer.</p>
+    </div>
+
+    <h2>De échte impact: tijd</h2>
+
+    <p>
+      Het meest onderschatte voordeel van multi-step formulieren is niet conversie. Het is <strong>tijdswinst</strong>.
+    </p>
+
+    <p>
+      Neem als voorbeeld een typische installateur of vakman in Vlaanderen. Met een klassiek formulier komt elke aanvraag onvolledig binnen — er volgt mailtjes-pingpong, telefoontjes voor verduidelijking, soms een plaatsbezoek voor enkel de offerte. Dat ziet er ongeveer zo uit:
+    </p>
+
+    <div class="comp-table">
+      <div class="comp-table-row header">
+        <div class="comp-table-cell">— Stap</div>
+        <div class="comp-table-cell">Klassiek</div>
+        <div class="comp-table-cell">Multi-step</div>
+      </div>
+      <div class="comp-table-row">
+        <div class="comp-table-cell">Lezen aanvraag</div>
+        <div class="comp-table-cell bad">5 min</div>
+        <div class="comp-table-cell good">2 min</div>
+      </div>
+      <div class="comp-table-row">
+        <div class="comp-table-cell">Mailtjes voor extra info</div>
+        <div class="comp-table-cell bad">3-5 mails, 2-4 dagen</div>
+        <div class="comp-table-cell good">0 mails</div>
+      </div>
+      <div class="comp-table-row">
+        <div class="comp-table-cell">Telefoontjes voor verduidelijking</div>
+        <div class="comp-table-cell bad">1-2 calls, 30 min</div>
+        <div class="comp-table-cell good">Soms 1 korte call</div>
+      </div>
+      <div class="comp-table-row">
+        <div class="comp-table-cell">Offerte opstellen</div>
+        <div class="comp-table-cell bad">45 min</div>
+        <div class="comp-table-cell good">15 min</div>
+      </div>
+      <div class="comp-table-row">
+        <div class="comp-table-cell">Totaal per aanvraag</div>
+        <div class="comp-table-cell bad" style="color: var(--red); font-weight: 600;">~2 uur</div>
+        <div class="comp-table-cell good" style="color: var(--green); font-weight: 600;">~18 minuten</div>
+      </div>
+    </div>
+
+    <p>
+      Voor 15 aanvragen per maand: dat is <strong>~25 uur tijdswinst per maand</strong>. Meer dan 3 werkdagen. Alleen al door het formulier te veranderen.
+    </p>
+
+    <p>
+      Reken die uren maar eens om in eigen tarief. Voor een vakman die €80/uur factureert, is dat €2.000 per maand aan vrijgekomen capaciteit — ruim €20.000 per jaar. <em>Voor één UI-keuze.</em>
+    </p>
+
+    <h2>Hoe ziet een goed multi-step formulier eruit?</h2>
+
+    <p>Niet elk multi-step formulier werkt. Een slecht ontworpen multi-step formulier (te veel stappen, irrelevante vragen, slechte mobiele UX) presteert slechter dan een goed klassiek formulier. Wat werkt:</p>
+
+    <ol>
+      <li><strong>Maximaal 3-4 stappen.</strong> Meer dan dat haakt mensen af. Begin met de makkelijkste vraag.</li>
+      <li><strong>Eerste stap is altijd één klik.</strong> Geen tekstinvoer in stap 1. Knoppen, opties, dropdown — niet typen.</li>
+      <li><strong>Voortgangsindicator zichtbaar.</strong> Bezoeker moet altijd weten waar hij zit ("stap 2 van 3").</li>
+      <li><strong>Conditionele logica.</strong> Vragen passen zich aan op vorige antwoorden. Geen overbodige velden.</li>
+      <li><strong>Email/telefoon komt laatst.</strong> Eerst commitment opbouwen, dan pas contactgegevens vragen.</li>
+      <li><strong>Mobiel-first ontworpen.</strong> 60-70% van bezoekers is mobiel. Grote tap-targets, geen pinch-to-zoom.</li>
+      <li><strong>Backend-integratie.</strong> Aanvragen landen direct in je CRM (Teamleader, Odoo, HubSpot). Klant krijgt automatisch een bevestigingsmail.</li>
+    </ol>
+
+    <h2>Wanneer is een klassiek formulier <em>wel</em> oké?</h2>
+
+    <p>
+      Eerlijk: niet altijd is multi-step nodig. Voor sommige situaties werkt een klassiek formulier prima:
+    </p>
+
+    <ul>
+      <li>Algemene "hallo, vraag mij iets"-pagina's (bv. een over-pagina-contact)</li>
+      <li>Sites zonder offertes-flow (een blog, een persoonlijke portfolio)</li>
+      <li>Wanneer je dienst écht maar één variant heeft</li>
+    </ul>
+
+    <p>
+      Maar voor élke KMO die offertes opmaakt op basis van klantvariabelen — installateurs, schilders, schrijnwerkers, architecten, fotografen, eventbureaus, marketingbureaus — is een multi-step formulier de <strong>standaard, niet de optie</strong>.
+    </p>
+
+    <div class="callout">
+      <div class="callout-label">— Conclusie</div>
+      <p style="margin-bottom: 0;">Een klassiek formulier kost je niet €0 — het kost je <strong>aanvragen die nooit binnenkomen</strong> en <strong>uren tijd per week</strong> aan onnodige communicatie. Voor de meeste KMO's is overschakelen naar multi-step de single hoogste-ROI verandering die je dit jaar kan doen aan je website.</p>
+    </div>
+
+    <h2>Wat nu?</h2>
+
+    <p>
+      Als je site nog een klassiek formulier heeft, heb je drie opties:
+    </p>
+
+    <ol>
+      <li><strong>Doe het zelf</strong> met tools als Tally, Typeform of Formless. Werkt, maar voelt vaak generiek en integreert moeizaam met je bestaande site.</li>
+      <li><strong>Vraag je huidige bureau</strong> om het in te bouwen. Verwacht een meerkost van €800-€2.000 afhankelijk van complexiteit.</li>
+      <li><strong>Bouw een complete site</strong> die rond conversie is opgezet — formulier inbegrepen. Onze Pro-pakket doet exact dat voor €4.500.</li>
+    </ol>
+
+    <p>
+      Wil je weten welke aanpak past bij jouw situatie? <a href="/#contact">Plan een vrijblijvende intake-call van 45 minuten</a> — we bekijken samen je huidige formulier, schatten in wat het je kost aan gemiste leads, en geven concrete adviezen. Geen verplichting, geen pitch.
+    </p>
+
+  </div>
+</article>
+
+<!-- RELATED POSTS -->
+<section class="related-section">
+  <div class="container-narrow">
+    <h2 class="related-h reveal">Lees <em>verder</em>.</h2>
+    <div class="related-grid reveal" data-delay="1">
+      <a href="/aanpak" class="related-card">
+        <div class="related-card-tag">Strategie · Mindset</div>
+        <h3 class="related-card-h">Een website is geen visitekaartje. Het is een werkpaard.</h3>
+        <p class="related-card-p">Waarom 9 op 10 KMO-websites in België falen — en wat je eraan doet. De volledige Webcraftiq aanpak.</p>
+      </a>
+      <a href="/cases/voltrix" class="related-card">
+        <div class="related-card-tag">Case Study · 2025</div>
+        <h3 class="related-card-h">Voltrix · Een lokale website voor een elektricien in Antwerpen.</h3>
+        <p class="related-card-p">Diepe case study: hoe we Voltrix' site herbouwden met een multi-step formulier — en wat de impact was.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="cta-h">Tijd voor een <em>betere flow</em>?</h2>
+    <p class="cta-sub">
+      Plan een vrijblijvende intake-call. We bekijken samen je huidige formulier en wat het je kost.
+    </p>
+    <div class="cta-actions">
+      <a href="/#contact" class="btn btn-amber">
+        Plan een intake-call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/cases" class="btn btn-ghost-dark">Bekijk ons werk</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="brand-mark">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+            </svg>
+          </div>
+          <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+        </div>
+        <p class="footer-tag">Premium webdesign voor Belgische KMO's. Volledige sites, op maat ontworpen, met slimme conversie-features.</p>
+      </div>
+      <div>
+        <div class="footer-h">Pagina's</div>
+        <ul class="footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/website-laten-maken">Website laten maken</a></li>
+          <li><a href="/cases">Werk</a></li>
+          <li><a href="/aanpak">Aanpak</a></li>
+          <li><a href="/over">Over</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Contact</div>
+        <ul class="footer-list">
+          <li>info@webcraftiq.be</li>
+          <li>BTW BE0803.343.103</li>
+          <li>Antwerpen, BE</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Legal</div>
+        <ul class="footer-list">
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/voorwaarden">Voorwaarden</a></li>
+          <li><a href="/cookies">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Webcraftiq · Stef Weyts · BTW BE0803.343.103</span>
+      <span>Built in Belgium · Made with care</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+reveals.forEach((el) => io.observe(el));
+
+const sp = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  sp.style.width = ((scrolled / docHeight) * 100) + '%';
+});
+</script>
+
+</body>
+</html>

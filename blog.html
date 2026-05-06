@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog · Webcraftiq | Inzichten over webdesign voor KMO's</title>
+<meta name="description" content="Praktische inzichten over webdesign, conversie en SEO voor Belgische KMO's. Geschreven voor zaakvoerders die meer uit hun website willen halen." />
+<meta name="keywords" content="webdesign blog België, KMO website tips, conversie tips, webdesign Vlaanderen, SEO KMO" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://webcraftiq.be/blog" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="nl_BE" />
+<meta property="og:url" content="https://webcraftiq.be/blog" />
+<meta property="og:title" content="Blog · Webcraftiq" />
+<meta property="og:description" content="Praktische inzichten over webdesign voor Belgische KMO's." />
+
+<meta name="theme-color" content="#f5f1ea" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141414'/%3E%3Cpath d='M7 11h3l1.5 7L13 12l1.5 6L16 11h3M19 18l3-7' stroke='%23d97706' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+
+<style>
+section { padding: 100px 0; border-bottom: 1px solid var(--line); }
+@media (max-width: 768px) { section { padding: 70px 0; } }
+
+/* Featured post */
+.featured-post {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 60px;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+}
+.featured-post:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 48px -16px rgba(20, 20, 20, 0.15);
+  border-color: var(--line-2);
+}
+@media (max-width: 900px) { .featured-post { grid-template-columns: 1fr; } }
+
+.featured-thumb {
+  background: linear-gradient(135deg, var(--ink) 0%, #2a2a28 100%);
+  color: var(--bg);
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+}
+.featured-thumb::before {
+  content: "";
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.18), transparent 60%);
+}
+.featured-thumb-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+  position: relative;
+}
+.featured-thumb-h {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  position: relative;
+  margin-bottom: 16px;
+}
+.featured-thumb-h em { font-style: italic; color: var(--accent); font-variation-settings: "wdth" 85; }
+.featured-thumb-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.5);
+  position: relative;
+}
+
+.featured-content {
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.featured-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 18px;
+}
+.featured-h {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.featured-excerpt {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-3);
+  margin-bottom: 24px;
+}
+.featured-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-deep);
+}
+
+/* Post grid */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+@media (max-width: 900px) { .post-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .post-grid { grid-template-columns: 1fr; } }
+
+.post-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s var(--ease);
+  cursor: pointer;
+}
+.post-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--line-2);
+  box-shadow: 0 16px 32px -16px rgba(20, 20, 20, 0.1);
+}
+.post-card-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 14px;
+}
+.post-card-h {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.post-card-excerpt {
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: 18px;
+}
+.post-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-4);
+  letter-spacing: 0.05em;
+}
+
+/* Coming soon state */
+.coming-soon-card {
+  background: var(--bg-soft);
+  border: 1px dashed var(--line-2);
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.coming-soon-icon {
+  width: 48px; height: 48px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--ink-3);
+}
+.coming-soon-h {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.coming-soon-p {
+  font-size: 13px;
+  color: var(--ink-4);
+}
+
+/* Newsletter */
+.newsletter {
+  background: var(--ink);
+  color: var(--dark-fg);
+  border-radius: 22px;
+  padding: 60px 50px;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.newsletter::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.15), transparent 60%);
+  pointer-events: none;
+}
+.newsletter-h {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 14px;
+  position: relative;
+}
+.newsletter-h em { font-style: italic; color: var(--accent); font-variation-settings: "wdth" 85; }
+.newsletter-sub {
+  font-size: 15px;
+  color: var(--dark-fg-2);
+  max-width: 480px;
+  margin: 0 auto 28px;
+  line-height: 1.55;
+  position: relative;
+}
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+  max-width: 460px;
+  margin: 0 auto;
+  position: relative;
+}
+@media (max-width: 600px) { .newsletter-form { flex-direction: column; } }
+.newsletter-input {
+  flex: 1;
+  padding: 13px 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 999px;
+  color: var(--dark-fg);
+  font-size: 15px;
+  font-family: inherit;
+}
+.newsletter-input:focus { outline: none; border-color: var(--accent); }
+.newsletter-input::placeholder { color: rgba(255,255,255,0.4); }
+.newsletter-btn {
+  background: var(--accent);
+  color: var(--ink);
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  font-family: inherit;
+}
+.newsletter-btn:hover { background: #fff; }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-brand">
+    <div class="brand-mark">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+      </svg>
+    </div>
+    <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/cases">Werk</a>
+    <a href="/aanpak">Aanpak</a>
+    <a href="/over">Over</a>
+    <a href="/blog" class="active">Blog</a>
+    <a href="/#pricing">Prijzen</a>
+  </div>
+  <a href="/#contact" class="nav-cta">Start project →</a>
+</nav>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow eyebrow-amber page-header-eyebrow">— Inzichten &amp; ideeën</span>
+      <h1 class="page-header-h">Webdesign-<em>inzichten</em><br />voor zaakvoerders.</h1>
+      <p class="page-header-sub">
+        Praktische artikels over webdesign, conversie, SEO en automatisering — geschreven vanuit het perspectief van Belgische KMO's. Geen gehyped marketingspeak, gewoon wat werkt.
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- POSTS -->
+<section style="background: var(--bg);">
+  <div class="container">
+
+    <!-- Featured post -->
+    <a href="/aanpak" class="featured-post reveal">
+      <div class="featured-thumb">
+        <div class="featured-thumb-tag">— UITGELICHT ARTIKEL</div>
+        <h2 class="featured-thumb-h">Een website is geen <em>visitekaartje</em>.</h2>
+        <div class="featured-thumb-meta">10 min · 4 mei 2026</div>
+      </div>
+      <div class="featured-content">
+        <div class="featured-eyebrow">Strategie · Mindset</div>
+        <h3 class="featured-h">Waarom 9 op 10 KMO-websites in België falen — en wat je eraan doet.</h3>
+        <p class="featured-excerpt">
+          De meeste KMO-websites zijn digitale brochures: ze staan er, maar genereren geen werk. We bekijken het verschil tussen een visitekaartje-site en een werkpaard, met concrete cijfers en stappen om je site om te bouwen.
+        </p>
+        <span class="featured-arrow">
+          Lees het artikel
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </a>
+
+    <!-- Other posts -->
+    <div class="post-grid reveal">
+
+      <!-- Echte tweede post -->
+      <a href="/blog/multi-step-formulier-vs-klassiek" class="post-card">
+        <div class="post-card-tag">Conversie · Cijfers</div>
+        <h3 class="post-card-h">Multi-step formulier vs klassiek contactformulier: de cijfers liegen niet</h3>
+        <p class="post-card-excerpt">Waarom een gestructureerd formulier 3-5x meer (en betere) leads oplevert dan een tekstvak. Met data uit 12 Webcraftiq-projecten en concrete voorbeelden.</p>
+        <div class="post-card-meta">
+          <span>7 MIN · CONVERSIE</span>
+          <span>4 MEI 2026</span>
+        </div>
+      </a>
+
+      <!-- Coming soon placeholders — vervang door echte posts -->
+      <div class="coming-soon-card">
+        <div class="coming-soon-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="coming-soon-h">SEO basics voor Belgische KMO's</div>
+        <p class="coming-soon-p">Coming soon — de essentiële stappen voor Vlaamse zaakvoerders</p>
+      </div>
+
+      <div class="coming-soon-card">
+        <div class="coming-soon-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="coming-soon-h">Waarom we geen WordPress meer bouwen</div>
+        <p class="coming-soon-p">Coming soon — Astro, Next.js en moderne alternatieven</p>
+      </div>
+
+    </div>
+
+    <!-- Newsletter -->
+    <div class="newsletter reveal">
+      <h3 class="newsletter-h">Krijg artikels in je <em>inbox</em>.</h3>
+      <p class="newsletter-sub">
+        Ongeveer 1 mail per maand. Praktische inzichten over webdesign en conversie voor Belgische KMO's. Geen spam, je kan je altijd uitschrijven.
+      </p>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Bedankt! Newsletter setup wordt binnenkort gekoppeld.');">
+        <input type="email" class="newsletter-input" placeholder="naam@bedrijf.be" required />
+        <button type="submit" class="newsletter-btn">Inschrijven →</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="brand-mark">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+            </svg>
+          </div>
+          <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+        </div>
+        <p class="footer-tag">Premium webdesign voor Belgische KMO's. Volledige sites, op maat ontworpen, met slimme conversie-features.</p>
+      </div>
+      <div>
+        <div class="footer-h">Pagina's</div>
+        <ul class="footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/website-laten-maken">Website laten maken</a></li>
+          <li><a href="/cases">Werk</a></li>
+          <li><a href="/aanpak">Aanpak</a></li>
+          <li><a href="/over">Over</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Contact</div>
+        <ul class="footer-list">
+          <li>info@webcraftiq.be</li>
+          <li>BTW BE0803.343.103</li>
+          <li>Antwerpen, BE</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Legal</div>
+        <ul class="footer-list">
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/voorwaarden">Voorwaarden</a></li>
+          <li><a href="/cookies">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Webcraftiq · Stef Weyts · BTW BE0803.343.103</span>
+      <span>Built in Belgium · Made with care</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+reveals.forEach((el) => io.observe(el));
+
+const sp = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  sp.style.width = ((scrolled / docHeight) * 100) + '%';
+});
+</script>
+
+</body>
+</html>
