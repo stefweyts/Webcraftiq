@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-<!-- Webcraftiq v1.0 | 2026-05-06 | Stef Weyts -->
+<!-- Webcraftiq v2.0 | 2026-05-06 | Stef Weyts -->
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -295,6 +295,42 @@ section { padding: 100px 0; border-bottom: 1px solid var(--line); }
 }
 .newsletter-btn:hover { background: #fff; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://webcraftiq.be/#organization",
+  "name": "Webcraftiq",
+  "url": "https://webcraftiq.be",
+  "logo": "https://webcraftiq.be/logo.svg",
+  "email": "info@webcraftiq.be",
+  "vatID": "BE0803343103",
+  "foundingDate": "2026",
+  "founder": {"@type": "Person", "name": "Stef Weyts"},
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Antwerpen",
+    "addressRegion": "Antwerpen",
+    "addressCountry": "BE"
+  },
+  "areaServed": [
+    {"@type": "AdministrativeArea", "name": "Vlaanderen"},
+    {"@type": "AdministrativeArea", "name": "Brussels Hoofdstedelijk Gewest"}
+  ],
+  "priceRange": "€€€",
+  "knowsAbout": ["Webdesign", "Webdevelopment", "SEO", "Conversie-optimalisatie"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://webcraftiq.be/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://webcraftiq.be/blog"}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -311,13 +347,13 @@ section { padding: 100px 0; border-bottom: 1px solid var(--line); }
     <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
   </a>
   <div class="nav-links">
-    <a href="/cases">Werk</a>
-    <a href="/aanpak">Aanpak</a>
-    <a href="/over">Over</a>
-    <a href="/blog" class="active">Blog</a>
-    <a href="/#pricing">Prijzen</a>
+    <a href="/aanpak">Onze aanpak</a>
+    <a href="/website-laten-maken">Website laten maken</a>
+    <a href="/redesign">Redesign</a>
+    <a href="/cases">Portfolio</a>
+    <a href="/over">Over ons</a>
   </div>
-  <a href="/#contact" class="nav-cta">Start project →</a>
+  <a href="/#contact" class="nav-cta">Plan een call →</a>
 </nav>
 
 <!-- HEADER -->
@@ -338,7 +374,7 @@ section { padding: 100px 0; border-bottom: 1px solid var(--line); }
   <div class="container">
 
     <!-- Featured post -->
-    <a href="/aanpak" class="featured-post reveal">
+    <a href="/blog/website-geen-visitekaartje" class="featured-post reveal">
       <div class="featured-thumb">
         <div class="featured-thumb-tag">— UITGELICHT ARTIKEL</div>
         <h2 class="featured-thumb-h">Een website is geen <em>visitekaartje</em>.</h2>
@@ -360,32 +396,35 @@ section { padding: 100px 0; border-bottom: 1px solid var(--line); }
     <!-- Other posts -->
     <div class="post-grid reveal">
 
-      <!-- Echte tweede post -->
+      <!-- Manifesto blog post -->
+      <a href="/blog/website-geen-visitekaartje" class="post-card">
+        <div class="post-card-tag">Manifesto · Strategie</div>
+        <h3 class="post-card-h">Een website is geen visitekaartje, het is een werkpaard</h3>
+        <p class="post-card-excerpt">Waarom 9 van de 10 KMO-websites in België falen — en wat een site écht moet doen om je business vooruit te helpen. Met concrete rekensom.</p>
+        <div class="post-card-meta">
+          <span>8 MIN · MANIFESTO</span>
+          <span>4 MEI 2026</span>
+        </div>
+      </a>
+
+      <!-- Multi-step blog post -->
       <a href="/blog/multi-step-formulier-vs-klassiek" class="post-card">
         <div class="post-card-tag">Conversie · Cijfers</div>
         <h3 class="post-card-h">Multi-step formulier vs klassiek contactformulier: de cijfers liegen niet</h3>
-        <p class="post-card-excerpt">Waarom een gestructureerd formulier 3-5x meer (en betere) leads oplevert dan een tekstvak. Met data uit 12 Webcraftiq-projecten en concrete voorbeelden.</p>
+        <p class="post-card-excerpt">Waarom een gestructureerd formulier 3-5x meer (en betere) leads oplevert dan een tekstvak. Met data uit conversie-onderzoek en concrete voorbeelden.</p>
         <div class="post-card-meta">
           <span>7 MIN · CONVERSIE</span>
           <span>4 MEI 2026</span>
         </div>
       </a>
 
-      <!-- Coming soon placeholders — vervang door echte posts -->
-      <div class="coming-soon-card">
-        <div class="coming-soon-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
-        </div>
-        <div class="coming-soon-h">SEO basics voor Belgische KMO's</div>
-        <p class="coming-soon-p">Coming soon — de essentiële stappen voor Vlaamse zaakvoerders</p>
-      </div>
-
+      <!-- Coming soon placeholder -->
       <div class="coming-soon-card">
         <div class="coming-soon-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
         </div>
         <div class="coming-soon-h">Waarom we geen WordPress meer bouwen</div>
-        <p class="coming-soon-p">Coming soon — Astro, Next.js en moderne alternatieven</p>
+        <p class="coming-soon-p">Komt er aan — Astro, Next.js en moderne alternatieven voor KMO-websites</p>
       </div>
 
     </div>
@@ -424,10 +463,11 @@ section { padding: 100px 0; border-bottom: 1px solid var(--line); }
         <div class="footer-h">Pagina's</div>
         <ul class="footer-list">
           <li><a href="/">Home</a></li>
+          <li><a href="/aanpak">Onze aanpak</a></li>
           <li><a href="/website-laten-maken">Website laten maken</a></li>
-          <li><a href="/cases">Werk</a></li>
-          <li><a href="/aanpak">Aanpak</a></li>
-          <li><a href="/over">Over</a></li>
+          <li><a href="/redesign">Redesign</a></li>
+          <li><a href="/cases">Portfolio</a></li>
+          <li><a href="/over">Over ons</a></li>
           <li><a href="/blog">Blog</a></li>
         </ul>
       </div>

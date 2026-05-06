@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-<!-- Webcraftiq v1.0 | 2026-05-06 | Stef Weyts -->
+<!-- Webcraftiq v2.0 | 2026-05-06 | Stef Weyts -->
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -1774,6 +1774,107 @@ details[open] .faq-toggle {
   flex-shrink: 0;
 }
 
+/* TRUST STRIP */
+.trust-strip {
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+.trust-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.trust-item { display: inline-flex; }
+.trust-sep { color: var(--ink-4); }
+
+/* REDESIGN PROMO */
+.redesign-promo {
+  padding: 80px 0 0;
+}
+@media (max-width: 768px) {
+  .redesign-promo { padding: 60px 0 0; }
+}
+.redesign-promo-card {
+  background: var(--ink);
+  color: var(--dark-fg);
+  border-radius: 22px;
+  padding: 64px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.redesign-promo-card::before {
+  content: "";
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.18), transparent 60%);
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .redesign-promo-card { padding: 48px 28px; border-radius: 18px; }
+}
+.redesign-promo-content {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.redesign-promo-content .eyebrow {
+  display: inline-flex;
+  margin-bottom: 16px;
+  background: rgba(217, 119, 6, 0.16);
+  color: var(--accent);
+  border-color: rgba(217, 119, 6, 0.3);
+}
+.redesign-promo-h {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.redesign-promo-h em {
+  font-style: italic;
+  color: var(--accent);
+  font-variation-settings: "wdth" 85;
+}
+.redesign-promo-p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dark-fg-2);
+  margin-bottom: 28px;
+}
+.redesign-promo-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.redesign-promo-actions .btn-primary {
+  background: var(--accent);
+  color: var(--ink);
+}
+.redesign-promo-actions .btn-primary:hover {
+  background: var(--bg);
+}
+.redesign-promo-actions .btn-secondary {
+  background: rgba(255,255,255,0.08);
+  color: var(--dark-fg);
+  border-color: rgba(255,255,255,0.16);
+}
+.redesign-promo-actions .btn-secondary:hover {
+  background: rgba(255,255,255,0.14);
+}
+
 /* ============================================================
    HERO FLOATING MOCKUP
    ============================================================ */
@@ -2477,13 +2578,13 @@ details[open] .faq-toggle {
     <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
   </a>
   <div class="nav-links">
-    <a href="/cases">Werk</a>
-    <a href="/aanpak">Aanpak</a>
-    <a href="/over">Over</a>
-    <a href="/blog">Blog</a>
-    <a href="#pricing">Prijzen</a>
+    <a href="/aanpak">Onze aanpak</a>
+    <a href="/website-laten-maken">Website laten maken</a>
+    <a href="/redesign">Redesign</a>
+    <a href="/cases">Portfolio</a>
+    <a href="/over">Over ons</a>
   </div>
-  <a href="#contact" class="nav-cta">Start project →</a>
+  <a href="/#contact" class="nav-cta">Plan een call →</a>
 </nav>
 
 <!-- MARQUEE TICKER -->
@@ -2504,6 +2605,21 @@ details[open] .faq-toggle {
     <div class="marquee-item"><span class="marquee-dot"></span>Vaste prijs · vanaf €2.495</div>
     <div class="marquee-item"><span class="marquee-dot"></span>Custom code — geen templates</div>
     <div class="marquee-item"><span class="marquee-dot"></span>Antwerpen-based</div>
+  </div>
+</div>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-content">
+      <span class="trust-item">Sinds 2026</span>
+      <span class="trust-sep">·</span>
+      <span class="trust-item">2 live projecten</span>
+      <span class="trust-sep">·</span>
+      <span class="trust-item">Vaste prijs vanaf €2.495</span>
+      <span class="trust-sep">·</span>
+      <span class="trust-item">BTW BE0803.343.103</span>
+    </div>
   </div>
 </div>
 
@@ -2681,6 +2797,26 @@ details[open] .faq-toggle {
         <span class="logo-pill">Stripe</span>
         <span class="logo-pill italic">Vercel</span>
         <span class="logo-pill">Cal.com</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REDESIGN PROMO -->
+<section class="redesign-promo">
+  <div class="container">
+    <div class="redesign-promo-card reveal">
+      <div class="redesign-promo-content">
+        <span class="eyebrow eyebrow-amber">— Bestaande website</span>
+        <h2 class="redesign-promo-h">Heb je al een site die <em>niet werkt</em>?</h2>
+        <p class="redesign-promo-p">Geen aanvragen, traag op mobiel, plug-in chaos? Een redesign is goedkoper en sneller dan opnieuw beginnen — én je behoudt je SEO-rankings.</p>
+        <div class="redesign-promo-actions">
+          <a href="/redesign" class="btn btn-primary">
+            Bekijk redesign-aanpak
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/redesign#audit" class="btn btn-secondary">Vraag gratis audit</a>
+        </div>
       </div>
     </div>
   </div>
@@ -3447,14 +3583,15 @@ details[open] .faq-toggle {
         <p class="footer-tag">Premium webdesign voor Belgische KMO's. Volledige sites, op maat ontworpen, met slimme conversie-features.</p>
       </div>
       <div>
-        <div class="footer-h">Site</div>
+        <div class="footer-h">Pagina's</div>
         <ul class="footer-list">
+          <li><a href="/aanpak">Onze aanpak</a></li>
           <li><a href="/website-laten-maken">Website laten maken</a></li>
-          <li><a href="/cases">Werk</a></li>
-          <li><a href="/aanpak">Aanpak</a></li>
-          <li><a href="/over">Over</a></li>
+          <li><a href="/redesign">Redesign</a></li>
+          <li><a href="/cases">Portfolio</a></li>
+          <li><a href="/over">Over ons</a></li>
           <li><a href="/blog">Blog</a></li>
-          <li><a href="#pricing">Prijzen</a></li>
+          <li><a href="#pricing">Tarieven</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>

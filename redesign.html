@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+<!-- Webcraftiq v2.0 | 2026-05-06 | Stef Weyts -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Redesign · Bestaande website opnieuw laten maken | Webcraftiq</title>
+<meta name="description" content="Je bestaande website werkt niet — geen leads, traag op mobiel, oogt verouderd? Krijg een gratis website-audit van Webcraftiq en een redesign-voorstel binnen 48 uur." />
+<meta name="keywords" content="website redesign, website opnieuw laten maken, website verbeteren, website audit, website laat geld liggen, websiteaanpak vernieuwen" />
+<meta name="author" content="Webcraftiq" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://webcraftiq.be/redesign" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="nl_BE" />
+<meta property="og:site_name" content="Webcraftiq" />
+<meta property="og:url" content="https://webcraftiq.be/redesign" />
+<meta property="og:title" content="Redesign · Je website werkt niet? Tijd voor een redesign | Webcraftiq" />
+<meta property="og:description" content="Geen aanvragen, mobiel slecht, plug-in chaos? Vraag een gratis website-audit en redesign-voorstel binnen 48 uur." />
+<meta property="og:image" content="https://webcraftiq.be/og-redesign.jpg" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Redesign · Webcraftiq | Bestaande website opnieuw laten maken" />
+<meta name="twitter:description" content="Vraag een gratis website-audit en redesign-voorstel binnen 48 uur." />
+
+<meta name="theme-color" content="#f5f1ea" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141414'/%3E%3Cpath d='M7 11h3l1.5 7L13 12l1.5 6L16 11h3M19 18l3-7' stroke='%23d97706' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://webcraftiq.be/redesign#service",
+  "serviceType": "Website redesign",
+  "name": "Website redesign — Webcraftiq",
+  "description": "Bestaande website opnieuw laten maken voor Belgische KMO's. Inclusief gratis website-audit, behoud van SEO-rankings en migratie zonder downtime.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "@id": "https://webcraftiq.be/#organization",
+    "name": "Webcraftiq",
+    "url": "https://webcraftiq.be",
+    "founder": {"@type": "Person", "name": "Stef Weyts"},
+    "vatID": "BE0803343103"
+  },
+  "areaServed": [
+    {"@type": "AdministrativeArea", "name": "Vlaanderen"},
+    {"@type": "AdministrativeArea", "name": "Brussels Hoofdstedelijk Gewest"}
+  ],
+  "offers": {
+    "@type": "Offer",
+    "name": "Gratis website-audit",
+    "priceCurrency": "EUR",
+    "price": "0",
+    "description": "Vrijblijvende audit van je bestaande website met concrete verbeterpunten binnen 48 uur."
+  }
+}
+</script>
+
+<style>
+:root {
+  --bg: #f5f1ea;
+  --bg-soft: #faf7f1;
+  --bg-card: #ffffff;
+  --bg-tint: #ede7db;
+  --bg-deep: #e8e0d0;
+  --ink: #141414;
+  --ink-2: #2a2a28;
+  --ink-3: #56524d;
+  --ink-4: #888378;
+  --line: #e6dfd0;
+  --line-2: #d6cdb8;
+  --accent: #d97706;
+  --accent-deep: #b45309;
+  --accent-soft: #fef3e6;
+  --accent-line: #f4d8a8;
+  --green: #166534;
+  --red: #b91c1c;
+  --dark-bg: #0e0e0d;
+  --dark-fg: #f5f1ea;
+  --dark-fg-2: #a8a29c;
+  --dark-line: rgba(255,255,255,0.08);
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--accent); color: #fff; }
+.scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: var(--accent); width: 0%; z-index: 200; transition: width 0.1s linear; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 32px; }
+.prose { max-width: 720px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 768px) { .container, .prose { padding: 0 22px; } }
+
+/* NAV */
+.nav { position: fixed; top: 12px; left: 50%; transform: translateX(-50%); z-index: 100; width: calc(100% - 24px); max-width: 1200px; background: rgba(245, 241, 234, 0.78); backdrop-filter: saturate(140%) blur(12px); -webkit-backdrop-filter: saturate(140%) blur(12px); border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px 10px 22px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.nav-brand { display: flex; align-items: center; gap: 10px; }
+.brand-mark { width: 26px; height: 26px; border-radius: 7px; background: var(--ink); display: flex; align-items: center; justify-content: center; }
+.brand-text { font-family: var(--font-display); font-weight: 600; font-size: 18px; letter-spacing: -0.025em; }
+.brand-text .ink { color: var(--ink); }
+.brand-text .accent { color: var(--accent); font-style: italic; font-variation-settings: "wdth" 90; }
+.nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--ink-3); }
+.nav-links a { transition: color 0.2s; }
+.nav-links a:hover { color: var(--ink); }
+.nav-links a.active { color: var(--ink); font-weight: 500; }
+.nav-cta { background: var(--ink); color: var(--bg); padding: 9px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; transition: all 0.2s; }
+.nav-cta:hover { background: var(--accent-deep); }
+@media (max-width: 1080px) { .nav-links { display: none; } .nav { padding-left: 18px; } }
+
+/* HERO */
+.redesign-hero { padding: 180px 0 100px; text-align: center; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
+.redesign-hero::before { content: ""; position: absolute; top: 30%; left: 50%; transform: translateX(-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(217, 119, 6, 0.06), transparent 60%); pointer-events: none; z-index: -1; }
+.eyebrow-pill { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-deep); background: var(--accent-soft); border: 1px solid var(--accent-line); padding: 8px 16px; border-radius: 999px; margin-bottom: 32px; }
+.eyebrow-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.hero-h1 { font-family: var(--font-display); font-size: clamp(2.4rem, 6vw, 5rem); font-weight: 400; letter-spacing: -0.045em; line-height: 0.98; color: var(--ink); margin-bottom: 28px; max-width: 920px; margin-left: auto; margin-right: auto; }
+.hero-h1 em { font-style: italic; font-variation-settings: "wdth" 85; color: var(--accent-deep); }
+.hero-sub { font-size: clamp(17px, 1.8vw, 21px); line-height: 1.55; color: var(--ink-3); max-width: 620px; margin: 0 auto 40px; }
+.hero-cta { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 999px; font-size: 15px; font-weight: 500; transition: all 0.2s var(--ease); white-space: nowrap; }
+.btn-primary { background: var(--ink); color: var(--bg); }
+.btn-primary:hover { background: var(--accent-deep); transform: translateY(-2px); }
+.btn-amber { background: var(--accent); color: #fff; }
+.btn-amber:hover { background: var(--accent-deep); transform: translateY(-2px); }
+.btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--line-2); }
+.btn-secondary:hover { background: var(--bg-card); border-color: var(--ink); }
+.hero-meta { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-4); }
+.hero-meta-item { display: inline-flex; align-items: center; gap: 8px; }
+.hero-meta-item::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+
+/* SECTIONS */
+.section { padding: 100px 0; border-bottom: 1px solid var(--line); }
+@media (max-width: 768px) { .section { padding: 70px 0; } }
+.section-num { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.15em; color: var(--accent-deep); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+.section-num::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.section-h2 { font-family: var(--font-display); font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 400; letter-spacing: -0.04em; line-height: 1.02; margin-bottom: 32px; }
+.section-h2 em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+.lead { font-family: var(--font-display); font-size: clamp(20px, 2vw, 26px); font-weight: 400; line-height: 1.4; color: var(--ink-2); margin-bottom: 32px; letter-spacing: -0.015em; }
+.prose p { font-size: 17px; line-height: 1.7; margin-bottom: 22px; color: var(--ink-2); }
+.prose p strong { font-weight: 600; color: var(--ink); }
+.prose p em { font-style: italic; color: var(--ink); }
+.prose a { color: var(--accent-deep); border-bottom: 1px solid var(--accent-line); }
+
+/* CHECKLIST GRID */
+.checklist-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+@media (max-width: 720px) { .checklist-grid { grid-template-columns: 1fr; } }
+.check-item { display: flex; gap: 14px; padding: 22px 24px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; align-items: flex-start; }
+.check-icon { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--accent-soft); border: 1px solid var(--accent-line); display: flex; align-items: center; justify-content: center; color: var(--accent-deep); }
+.check-content h4 { font-family: var(--font-display); font-size: 17px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 4px; }
+.check-content p { font-size: 14px; color: var(--ink-3); line-height: 1.55; margin: 0; }
+
+/* PROCESS STEPS */
+.process-steps { display: flex; flex-direction: column; gap: 28px; margin: 40px 0; }
+.process-step { display: grid; grid-template-columns: 60px 1fr; gap: 20px; align-items: start; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.process-step:last-child { border-bottom: 0; padding-bottom: 0; }
+.process-num { font-family: var(--font-display); font-size: 36px; font-weight: 400; letter-spacing: -0.04em; line-height: 1; font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 80; }
+.process-content h4 { font-family: var(--font-display); font-size: 22px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 8px; }
+.process-content p { font-size: 16px; color: var(--ink-3); line-height: 1.6; margin-bottom: 0; }
+.process-meta { font-family: var(--font-mono); font-size: 11px; color: var(--accent-deep); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 8px; }
+
+/* MIGRATION TABLE */
+.migration-table { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 40px 0; border: 1px solid var(--ink); border-radius: 18px; overflow: hidden; }
+@media (max-width: 720px) { .migration-table { grid-template-columns: 1fr; } }
+.migration-col { padding: 32px 28px; }
+.migration-yes { background: var(--bg-soft); position: relative; }
+.migration-no { background: var(--ink); color: var(--dark-fg); }
+.migration-yes::after { content: ""; position: absolute; right: -1px; top: 10%; bottom: 10%; width: 1px; background: var(--line); }
+@media (max-width: 720px) { .migration-yes::after { display: none; } }
+.migration-tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; display: inline-flex; align-items: center; gap: 8px; }
+.migration-yes .migration-tag { color: var(--green); }
+.migration-no .migration-tag { color: var(--accent); }
+.migration-h { font-family: var(--font-display); font-size: 22px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 20px; }
+.migration-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.migration-item { display: flex; gap: 12px; font-size: 15px; line-height: 1.5; align-items: start; }
+.migration-bullet { flex-shrink: 0; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 3px; font-family: var(--font-mono); font-size: 10px; font-weight: 700; }
+.migration-yes .migration-bullet { background: rgba(22, 101, 52, 0.15); color: var(--green); }
+.migration-no .migration-bullet { background: rgba(217, 119, 6, 0.2); color: var(--accent); }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; gap: 12px; margin: 40px 0; }
+.faq-item { background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.faq-q { width: 100%; padding: 22px 26px; background: transparent; border: 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; text-align: left; font-family: var(--font-display); font-size: 17px; font-weight: 500; letter-spacing: -0.015em; color: var(--ink); }
+.faq-q:hover { background: var(--bg-soft); }
+.faq-q .faq-icon { width: 22px; height: 22px; border-radius: 50%; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; color: var(--accent-deep); flex-shrink: 0; transition: transform 0.3s var(--ease); }
+.faq-item.open .faq-q .faq-icon { transform: rotate(45deg); }
+.faq-a { padding: 0 26px; max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease), padding 0.4s var(--ease); }
+.faq-item.open .faq-a { padding: 0 26px 22px; max-height: 500px; }
+.faq-a p { font-size: 15px; line-height: 1.65; color: var(--ink-3); margin: 0; }
+
+/* DARK CTA */
+.cta-section { background: var(--ink); color: var(--dark-fg); padding: 120px 0; text-align: center; border-bottom: 0; position: relative; overflow: hidden; }
+.cta-section::before { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(217, 119, 6, 0.15), transparent 60%); pointer-events: none; }
+.cta-h { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 400; letter-spacing: -0.04em; line-height: 1; margin-bottom: 24px; position: relative; }
+.cta-h em { font-style: italic; color: var(--accent); font-variation-settings: "wdth" 85; }
+.cta-sub { font-size: 17px; color: var(--dark-fg-2); max-width: 540px; margin: 0 auto 36px; line-height: 1.6; position: relative; }
+.cta-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: relative; }
+.btn-ghost-dark { background: rgba(255,255,255,0.08); color: var(--dark-fg); border: 1px solid rgba(255,255,255,0.15); }
+.btn-ghost-dark:hover { background: rgba(255,255,255,0.14); }
+
+/* FOOTER */
+.footer { background: var(--bg); padding: 60px 0 40px; border-top: 1px solid var(--line); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+.footer-brand { font-family: var(--font-display); font-size: 24px; font-weight: 600; letter-spacing: -0.025em; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+.footer-tag { font-size: 14px; color: var(--ink-3); max-width: 320px; line-height: 1.55; }
+.footer-h { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 14px; }
+.footer-list { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--ink-2); }
+.footer-list a:hover { color: var(--ink); }
+.footer-bottom { padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: var(--ink-4); font-family: var(--font-mono); }
+
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-brand">
+    <div class="brand-mark">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+      </svg>
+    </div>
+    <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/aanpak">Onze aanpak</a>
+    <a href="/website-laten-maken">Website laten maken</a>
+    <a href="/redesign" class="active">Redesign</a>
+    <a href="/cases">Portfolio</a>
+    <a href="/over">Over ons</a>
+  </div>
+  <a href="/#contact" class="nav-cta">Plan een call →</a>
+</nav>
+
+<!-- HERO -->
+<section class="redesign-hero">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow-pill">
+        <span class="eyebrow-dot"></span>
+        Redesign · Bestaande site opnieuw
+      </div>
+      <h1 class="hero-h1">
+        Je website werkt niet?<br />
+        Tijd voor een <em>redesign</em><br />die wél leads brengt.
+      </h1>
+      <p class="hero-sub">
+        Van WordPress-chaos naar een snelle, conversie-gerichte site. Met behoud van je SEO-rankings én zonder dat je site offline gaat tijdens de migratie.
+      </p>
+      <div class="hero-cta">
+        <a href="#audit" class="btn btn-amber">
+          Vraag gratis website-audit
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/cases" class="btn btn-secondary">Bekijk portfolio</a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">Audit binnen 48u</div>
+        <div class="hero-meta-item">Geen verplichtingen</div>
+        <div class="hero-meta-item">SEO behouden</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HERKENBARE PIJN -->
+<section class="section">
+  <div class="prose reveal">
+    <div class="section-num">01 · Herkenbaar?</div>
+    <h2 class="section-h2">Vijf klachten die we <em>elke week</em> horen.</h2>
+    <p class="lead">
+      Je hebt een website. Je hebt er destijds geld voor neergeteld. En toch zit je nu met deze problemen — of een combinatie ervan.
+    </p>
+  </div>
+
+  <div class="container reveal" data-delay="1">
+    <div class="checklist-grid">
+      <div class="check-item">
+        <div class="check-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div class="check-content">
+          <h4>Je site oogt verouderd</h4>
+          <p>Klanten landen erop, scrollen 5 seconden, en haken af. Het ontwerp dateert van 2019 en dat is te zien.</p>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div class="check-content">
+          <h4>Geen aanvragen via je site</h4>
+          <p>Het contactformulier brengt 1-2 onvolledige berichten per maand. De rest van het werk komt nog steeds via mond-tot-mond.</p>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div class="check-content">
+          <h4>Mobiel werkt slecht</h4>
+          <p>Knoppen overlappen, tekst loopt door foto's, formulieren werken niet. 60% van je verkeer zit op mobiel.</p>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div class="check-content">
+          <h4>Plug-in chaos en hoge kosten</h4>
+          <p>Elke maand €40-120 aan WordPress-plugins. Updates die de site breken. Onderhouder die niet snel genoeg reageert.</p>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div class="check-content">
+          <h4>Je weet niet hoe je content aanpast</h4>
+          <p>Een tekst veranderen vraagt een mailtje aan je oude bouwer. Wie inmiddels 2 weken niet reageert, of €120/uur factureert.</p>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <div class="check-content">
+          <h4>Trage laadtijd, slechte SEO</h4>
+          <p>PageSpeed-score van 30/100. Google ranked je site niet hoog. Concurrenten staan boven jou voor jouw eigen vakgebied.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOE EEN REDESIGN WERKT -->
+<section class="section" style="background: var(--bg-soft);">
+  <div class="prose reveal">
+    <div class="section-num">02 · De aanpak</div>
+    <h2 class="section-h2">Hoe werkt een redesign <em>bij Webcraftiq</em>?</h2>
+    <p class="lead">
+      Vier stappen, vaste prijs, geen verrassingen. Je site blijft online tijdens de hele migratie.
+    </p>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div class="process-content">
+          <h4>Gratis website-audit (48 uur)</h4>
+          <p>We analyseren je huidige site op performance, SEO, conversie en techniek. Je krijgt een concreet rapport met verbeterpunten — bruikbaar zelfs als je géén klant wordt.</p>
+          <div class="process-meta">— Geen verplichtingen, geen verkooppraat</div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div class="process-content">
+          <h4>Voorstel met heldere roadmap</h4>
+          <p>Op basis van de audit krijg je een voorstel met tijdlijn, prijs en prioriteiten. Je kiest welk pakket past — Essential, Pro of Custom. Geen meerwerk-discussies achteraf.</p>
+          <div class="process-meta">— Vaste prijs vanaf €2.495</div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div class="process-content">
+          <h4>Build zonder downtime</h4>
+          <p>We bouwen de nieuwe site op een staging-omgeving. Je oude site blijft online tot we klaar zijn. Je kan elke dag meekijken via een private link en feedback geven.</p>
+          <div class="process-meta">— Levertijd 14 tot 28 dagen</div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div class="process-content">
+          <h4>Migratie zonder SEO-verlies</h4>
+          <p>301-redirects voor élke oude URL naar de nieuwe equivalent. Sitemap.xml ingediend bij Google. Search Console gemonitord de eerste 30 dagen om rankings te beschermen.</p>
+          <div class="process-meta">— SEO-rankings behouden</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAT WEL/NIET MIGREREN -->
+<section class="section">
+  <div class="prose reveal">
+    <div class="section-num">03 · Migratie</div>
+    <h2 class="section-h2">Wat we <em>wel</em> en <em>niet</em> meenemen.</h2>
+    <p>Eerlijk vooraf: een redesign is geen "alles overzetten van platform A naar platform B". Sommige dingen migreren we bewust niet — omdat ze het probleem zijn dat je wil oplossen.</p>
+  </div>
+
+  <div class="container reveal" data-delay="1">
+    <div class="migration-table">
+      <div class="migration-col migration-yes">
+        <div class="migration-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Wel migreren
+        </div>
+        <h3 class="migration-h">Wat blijft van jou.</h3>
+        <ul class="migration-list">
+          <li class="migration-item"><span class="migration-bullet">✓</span><span>Je domeinnaam — je behoudt eigendom</span></li>
+          <li class="migration-item"><span class="migration-bullet">✓</span><span>Bestaande teksten en foto's (gefilterd op kwaliteit)</span></li>
+          <li class="migration-item"><span class="migration-bullet">✓</span><span>SEO-rankings via 301-redirects per URL</span></li>
+          <li class="migration-item"><span class="migration-bullet">✓</span><span>Logo, kleuren en huisstijl</span></li>
+          <li class="migration-item"><span class="migration-bullet">✓</span><span>E-mailadressen (info@, contact@, etc.)</span></li>
+          <li class="migration-item"><span class="migration-bullet">✓</span><span>Bestaande klanten-logins als je een webshop hebt</span></li>
+          <li class="migration-item"><span class="migration-bullet">✓</span><span>Google Analytics historiek (via account-koppeling)</span></li>
+        </ul>
+      </div>
+
+      <div class="migration-col migration-no">
+        <div class="migration-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Niet migreren
+        </div>
+        <h3 class="migration-h">Wat we vervangen.</h3>
+        <ul class="migration-list">
+          <li class="migration-item"><span class="migration-bullet">×</span><span>WordPress en plug-in stack — vervangen door modern framework</span></li>
+          <li class="migration-item"><span class="migration-bullet">×</span><span>Page builders (Elementor, Divi, WPBakery) — niet performant</span></li>
+          <li class="migration-item"><span class="migration-bullet">×</span><span>Verouderde contactformulieren — vervangen door multi-step flow</span></li>
+          <li class="migration-item"><span class="migration-bullet">×</span><span>Slechte mobiele layouts — herbouwd mobile-first</span></li>
+          <li class="migration-item"><span class="migration-bullet">×</span><span>Stockfoto's en placeholder-content — vervangen of verwijderd</span></li>
+          <li class="migration-item"><span class="migration-bullet">×</span><span>Verouderde designs zonder visuele hiërarchie</span></li>
+          <li class="migration-item"><span class="migration-bullet">×</span><span>Trage hosting — over naar Cloudflare/Vercel CDN</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIEVEN VERWIJZING -->
+<section class="section" style="background: var(--bg-soft);">
+  <div class="prose reveal">
+    <div class="section-num">04 · Tarieven</div>
+    <h2 class="section-h2">Wat kost een <em>redesign</em>?</h2>
+    <p class="lead">
+      Hetzelfde als een nieuwe website. Het werk is vergelijkbaar — soms zelfs eenvoudiger omdat de content er al is.
+    </p>
+    <p>Een redesign valt in dezelfde tariefcategorieën als een nieuwe site:</p>
+    <ul style="list-style: none; padding-left: 0; margin: 24px 0;">
+      <li style="padding: 12px 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px;">
+        <span><strong>Essential</strong> — basisredesign (5-8 pagina's)</span>
+        <span style="font-family: var(--font-mono); color: var(--accent-deep);">vanaf €2.495</span>
+      </li>
+      <li style="padding: 12px 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px;">
+        <span><strong>Pro</strong> — incl. multi-step formulier en CRM</span>
+        <span style="font-family: var(--font-mono); color: var(--accent-deep);">vanaf €4.500</span>
+      </li>
+      <li style="padding: 12px 0; display: flex; justify-content: space-between; gap: 16px;">
+        <span><strong>Custom</strong> — webshop, complexe integraties</span>
+        <span style="font-family: var(--font-mono); color: var(--accent-deep);">vanaf €7.995</span>
+      </li>
+    </ul>
+    <p style="margin-top: 32px;">
+      <a href="/#pricing" class="btn btn-secondary" style="display: inline-flex;">
+        Bekijk volledige tarieven
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="prose reveal">
+    <div class="section-num">05 · FAQ</div>
+    <h2 class="section-h2">Veelgestelde <em>vragen</em>.</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>Verlies ik mijn Google ranking als jullie de site herbouwen?</span>
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Nee — dat is precies waarom we 301-redirects voor elke oude URL instellen. Google volgt die redirects en kent de ranking van de oude URL toe aan de nieuwe. Bij Voltrix en Gevanti behielden we 100% van de bestaande rankings na migratie.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>Hoelang is mijn site offline?</span>
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Nul minuten. We bouwen op staging, jij keurt goed, dan vlippen we de DNS op een afgesproken moment (meestal 's nachts of weekend). De overgang duurt minder dan 5 minuten en bezoekers merken er niets van.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>Behouden mijn klanten hun logins als ik een webshop heb?</span>
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Ja, klantgegevens worden gemigreerd inclusief password-hashes. Klanten kunnen blijven inloggen met hun bestaande wachtwoord. Voor webshop-redesigns gebruiken we WooCommerce-export of een directe database-migratie afhankelijk van je platform.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>Wat met mijn bestaande e-mailadressen?</span>
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Die blijven volledig werken. We raken alleen je website-DNS aan, niet je MX-records voor mail. Je info@, contact@ en alle andere mailadressen blijven gewoon doorlopen tijdens en na de migratie.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>Wat als mijn nieuwe site niet beter presteert?</span>
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>We meten vanaf dag één: bezoekers, conversie-rate, PageSpeed, search-rankings. Elke maand krijg je een rapport van de eerste 90 dagen. Doel: meetbaar betere resultaten dan je oude site. Als iets niet werkt, passen we het kosteloos aan.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span>Kunnen jullie mijn huidige bouwer/agency overnemen?</span>
+          <span class="faq-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Ja. We regelen alle technische zaken (DNS-toegang, hosting-account-overname, e-mailmigratie). Je hoeft alleen je domeinregistratie-contact te bevestigen. Het oude contract met je vorige bureau is jouw verantwoordelijkheid om op te zeggen — daar bemoeien we ons niet mee.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIT CTA -->
+<section class="cta-section" id="audit">
+  <div class="container">
+    <h2 class="cta-h">Krijg een <em>gratis website-audit</em>.</h2>
+    <p class="cta-sub">
+      Stuur ons je site-URL en binnen 48 uur krijg je een concreet rapport met verbeterpunten. Geen verkooppraat — gewoon eerlijke analyse.
+    </p>
+    <div class="cta-actions">
+      <a href="mailto:info@webcraftiq.be?subject=Gratis%20website-audit&body=Hallo%20Stef%2C%0A%0AIk%20zou%20graag%20een%20gratis%20website-audit%20aanvragen.%0A%0AMijn%20huidige%20website%3A%20%5BVUL%20HIER%20JE%20URL%20IN%5D%0A%0AMijn%20grootste%20probleem%20met%20de%20huidige%20site%3A%20%5BVUL%20HIER%20IN%5D%0A%0AGroet" class="btn btn-amber">
+        Vraag gratis audit aan
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/cases" class="btn btn-ghost-dark">Bekijk eerst portfolio</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="brand-mark">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+            </svg>
+          </div>
+          <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+        </div>
+        <p class="footer-tag">Premium webdesign voor Belgische KMO's. Volledige sites op maat ontworpen, met slimme conversie-features.</p>
+      </div>
+      <div>
+        <div class="footer-h">Pagina's</div>
+        <ul class="footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/aanpak">Onze aanpak</a></li>
+          <li><a href="/website-laten-maken">Website laten maken</a></li>
+          <li><a href="/redesign">Redesign</a></li>
+          <li><a href="/cases">Portfolio</a></li>
+          <li><a href="/over">Over ons</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Contact</div>
+        <ul class="footer-list">
+          <li>info@webcraftiq.be</li>
+          <li>BTW BE0803.343.103</li>
+          <li>Antwerpen, BE</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Legal</div>
+        <ul class="footer-list">
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/voorwaarden">Voorwaarden</a></li>
+          <li><a href="/cookies">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Webcraftiq · Stef Weyts · BTW BE0803.343.103</span>
+      <span>Built in Belgium · Made with care</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+reveals.forEach((el) => io.observe(el));
+
+const sp = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  sp.style.width = ((scrolled / docHeight) * 100) + '%';
+});
+
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    q.parentElement.classList.toggle('open');
+  });
+});
+</script>
+
+</body>
+</html>
