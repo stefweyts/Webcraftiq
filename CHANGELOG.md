@@ -4,7 +4,26 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.0 — 6 mei 2026 ✅ ACTIEF
+## V2.1 — 6 mei 2026 ✅ ACTIEF
+
+**Status:** Mobile menu fix.
+
+### Critical fix
+- ✅ **Hamburger-menu** toegevoegd op alle 14 pagina's — was kritieke bug in V2.0 waardoor mobile users vastgepind zaten op de homepage
+- ✅ Volledig-scherm overlay met grote tikbare links (26px font)
+- ✅ Geanimeerde hamburger ↔ X transitie
+- ✅ Staggered fade-in van menu-items
+- ✅ Sluit op link-klik én Escape-toets
+- ✅ Body-scroll lock wanneer menu open
+- ✅ Toegankelijk: ARIA labels, focus management, keyboard navigation
+- ✅ Mobile menu toont contact info onderaan (info@webcraftiq.be · BTW · Antwerpen)
+
+### Versie-marker
+- ✅ Alle 15 pagina's bijgewerkt naar `<!-- Webcraftiq v2.1 | 2026-05-06 | Stef Weyts -->`
+
+---
+
+## V2.0 — 6 mei 2026
 
 **Status:** Volledige IA-restructure + nieuwe redesign-pagina + structured data.
 
