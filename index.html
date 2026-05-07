@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-<!-- Webcraftiq v2.8.2 | 2026-05-07 | Stef Weyts -->
+<!-- Webcraftiq v2.8.3 | 2026-05-07 | Stef Weyts -->
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -2520,6 +2520,56 @@ details[open] .faq-toggle {
   padding: 30px;
 }
 
+/* WORK THUMB — real browser frame with screenshot */
+.work-thumb-real {
+  padding: 0;
+  background: linear-gradient(135deg, #faf7f1 0%, #f0e9d8 100%);
+  display: block;
+}
+.work-browser {
+  width: calc(100% - 32px);
+  margin: 16px auto 0;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  box-shadow: 0 12px 30px -10px rgba(20, 20, 20, 0.15);
+  transition: transform 0.4s var(--ease);
+}
+.work-card:hover .work-browser { transform: translateY(-3px); }
+.work-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  background: linear-gradient(to bottom, #f5f0e6, #ece6d8);
+  border-bottom: 1px solid var(--line);
+}
+.work-browser-dots { display: flex; gap: 4px; flex-shrink: 0; }
+.work-browser-dot { width: 7px; height: 7px; border-radius: 50%; }
+.work-browser-dot-r { background: #ff5f56; }
+.work-browser-dot-y { background: #ffbd2e; }
+.work-browser-dot-g { background: #27c93f; }
+.work-browser-url {
+  flex: 1;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(214, 205, 184, 0.6);
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ink-3);
+  text-align: center;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.work-browser-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #0F172A;
+}
+
 .work-card-info {
   padding: 22px 24px;
   display: flex;
@@ -3235,22 +3285,17 @@ details[open] .faq-toggle {
     <!-- Row 1 -->
     <div class="work-grid reveal">
       <a href="https://voltrix.be" target="_blank" rel="noopener" class="work-card" style="text-decoration:none;color:inherit;">
-        <div class="work-thumb thumb-1">
-          <div class="mini-site">
-            <div class="ms-nav-bar">
-              <div class="ms-logo">voltrix<em>.</em></div>
-              <div class="ms-menu"><span>Diensten</span><span>Werk</span><span>Over</span></div>
-              <div class="ms-cta-mini">Offerte →</div>
-            </div>
-            <div class="ms-hero-content">
-              <div class="ms-hero-tag">— ELEKTRICIEN · ANTWERPEN</div>
-              <div class="ms-hero-h">Een elektricien die het <em>verschil maakt</em>.</div>
-              <div class="ms-hero-sub">Toekomstgerichte installaties — AREI-conform, klaar voor laadpalen, domotica en zonne-energie.</div>
-              <div class="ms-buttons">
-                <span class="ms-btn-1">Offerte in 3 stappen</span>
-                <span class="ms-btn-2">WhatsApp</span>
+        <div class="work-thumb work-thumb-real">
+          <div class="work-browser">
+            <div class="work-browser-bar">
+              <div class="work-browser-dots">
+                <span class="work-browser-dot work-browser-dot-r"></span>
+                <span class="work-browser-dot work-browser-dot-y"></span>
+                <span class="work-browser-dot work-browser-dot-g"></span>
               </div>
+              <div class="work-browser-url">voltrix.be</div>
             </div>
+            <img src="/images/voltrix-hero-snapshot.jpg" alt="voltrix.be — Webcraftiq website voor Voltrix Elektricien Antwerpen" loading="lazy" class="work-browser-img" />
           </div>
         </div>
         <div class="work-card-info">

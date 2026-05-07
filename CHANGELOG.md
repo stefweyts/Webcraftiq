@@ -4,9 +4,26 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.8.2 — 7 mei 2026 ✅ ACTIEF
+## V2.8.3 — 7 mei 2026 ✅ ACTIEF
 
-**Status:** Echte Voltrix screenshot vervangt fake mockup op homepage.
+**Status:** Echte Voltrix screenshot ook in homepage "Recent werk" en op /cases pagina.
+
+### Wijzigingen
+- ✅ **Homepage "Recent werk" sectie** (id="work"): Voltrix work-card vervangen — fake mini-site mockup → echte screenshot in browser-frame met traffic-light dots + URL bar (voltrix.be)
+- ✅ **/cases (Portfolio)** pagina: Voltrix case-card vervangen met dezelfde echte screenshot in browser-frame
+- ✅ **/cases/voltrix.html** (case study): grote preview-frame vervangen met echte screenshot in browser-frame, met klikbare link naar live site
+
+### Inconsistentie te adresseren
+- ⚠️ **Gevanti** heeft nog fake mockups op alle drie de plekken — zodra Stef een Gevanti screenshot levert, kunnen we hetzelfde doen voor consistentie
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.8.3 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.8.2 — 7 mei 2026
+
+**Status:** Echte Voltrix screenshot in homepage "Lokaal vindbaar" sectie. Vervangen door V2.8.3.
 
 ### Wijzigingen
 - ✅ **Echte voltrix.be screenshot** geüpload (1600×890px, 106KB) als `/images/voltrix-hero-snapshot.jpg`
