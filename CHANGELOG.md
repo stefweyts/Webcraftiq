@@ -4,9 +4,63 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.5 — 7 mei 2026 ✅ ACTIEF
+## V2.6 — 7 mei 2026 ✅ ACTIEF
 
-**Status:** Drie Care-pakketten + dedicated /care pagina.
+**Status:** Care-pakketten herzien — 1u inbegrepen vanaf Basis, prijzen aangepast.
+
+### Care-pakketten herzien
+
+| Pakket | Was | Nu | Verandering |
+|---|---|---|---|
+| **Care Basis** | €49/m, 0u | **€89/m, 1u** | +€40, +1u inbegrepen |
+| **Care Actief** | €179/m, 2u | **€189/m, 3u** | +€10, +1u inbegrepen |
+| **Care Groei** | €449/m, 5u + SEO | **€449/m, 5u + SEO** | Onveranderd |
+
+### Reden voor wijziging
+- **Care Basis** krijgt 1u inbegrepen omdat dit het minimum is dat Stef levert: elke klant heeft het recht om elke maand 1 keer aanpassingen te vragen
+- **Care Actief** progressie aangepast voor nettere upgrade-trigger (1u → 3u → 5u)
+- **Niet-gebruikte uren stapelen onbeperkt op** (vorige versie was 1 maand rolloff)
+
+### Inhoudelijke wijzigingen
+- ✅ Tier-cards op /care: alle 3 prijzen + uren + features bijgewerkt
+- ✅ Care Basis tagline: "Het minimum dat we leveren — hosting plus 1 uur updates per maand"
+- ✅ Deep-dive sectie: "2 uur updates" → "3 uur updates" voor Actief
+- ✅ Rolloff-tekst: "rollen 1 maand door" → "stapelen onbeperkt op"
+- ✅ JSON-LD Service-schemas met nieuwe prijzen (89, 189, 449)
+
+### Bijgewerkt op andere pagina's
+- ✅ **Homepage**: 3 mini-tier-cards + tier-card "+ Care vanaf €89/m" + FAQ over Care
+- ✅ **/website-laten-maken**: FAQ Care-uitleg met nieuwe prijzen en uren
+- ✅ **/redesign**: Care-vermelding bijgewerkt
+- ✅ **/contact**: Care-blok onderaan + tier-cards "+ Care vanaf €89/m" + form step 2A subtekst
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.6 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.5.1 — 7 mei 2026
+
+**Status:** Care toegevoegd aan hoofdmenu. Vervangen door V2.6.
+
+### Wijzigingen
+- ✅ **Care** toegevoegd in primaire navigatie (tussen Redesign en Portfolio)
+- ✅ Mobile menu: 6e item Care toegevoegd, staggered animatie aangepast
+- ✅ Breakpoint hamburger menu: **1080px → 1180px** (meer ruimte voor 6 items)
+- ✅ Nav-gap iets verkleind (28px → 22px) zodat 6 items netjes passen
+- ✅ Active-state per pagina correct gemarkeerd
+- ✅ Versie-marker bijgewerkt naar V2.5.1 op alle 17 pagina's
+
+### Menu-volgorde nu
+```
+Onze aanpak · Website laten maken · Redesign · Care · Portfolio · Over ons    [Contacteer ons →]
+```
+
+---
+
+## V2.5 — 7 mei 2026
+
+**Status:** Drie Care-pakketten + dedicated /care pagina. Vervangen door V2.5.1.
 
 ### Nieuwe pagina
 - ✅ **`/care`** — volledige uitleg over 3 maandelijkse Care-pakketten
