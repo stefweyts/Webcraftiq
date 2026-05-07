@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-<!-- Webcraftiq v2.3 | 2026-05-06 | Stef Weyts -->
+<!-- Webcraftiq v2.8.3 | 2026-05-07 | Stef Weyts -->
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -56,6 +56,17 @@
 
 .case-preview { background: var(--bg-soft); padding: 80px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .case-preview-frame { background: var(--ink); border-radius: 16px; overflow: hidden; aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center; padding: 40px; color: var(--bg); position: relative; box-shadow: 0 24px 60px -20px rgba(20, 20, 20, 0.25); }
+
+/* CASE REAL PREVIEW — actual screenshot in browser frame */
+.case-real-preview { background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 60px -20px rgba(20, 20, 20, 0.22), 0 8px 16px -8px rgba(20, 20, 20, 0.08); max-width: 1100px; margin: 0 auto; transition: transform 0.4s var(--ease); }
+.case-real-preview:hover { transform: translateY(-4px); }
+.case-real-bar { display: flex; align-items: center; gap: 14px; padding: 13px 16px; background: linear-gradient(to bottom, #f5f0e6, #ece6d8); border-bottom: 1px solid var(--line); }
+.case-real-dots { display: flex; gap: 7px; flex-shrink: 0; }
+.case-real-dot { width: 12px; height: 12px; border-radius: 50%; }
+.case-real-url { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 7px; background: rgba(255,255,255,0.7); border: 1px solid rgba(214, 205, 184, 0.6); border-radius: 6px; padding: 6px 14px; font-family: var(--font-mono); font-size: 13px; color: var(--ink-3); max-width: 360px; margin: 0 auto; }
+.case-real-url svg { color: var(--ink-4); flex-shrink: 0; }
+.case-real-img { display: block; width: 100%; height: auto; background: #0F172A; }
+
 .preview-content { width: 100%; height: 100%; display: flex; flex-direction: column; }
 .preview-bar { display: flex; align-items: center; gap: 16px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 30px; }
 .preview-logo { font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: -0.02em; }
@@ -166,11 +177,12 @@ body.menu-open .mobile-menu { opacity: 1; visibility: visible; }
   transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
 }
 body.menu-open .mobile-menu-list li { opacity: 1; transform: translateY(0); }
-body.menu-open .mobile-menu-list li:nth-child(1) { transition-delay: 0.08s; }
-body.menu-open .mobile-menu-list li:nth-child(2) { transition-delay: 0.13s; }
-body.menu-open .mobile-menu-list li:nth-child(3) { transition-delay: 0.18s; }
-body.menu-open .mobile-menu-list li:nth-child(4) { transition-delay: 0.23s; }
-body.menu-open .mobile-menu-list li:nth-child(5) { transition-delay: 0.28s; }
+body.menu-open .mobile-menu-list li:nth-child(1) { transition-delay: 0.06s; }
+body.menu-open .mobile-menu-list li:nth-child(2) { transition-delay: 0.10s; }
+body.menu-open .mobile-menu-list li:nth-child(3) { transition-delay: 0.14s; }
+body.menu-open .mobile-menu-list li:nth-child(4) { transition-delay: 0.18s; }
+body.menu-open .mobile-menu-list li:nth-child(5) { transition-delay: 0.22s; }
+body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
 .mobile-menu-list a {
   display: flex;
   justify-content: space-between;
@@ -236,7 +248,7 @@ body.menu-open .mobile-menu-list li:nth-child(5) { transition-delay: 0.28s; }
   text-align: center;
 }
 @media (max-width: 1080px) { .nav-burger { display: flex; } }
-@media (min-width: 1081px) { .mobile-menu { display: none !important; } }
+@media (min-width: 1181px) { .mobile-menu { display: none !important; } }
 </style>
 <script type="application/ld+json">
 {
@@ -294,7 +306,8 @@ body.menu-open .mobile-menu-list li:nth-child(5) { transition-delay: 0.28s; }
     <a href="/aanpak">Onze aanpak</a>
     <a href="/website-laten-maken">Website laten maken</a>
     <a href="/redesign">Redesign</a>
-    <a href="/cases">Portfolio</a>
+    <a href="/care">Care</a>
+    <a href="/cases" class="active">Portfolio</a>
     <a href="/over">Over ons</a>
   </div>
   <button class="nav-burger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" id="navBurger">
@@ -366,28 +379,24 @@ body.menu-open .mobile-menu-list li:nth-child(5) { transition-delay: 0.28s; }
 <section class="case-preview">
   <div class="container">
     <div class="reveal">
-      <div class="case-preview-frame">
-        <div class="preview-content">
-          <div class="preview-bar">
-            <div class="preview-logo">voltrix<em>.</em></div>
-            <div class="preview-menu">
-              <span>Diensten</span>
-              <span>Werk</span>
-              <span>Over</span>
-              <span>Contact</span>
-            </div>
-            <div class="preview-cta">⚡ Offerte in 3 stappen →</div>
+      <div class="case-real-preview">
+        <div class="case-real-bar">
+          <div class="case-real-dots">
+            <span class="case-real-dot" style="background:#ff5f56"></span>
+            <span class="case-real-dot" style="background:#ffbd2e"></span>
+            <span class="case-real-dot" style="background:#27c93f"></span>
           </div>
-          <div class="preview-hero">
-            <div class="preview-hero-tag">— ELEKTRICIEN · ANTWERPEN</div>
-            <div class="preview-hero-h">Een elektricien die het <em>verschil</em> maakt.</div>
-            <div class="preview-hero-sub">Toekomstgerichte elektriciteitsinstallaties — AREI-conform, klaar voor laadpalen, domotica en zonnepanelen.</div>
-            <div class="preview-buttons">
-              <span class="preview-btn-1">⚡ Offerte in 3 stappen</span>
-              <span class="preview-btn-2">WhatsApp</span>
-            </div>
+          <div class="case-real-url">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>voltrix.be</span>
           </div>
         </div>
+        <a href="https://voltrix.be" target="_blank" rel="noopener">
+          <img src="/images/voltrix-hero-snapshot.jpg" alt="voltrix.be — live website hero" class="case-real-img" />
+        </a>
+      </div>
+      <div style="text-align: center; margin-top: 20px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-4);">
+        <a href="https://voltrix.be" target="_blank" rel="noopener" style="color: var(--accent-deep); border-bottom: 1px solid var(--accent-line);">Bekijk de live website ↗</a>
       </div>
     </div>
   </div>
@@ -578,6 +587,7 @@ body.menu-open .mobile-menu-list li:nth-child(5) { transition-delay: 0.28s; }
           <li><a href="/aanpak">Onze aanpak</a></li>
           <li><a href="/website-laten-maken">Website laten maken</a></li>
           <li><a href="/redesign">Redesign</a></li>
+          <li><a href="/care">Care</a></li>
           <li><a href="/cases">Portfolio</a></li>
           <li><a href="/over">Over ons</a></li>
           <li><a href="/blog">Blog</a></li>
