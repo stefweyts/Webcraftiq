@@ -4,9 +4,42 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.2 — 6 mei 2026 ✅ ACTIEF
+## V2.3 — 6 mei 2026 ✅ ACTIEF
 
-**Status:** Dedicated /contact pagina met multi-step formulier.
+**Status:** Nieuwe prijzenstructuur + verplicht Care-pakket.
+
+### Pricing wijzigingen
+- ✅ **Essential**: €2.495 → **€2.999** ex BTW (eenmalig)
+- ✅ **Pro**: €4.500 → **€4.999** ex BTW (eenmalig)
+- ✅ **Custom**: vanaf €7.995 → **vanaf €7.500** ex BTW (eenmalig)
+- ✅ **Webcraftiq Care**: €45/maand ex BTW — **verplicht inbegrepen bij elk pakket**
+
+### Nieuwe Care-positionering
+Care vervangt het oude "optioneel maandcontract van €79". Nu één duidelijk verhaal:
+- **Wat zit erin**: hosting (Cloudflare), SSL, daily backups (30d historiek), security-updates, 24/7 monitoring
+- **Wat NIET inbegrepen**: content-aanpassingen of nieuwe pagina's → apart aan €85/u ex BTW
+- **Verplicht**: bij elk pakket, geen losse hosting mogelijk
+
+### Visuele wijzigingen
+- ✅ **Homepage**: nieuwe Care-blok met donker amber-gloed onder de tier-cards (4 features: Hosting, Security, Backups, Monitoring)
+- ✅ **Tier-cards**: elke kaart toont nu prominent "+ €45/m Care" als amber pill
+- ✅ **Pricing-intro**: gewijzigd naar "Eén vaste prijs. Care inbegrepen."
+- ✅ **/website-laten-maken**: prijzen + Service-schema (JSON-LD) bijgewerkt + FAQ over Care
+- ✅ **/redesign**: prijzen bijgewerkt + Care-vermelding in tarieven-sectie
+- ✅ **/contact**: pricing recap + multi-step form (stap 2A) bijgewerkt + Care-blok onderaan
+
+### FAQ updates
+- ✅ Op homepage en /website-laten-maken: FAQ over support/onderhoud volledig herschreven naar Care-positionering
+- ✅ Verwijderd: oude tekst "twee opties: zelfstandig hosten of maandcontract"
+
+### Versie-marker
+- ✅ Alle 16 pagina's bijgewerkt naar `<!-- Webcraftiq v2.3 | 2026-05-06 | Stef Weyts -->`
+
+---
+
+## V2.2 — 6 mei 2026
+
+**Status:** Dedicated /contact pagina met multi-step formulier. Vervangen door V2.3.
 
 ### Nieuwe features
 - ✅ **Nieuwe `/contact` pagina** — alle CTA's leiden hier naartoe
