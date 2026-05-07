@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-<!-- Webcraftiq v2.7.1 | 2026-05-07 | Stef Weyts -->
+<!-- Webcraftiq v2.8.1 | 2026-05-07 | Stef Weyts -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>Webcraftiq Care · Maandelijks onderhoud & SEO-groei | Webcraftiq</title>
-<meta name="description" content="Drie maandelijkse Care-pakketten voor je Webcraftiq website. Hosting, updates en SEO-groei vanaf €89/maand. Eén partij, één factuur, geen losse hosting-rekeningen." />
+<meta name="description" content="Drie maandelijkse Care-pakketten voor je Webcraftiq website. Hosting, updates, SEO-groei en Google Bedrijfsprofiel-beheer vanaf €89/maand. Eén partij, één factuur, geen losse hosting-rekeningen." />
 <meta name="keywords" content="website onderhoud, hosting Belgisch, webcraftiq care, SEO-pakket, maandelijks onderhoud website" />
 <meta name="author" content="Webcraftiq" />
 <meta name="robots" content="index, follow" />
@@ -85,7 +85,7 @@
       "@id": "https://webcraftiq.be/care#groei",
       "serviceType": "Webcraftiq Care Groei",
       "name": "Care Groei",
-      "description": "Hosting + 5 uur maandelijks (waaronder 1 nieuwe SEO-pagina + content-updates) + ranking-monitoring + maandelijkse strategie-call.",
+      "description": "Hosting + 5 uur maandelijks (waaronder 1 nieuwe SEO-pagina + content-updates) + Google Bedrijfsprofiel maandelijks beheer + ranking-monitoring + maandelijkse strategie-call.",
       "provider": {"@id": "https://webcraftiq.be/#organization"},
       "offers": {
         "@type": "Offer",
@@ -358,6 +358,33 @@ body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
   color: var(--accent);
 }
 .pkg-features li strong { color: var(--ink); font-weight: 600; }
+.pkg-addon {
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+}
+.pkg-addon em { font-style: italic; color: var(--ink-4); font-variation-settings: "wdth" 90; }
+.pkg-addon strong { color: var(--accent-deep) !important; font-weight: 600; }
+.pkg-feat-plus {
+  flex-shrink: 0;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px dashed var(--line-2);
+  color: var(--ink-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  font-size: 13px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+.pkg.featured .pkg-addon { color: var(--dark-fg-2); border-top-color: rgba(255,255,255,0.1); }
+.pkg.featured .pkg-feat-plus { border-color: rgba(255,255,255,0.2); color: var(--dark-fg-2); }
+.pkg.featured .pkg-addon strong { color: var(--accent) !important; }
 .pkg.featured .pkg-features li strong { color: var(--dark-fg); }
 
 .pkg-cta {
@@ -551,6 +578,7 @@ body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
         <li><span class="pkg-feat-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><strong>24/7 uptime-monitoring</strong></li>
         <li><span class="pkg-feat-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><strong>1 uur content-updates</strong> per maand</li>
         <li><span class="pkg-feat-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Tegoed stapelt op tot <strong>3 maanden</strong></li>
+        <li class="pkg-addon"><span class="pkg-feat-plus">+</span><span>Google Bedrijfsprofiel beheer <em>optioneel</em>: <strong>€49/m</strong></span></li>
       </ul>
       <a href="/contact" class="pkg-cta">Kies Basis</a>
     </div>
@@ -570,6 +598,7 @@ body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
         <li><span class="pkg-feat-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><strong>Maandelijks performance-rapport</strong></li>
         <li><span class="pkg-feat-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><strong>Prioriteit-support</strong> (24u response)</li>
         <li><span class="pkg-feat-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Tegoed stapelt op tot <strong>3 maanden</strong></li>
+        <li class="pkg-addon"><span class="pkg-feat-plus">+</span><span>Google Bedrijfsprofiel beheer <em>optioneel</em>: <strong>€49/m</strong></span></li>
       </ul>
       <a href="/contact" class="pkg-cta">Kies Actief</a>
     </div>
@@ -588,7 +617,8 @@ body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
         <li><span class="pkg-feat-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><strong>1 nieuwe SEO-pagina</strong> per maand</li>
         <li><span class="pkg-feat-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Keyword-research + interne linking</li>
         <li><span class="pkg-feat-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><strong>Maandelijkse strategie-call</strong> (30 min)</li>
-        <li><span class="pkg-feat-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Ranking-monitoring + Google Business</li>
+        <li><span class="pkg-feat-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span><strong>Google Bedrijfsprofiel</strong> maandelijks beheer</li>
+        <li><span class="pkg-feat-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Ranking-monitoring + maandrapport</li>
       </ul>
       <a href="/contact" class="pkg-cta">Kies Groei</a>
     </div>

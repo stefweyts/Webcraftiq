@@ -4,9 +4,65 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.7.1 — 7 mei 2026 ✅ ACTIEF
+## V2.8.1 — 7 mei 2026 ✅ ACTIEF
 
-**Status:** Prijs-consistentie hotfix.
+**Status:** Pro pakket: multi-step formulieren + prijs-calculators als specialiteit benadrukt.
+
+### Wijzigingen Pro feature-lists
+**Toegevoegd / herbenoemd op alle 3 pagina's** (homepage, /website-laten-maken, /contact):
+- ✅ "Multi-step offerteformulier" → **"Multi-step formulieren op maat"** (meervoud, op maat)
+- ✅ NIEUW: **"Custom prijs-calculators"** als aparte feature-regel
+- ✅ Op homepage: beide krijgen "(specialiteit)" label in amber
+
+### Vorige Pro features (V2.8) blijven
+- Tot 12 pagina's + dienstenpagina's
+- CRM-integratie (Teamleader, Odoo)
+- Conversie-tracking ingesteld
+- Google Bedrijfsprofiel volledig opgezet
+- 21 dagen levertijd
+
+### Andere wijzigingen
+- ✅ /contact form Pro-optie: description vermeldt nu expliciet multi-step formulieren én prijs-calculators
+- ✅ /contact pricing recap: Pro feature-lijst herzien met multi-step + prijs-calculators
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.8.1 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.8 — 7 mei 2026
+
+**Status:** Google Bedrijfsprofiel toegevoegd. Vervangen door V2.8.1.
+
+### Pricing wijzigingen
+- ✅ **Pro pakket**: €4.499 → **€4.999** ex BTW (Google Bedrijfsprofiel-setup nu inbegrepen)
+- ✅ **Essential**: ongewijzigd op €2.499 + GBP-setup als optioneel **€395** add-on
+- ✅ **Custom**: vanaf €7.500 + GBP inbegrepen
+- ✅ **Care Basis & Actief**: + GBP-beheer optioneel **€49/m** add-on
+- ✅ **Care Groei**: GBP maandelijks beheer nu expliciet inbegrepen
+
+### Nieuwe sectie op homepage
+- ✅ **"Lokaal vindbaar"** sectie toegevoegd tussen Cases en Pricing
+- Hero-uitleg waarom GBP belangrijk is (70% van de klikken)
+- Lijst van wat we doen (claim, optimaliseer, foto's, service-area, reviews, training)
+- Visualisatie van een Google Bedrijfsprofiel (Voltrix als voorbeeld)
+- Donker beschikbaarheids-blok dat toont waar GBP inbegrepen/optioneel is
+
+### Andere updates
+- ✅ **/website-laten-maken**: Pro krijgt feature-regel "Google Bedrijfsprofiel opgezet" + Essential krijgt GBP-optioneel rij
+- ✅ **/care**: Care Basis + Actief tier-cards krijgen "+ GBP-beheer optioneel €49/m" feature
+- ✅ **/care**: Care Groei "Google Business-optimalisatie" → expliciet "Google Bedrijfsprofiel maandelijks beheer"
+- ✅ **/contact**: nieuwe checkbox in stap 3 voor GBP add-on
+- ✅ **JSON-LD**: Care Groei description uitgebreid met GBP-beheer
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.8 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.7.1 — 7 mei 2026
+
+**Status:** Prijs-consistentie hotfix. Vervangen door V2.8.
 
 ### Probleem
 Stef merkte dat prijzen niet overal hetzelfde waren. Audit toonde drie bugs:

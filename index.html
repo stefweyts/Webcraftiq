@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-<!-- Webcraftiq v2.7.1 | 2026-05-07 | Stef Weyts -->
+<!-- Webcraftiq v2.8.1 | 2026-05-07 | Stef Weyts -->
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -165,7 +165,7 @@
             "@type": "Offer",
             "name": "Pro",
             "description": "Compleet pakket inclusief multi-step offerteformulier, CRM-integratie en booking-flow",
-            "price": "4499",
+            "price": "4999",
             "priceCurrency": "EUR"
           },
           {
@@ -257,7 +257,7 @@
           "name": "Wat kost een website laten maken in België?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In België ligt de prijs voor een professionele website tussen €1.500 en €10.000 — afhankelijk van complexiteit, sector en functionaliteiten. Bij Webcraftiq starten onze pakketten vanaf €2.499 (Essential) en €4.499 (Pro met multi-step formulier). Custom projecten beginnen vanaf €7.500."
+            "text": "In België ligt de prijs voor een professionele website tussen €1.500 en €10.000 — afhankelijk van complexiteit, sector en functionaliteiten. Bij Webcraftiq starten onze pakketten vanaf €2.499 (Essential) en €4.999 (Pro met multi-step formulier). Custom projecten beginnen vanaf €7.500."
           }
         },
         {
@@ -1434,6 +1434,47 @@ section { padding: 120px 0; position: relative; }
 }
 
 /* WEBCRAFTIQ CARE BLOCK */
+/* LOKAAL VINDBAAR — GBP section */
+.local-section { padding: 100px 0; background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+@media (max-width: 768px) { .local-section { padding: 70px 0; } }
+.local-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+@media (max-width: 1000px) { .local-grid { grid-template-columns: 1fr; gap: 50px; } }
+.local-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-deep); background: var(--accent-soft); border: 1px solid var(--accent-line); padding: 7px 14px; border-radius: 999px; margin-bottom: 24px; }
+.local-h { font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 400; letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 22px; }
+.local-h em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+.local-p { font-size: 16px; line-height: 1.65; color: var(--ink-2); margin-bottom: 18px; }
+.local-p strong { font-weight: 600; color: var(--ink); }
+.local-p em { font-style: italic; color: var(--ink); }
+.local-includes { background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin: 26px 0; }
+.local-includes-h { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
+.local-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.local-list li { font-size: 14px; line-height: 1.5; display: flex; gap: 10px; align-items: flex-start; color: var(--ink-2); }
+.local-check { flex-shrink: 0; width: 18px; height: 18px; border-radius: 50%; background: var(--accent-soft); border: 1px solid var(--accent-line); color: var(--accent-deep); display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+.local-availability { display: flex; flex-direction: column; gap: 10px; padding: 22px 24px; background: var(--ink); color: var(--dark-fg); border-radius: 14px; margin-top: 28px; }
+.local-avail-row { display: flex; align-items: center; gap: 14px; font-size: 14px; line-height: 1.4; color: var(--dark-fg-2); }
+.local-avail-row strong { color: var(--dark-fg); font-weight: 600; }
+.local-avail-tag { flex-shrink: 0; min-width: 90px; text-align: center; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; font-weight: 600; }
+.local-avail-yes { background: rgba(217, 119, 6, 0.18); border: 1px solid rgba(217, 119, 6, 0.4); color: var(--accent); }
+.local-avail-add { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: var(--dark-fg); }
+
+.local-visual { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.local-card { width: 100%; max-width: 360px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; box-shadow: 0 8px 24px -8px rgba(20,20,20,0.12); position: relative; }
+.local-card-head { margin-bottom: 14px; }
+.local-card-name { font-family: var(--font-display); font-size: 18px; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 4px; }
+.local-card-rating { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.local-stars { color: #f59e0b; letter-spacing: 0.04em; font-size: 14px; }
+.local-rating-text { color: var(--ink-3); }
+.local-card-meta { display: flex; flex-direction: column; gap: 7px; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 14px; }
+.local-card-meta-row { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ink-2); }
+.local-card-icon { width: 18px; text-align: center; opacity: 0.7; }
+.local-card-actions { display: flex; gap: 8px; margin-bottom: 14px; }
+.local-card-btn { flex: 1; padding: 10px 12px; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px; font-family: inherit; font-size: 12px; color: var(--ink); cursor: default; }
+.local-card-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.local-card-photo { aspect-ratio: 1; background: linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-soft) 60%, #e9e3d3 100%); border-radius: 6px; }
+.local-card-photo:nth-child(2) { background: linear-gradient(135deg, #2a2a28 0%, #56524d 100%); }
+.local-card-photo:nth-child(3) { background: linear-gradient(135deg, var(--accent-soft) 0%, #f4d8a8 100%); }
+.local-visual-caption { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-4); }
+
 .care-block { margin-top: 50px; background: var(--ink); color: var(--dark-fg); border-radius: 22px; padding: 50px 44px; position: relative; overflow: hidden; }
 .care-block::before { content: ""; position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(217, 119, 6, 0.18), transparent 60%); pointer-events: none; }
 @media (max-width: 768px) { .care-block { padding: 40px 24px; border-radius: 18px; margin-top: 32px; } }
@@ -1489,6 +1530,37 @@ section { padding: 120px 0; position: relative; }
   border-color: rgba(217, 119, 6, 0.3);
   color: var(--accent);
 }
+.price-feature-optional {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+  color: var(--ink-3);
+  font-size: 13px;
+}
+.price-feature-optional em {
+  font-style: italic;
+  color: var(--ink-4);
+  font-variation-settings: "wdth" 90;
+}
+.price-feature-optional strong { color: var(--accent-deep); font-weight: 600; }
+.price-feat-plus {
+  flex-shrink: 0;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px dashed var(--line-2);
+  color: var(--ink-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
+.price-card.featured .price-feature-optional { color: var(--dark-fg-2); border-top-color: rgba(255,255,255,0.1); }
+.price-card.featured .price-feat-plus { border-color: rgba(255,255,255,0.2); color: var(--dark-fg-2); }
+.price-card.featured .price-feature-optional strong { color: var(--accent); }
 .price-tag {
   position: absolute;
   top: -14px;
@@ -3580,6 +3652,73 @@ details[open] .faq-toggle {
   </div>
 </section>
 
+<!-- LOKAAL VINDBAAR — Google Bedrijfsprofiel -->
+<section class="local-section">
+  <div class="container">
+    <div class="local-grid reveal">
+      <div class="local-content">
+        <div class="local-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Lokaal vindbaar
+        </div>
+        <h2 class="local-h">Een website is niet genoeg. Je moet vindbaar zijn waar klanten <em>écht zoeken</em>.</h2>
+        <p class="local-p">Tik <em>"loodgieter Antwerpen"</em> in Google. Wat zie je als eerste? <strong>Niet websites.</strong> Drie kaartjes met foto's, sterren en routebeschrijvingen. Dat zijn Google Bedrijfsprofielen — en <strong>70% van de klikken gaan ernaartoe</strong>, niet naar de websites eronder.</p>
+        <p class="local-p">Voor lokale KMO's is je Google Bedrijfsprofiel <em>vaak belangrijker dan je website zelf</em>. Onvolledig profiel = onzichtbaar in lokale zoekresultaten. Half ingevulde categorieën = je verschijnt niet voor de juiste zoektermen.</p>
+        
+        <div class="local-includes">
+          <div class="local-includes-h">Wat we doen:</div>
+          <ul class="local-list">
+            <li><span class="local-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Profiel claimen of aanmaken + verificatie</li>
+            <li><span class="local-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Volledige optimalisatie: categorieën, services, beschrijving</li>
+            <li><span class="local-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>10-15 professionele foto's uploaden</li>
+            <li><span class="local-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Service-area instellen (welke gemeenten je bedient)</li>
+            <li><span class="local-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Review-uitnodiging flow opzetten</li>
+            <li><span class="local-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>1u trainingssessie zodat je zelf kan blijven posten</li>
+          </ul>
+        </div>
+
+        <div class="local-availability">
+          <div class="local-avail-row"><span class="local-avail-tag local-avail-yes">Inbegrepen</span><span>bij <strong>Pro</strong> & <strong>Custom</strong> webdesign-pakketten</span></div>
+          <div class="local-avail-row"><span class="local-avail-tag local-avail-add">+ €395</span><span>optionele add-on bij <strong>Essential</strong></span></div>
+          <div class="local-avail-row"><span class="local-avail-tag local-avail-add">+ €49/m</span><span>optionele maandelijks beheer bij <strong>Care Basis</strong> & <strong>Actief</strong></span></div>
+          <div class="local-avail-row"><span class="local-avail-tag local-avail-yes">Inbegrepen</span><span>maandelijks beheer bij <strong>Care Groei</strong></span></div>
+        </div>
+      </div>
+
+      <div class="local-visual">
+        <div class="local-card">
+          <div class="local-card-head">
+            <div class="local-card-name">Voltrix Elektriciteitswerken</div>
+            <div class="local-card-rating">
+              <span class="local-stars">★★★★★</span>
+              <span class="local-rating-text">4.9 · 47 reviews</span>
+            </div>
+          </div>
+          <div class="local-card-meta">
+            <div class="local-card-meta-row"><span class="local-card-icon">📍</span>Italieleï 161, 2000 Antwerpen</div>
+            <div class="local-card-meta-row"><span class="local-card-icon">🕐</span>Open · sluit om 17:00</div>
+            <div class="local-card-meta-row"><span class="local-card-icon">📞</span>0493 71 00 68</div>
+          </div>
+          <div class="local-card-actions">
+            <button class="local-card-btn">Bel</button>
+            <button class="local-card-btn">Route</button>
+            <button class="local-card-btn">Website</button>
+          </div>
+          <div class="local-card-photos">
+            <div class="local-card-photo"></div>
+            <div class="local-card-photo"></div>
+            <div class="local-card-photo"></div>
+          </div>
+        </div>
+        <div class="local-visual-caption">Voorbeeld Google Bedrijfsprofiel</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="container">
@@ -3603,6 +3742,7 @@ details[open] .faq-toggle {
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Eenvoudig contactformulier</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Mobiel-geoptimaliseerd</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>14 dagen levertijd</li>
+          <li class="price-feature price-feature-optional"><span class="price-feat-plus">+</span><span>Google Bedrijfsprofiel <em>optioneel</em>: <strong>€395</strong></span></li>
         </ul>
         <a href="/contact" class="btn btn-secondary" style="justify-content: center;">Kies Essential</a>
       </div>
@@ -3611,15 +3751,17 @@ details[open] .faq-toggle {
         <div class="price-tag">Meest gekozen</div>
         <div class="price-tier">Pro</div>
         <div class="price-tier-sub">Een werkpaard voor je business — geen digitaal visitekaartje.</div>
-        <div class="price-amount"><em>€</em>4.499</div>
+        <div class="price-amount"><em>€</em>4.999</div>
         <div class="price-meta">eenmalig · excl. btw</div>
         <div class="price-care-line">+ Care vanaf €89/m</div>
         <ul class="price-features">
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Alles uit Essential, plus:</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Tot 12 pagina's + dienstenpagina's</li>
-          <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Multi-step offerteformulier op maat</li>
+          <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span><strong>Multi-step formulieren</strong> op maat <span style="color: var(--accent-deep); font-style: italic;">(specialiteit)</span></li>
+          <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span><strong>Custom prijs-calculators</strong> <span style="color: var(--accent-deep); font-style: italic;">(specialiteit)</span></li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>CRM-integratie (Teamleader, Odoo)</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Conversie-tracking ingesteld</li>
+          <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span><strong>Google Bedrijfsprofiel</strong> volledig opgezet</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>21 dagen levertijd</li>
         </ul>
         <a href="/contact" class="btn btn-amber" style="justify-content: center;">Kies Pro →</a>
@@ -3777,7 +3919,7 @@ details[open] .faq-toggle {
           <span class="faq-q">Wat kost een website laten maken in België?</span>
           <span class="faq-toggle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
-        <div class="faq-a">In België ligt de prijs voor een professionele website tussen €1.500 en €10.000 — afhankelijk van complexiteit, sector en functionaliteiten. Bij Webcraftiq starten onze pakketten vanaf €2.499 (Essential) en €4.499 (Pro met multi-step formulier). Bekijk onze <a href="/website-laten-maken" style="color: var(--accent); border-bottom: 1px solid var(--accent);">volledige uitleg over website laten maken</a> voor meer details.</div>
+        <div class="faq-a">In België ligt de prijs voor een professionele website tussen €1.500 en €10.000 — afhankelijk van complexiteit, sector en functionaliteiten. Bij Webcraftiq starten onze pakketten vanaf €2.499 (Essential) en €4.999 (Pro met multi-step formulier). Bekijk onze <a href="/website-laten-maken" style="color: var(--accent); border-bottom: 1px solid var(--accent);">volledige uitleg over website laten maken</a> voor meer details.</div>
       </details>
       <details class="faq-item">
         <summary>
