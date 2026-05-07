@@ -4,9 +4,72 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.3 — 6 mei 2026 ✅ ACTIEF
+## V2.5 — 7 mei 2026 ✅ ACTIEF
 
-**Status:** Nieuwe prijzenstructuur + verplicht Care-pakket.
+**Status:** Drie Care-pakketten + dedicated /care pagina.
+
+### Nieuwe pagina
+- ✅ **`/care`** — volledige uitleg over 3 maandelijkse Care-pakketten
+- Hero, "Waarom Care", drie tier-cards, deep-dive over update-rondes en SEO-pagina's, FAQ, CTA
+
+### Care herzien naar 3 pakketten
+- ✅ **Care Basis — €49/m** (was €45/m): hosting, security, backups, monitoring
+- ✅ **Care Actief — €179/m** (NIEUW): + 2u maandelijkse content-updates + performance-rapport + prioriteit-support
+- ✅ **Care Groei — €449/m** (NIEUW): + maandelijks 1 SEO-geoptimaliseerde pagina + ranking-monitoring + strategie-call
+- ✅ **Allemaal verplicht** bij elke website (klant kiest welk pakket — minimum is Basis)
+
+### Visuele wijzigingen
+- ✅ Homepage Care-blok herzien naar **3 tier-mini-cards** met direct doorklik naar /care#actief
+- ✅ Tier-cards op homepage tonen nu "+ Care vanaf €49/m" (was "€45/m")
+- ✅ Pricing-intro verwijst naar /care voor Care-uitleg
+
+### Updates op andere pagina's
+- ✅ **/website-laten-maken**: FAQ over Care vermeldt 3 pakketten + link naar /care
+- ✅ **/redesign**: Care-vermelding bijgewerkt met 3 pakketten
+- ✅ **/contact**: form step 2A toont "+ Care" achter elk pakket + Care-uitleg in subtekst
+- ✅ **/contact**: Care-blok onderaan vermeldt 3 prijzen + CTA naar /care
+
+### Schema & SEO
+- ✅ JSON-LD Service-schemas voor 3 Care-pakketten op /care
+- ✅ Sitemap.xml bijgewerkt met /care (priority 0.9)
+
+### Footer
+- ✅ "Care" toegevoegd aan footer "Pagina's"-lijst op alle 16 pagina's
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.5 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.4 — 7 mei 2026
+
+**Status:** Prijsbijstelling + cleanup balken homepage. Vervangen door V2.5.
+
+### Pricing wijzigingen
+- ✅ **Essential**: €2.999 → **€2.499** ex BTW (eenmalig)
+- ✅ **Pro**: €4.999 → **€4.499** ex BTW (eenmalig)
+- ✅ **Custom**: vanaf €7.500 — ongewijzigd
+- ✅ **Care**: €45/maand — ongewijzigd, blijft verplicht bij elk pakket
+
+### Visuele wijzigingen homepage
+- ✅ Verwijderd: donkere marquee-balk onder de menubalk
+- ✅ Verwijderd: trust-strip ("Sinds 2026 · 2 live projecten · ...")
+- ✅ Hero top-padding verhoogd (160px desktop, 130px mobiel) om visuele balans te behouden
+
+### Bijgewerkt op
+- Homepage prijzensectie + tier-cards
+- /website-laten-maken (prijzen + Service-schema's JSON-LD + FAQ)
+- /redesign (tarieven-sectie + Care-vermelding)
+- /contact (multi-step form stap 2A + pricing recap)
+
+### Versie-marker
+- ✅ Alle 16 pagina's bijgewerkt naar `<!-- Webcraftiq v2.4 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.3 — 6 mei 2026
+
+**Status:** Nieuwe prijzenstructuur + verplicht Care-pakket. Vervangen door V2.4.
 
 ### Pricing wijzigingen
 - ✅ **Essential**: €2.495 → **€2.999** ex BTW (eenmalig)

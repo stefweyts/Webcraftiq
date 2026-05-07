@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-<!-- Webcraftiq v2.3 | 2026-05-06 | Stef Weyts -->
+<!-- Webcraftiq v2.5 | 2026-05-07 | Stef Weyts -->
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,7 @@
      PRIMARY SEO META
      ============================================================ -->
 <title>Webcraftiq · Premium webdesign voor Belgische KMO's</title>
-<meta name="description" content="Premium websites op maat voor Belgische KMO's. Custom code, multi-step offerteformulieren, vaste prijs vanaf €2.999. Klaar in 14 dagen." />
+<meta name="description" content="Premium websites op maat voor Belgische KMO's. Custom code, multi-step offerteformulieren, vaste prijs vanaf €2.499. Klaar in 14 dagen." />
 <meta name="keywords" content="webdesign België, website laten maken, webdesign Antwerpen, website KMO, webdesign installateur, multi-step formulier, custom website, webdesigner Vlaanderen, website op maat, premium webdesign" />
 <meta name="author" content="Webcraftiq" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -36,7 +36,7 @@
 <meta property="og:site_name" content="Webcraftiq" />
 <meta property="og:url" content="https://webcraftiq.be/" />
 <meta property="og:title" content="Webcraftiq · Webdesign op maat voor Belgische KMO's" />
-<meta property="og:description" content="Premium websites op maat voor Belgische KMO's. Custom code, multi-step offerteformulieren, CRM-integratie. Vaste prijs vanaf €2.999, klaar in 14 dagen." />
+<meta property="og:description" content="Premium websites op maat voor Belgische KMO's. Custom code, multi-step offerteformulieren, CRM-integratie. Vaste prijs vanaf €2.499, klaar in 14 dagen." />
 <meta property="og:image" content="https://webcraftiq.be/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -158,14 +158,14 @@
             "@type": "Offer",
             "name": "Essential",
             "description": "Premium website tot 5 pagina's met SEO basis en standaard contactformulier",
-            "price": "2999",
+            "price": "2499",
             "priceCurrency": "EUR"
           },
           {
             "@type": "Offer",
             "name": "Pro",
             "description": "Compleet pakket inclusief multi-step offerteformulier, CRM-integratie en booking-flow",
-            "price": "4999",
+            "price": "4499",
             "priceCurrency": "EUR"
           },
           {
@@ -241,7 +241,7 @@
           "name": "Wat na de lancering?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bij elk pakket zit Webcraftiq Care standaard inbegrepen: €45/maand voor hosting, security, daily backups en monitoring. Geen losse hosting-rekeningen, geen verrassingen. Content-aanpassingen worden apart gefactureerd aan €85/u."
+            "text": "Bij elk pakket zit Webcraftiq Care verplicht inbegrepen — drie pakketten beschikbaar: Care Basis (€49/m) voor hosting + security, Care Actief (€179/m) voor 2u maandelijkse updates, en Care Groei (€449/m) voor maandelijkse SEO-pagina + strategie. Bekijk /care voor de volledige uitleg."
           }
         },
         {
@@ -257,7 +257,7 @@
           "name": "Wat kost een website laten maken in België?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In België ligt de prijs voor een professionele website tussen €1.500 en €10.000 — afhankelijk van complexiteit, sector en functionaliteiten. Bij Webcraftiq starten onze pakketten vanaf €2.999 (Essential) en €4.999 (Pro met multi-step formulier). Custom projecten beginnen vanaf €7.500."
+            "text": "In België ligt de prijs voor een professionele website tussen €1.500 en €10.000 — afhankelijk van complexiteit, sector en functionaliteiten. Bij Webcraftiq starten onze pakketten vanaf €2.499 (Essential) en €4.499 (Pro met multi-step formulier). Custom projecten beginnen vanaf €7.500."
           }
         },
         {
@@ -1455,6 +1455,22 @@ section { padding: 120px 0; position: relative; }
 .care-foot strong { color: var(--dark-fg); font-weight: 600; }
 .care-foot a { color: var(--accent); border-bottom: 1px solid rgba(217, 119, 6, 0.4); }
 .care-foot a:hover { color: var(--bg); border-bottom-color: var(--bg); }
+
+/* CARE TIERS — compact mini-cards on homepage */
+.care-tiers { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 30px; }
+@media (max-width: 900px) { .care-tiers { grid-template-columns: 1fr; gap: 12px; } }
+.care-tier { position: relative; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 24px 22px; display: flex; flex-direction: column; transition: all 0.2s var(--ease); }
+.care-tier:hover { background: rgba(255,255,255,0.07); border-color: rgba(217, 119, 6, 0.4); }
+.care-tier.featured { background: rgba(217, 119, 6, 0.1); border-color: rgba(217, 119, 6, 0.4); }
+.care-tier.featured:hover { background: rgba(217, 119, 6, 0.16); }
+.care-tier-badge { position: absolute; top: -10px; right: 18px; background: var(--accent); color: #fff; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; font-weight: 600; }
+.care-tier-name { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+.care-tier-price { font-family: var(--font-display); font-size: 38px; font-weight: 400; letter-spacing: -0.04em; line-height: 1; color: var(--dark-fg); margin-bottom: 10px; }
+.care-tier-price em { font-style: italic; color: var(--accent); font-variation-settings: "wdth" 85; }
+.care-tier-price span { font-size: 14px; color: var(--dark-fg-2); margin-left: 2px; font-style: normal; font-family: var(--font-mono); letter-spacing: 0.05em; }
+.care-tier-tagline { font-size: 13px; line-height: 1.5; color: var(--dark-fg-2); flex: 1; margin-bottom: 14px; }
+.care-tier-arrow { font-size: 18px; color: var(--accent); transition: transform 0.2s var(--ease); align-self: flex-end; }
+.care-tier:hover .care-tier-arrow { transform: translateX(4px); }
 .price-features { display: flex; flex-direction: column; gap: 12px; flex: 1; margin-bottom: 28px; }
 .price-feature { display: flex; align-items: start; gap: 10px; font-size: 14px; }
 .price-feat-check {
@@ -3569,7 +3585,7 @@ details[open] .faq-toggle {
     <div class="pricing-head reveal">
       <span class="eyebrow eyebrow-amber">— Investering</span>
       <h2 class="section-h" style="margin-top: 18px;">Eén vaste prijs.<br /><em>Care inbegrepen.</em></h2>
-      <p style="margin-top: 18px; font-size: 16px; color: var(--ink-3); max-width: 600px; line-height: 1.6;">Eenmalige bouw + Webcraftiq Care voor hosting, security en monitoring. Eén partij, één factuur, geen losse hosting-rekeningen meer.</p>
+      <p style="margin-top: 18px; font-size: 16px; color: var(--ink-3); max-width: 600px; line-height: 1.6;">Eenmalige bouw + Webcraftiq Care voor hosting, security en maandelijks onderhoud. <a href="/care" style="color: var(--accent-deep); border-bottom: 1px solid var(--accent-line);">Drie Care-pakketten vanaf €49/m</a> — kies wat past bij je situatie.</p>
     </div>
 
     <div class="pricing-grid">
@@ -3578,7 +3594,7 @@ details[open] .faq-toggle {
         <div class="price-tier-sub">Voor zaakvoerders die snel online willen met een sterke basis en goede SEO.</div>
         <div class="price-amount"><em>€</em>2.999</div>
         <div class="price-meta">eenmalig · excl. btw</div>
-        <div class="price-care-line">+ €45/m Care</div>
+        <div class="price-care-line">+ Care vanaf €49/m</div>
         <ul class="price-features">
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Tot 5 pagina's, op maat ontworpen</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>SEO-optimalisatie + Search Console</li>
@@ -3596,7 +3612,7 @@ details[open] .faq-toggle {
         <div class="price-tier-sub">Een werkpaard voor je business — geen digitaal visitekaartje.</div>
         <div class="price-amount"><em>€</em>4.999</div>
         <div class="price-meta">eenmalig · excl. btw</div>
-        <div class="price-care-line">+ €45/m Care</div>
+        <div class="price-care-line">+ Care vanaf €49/m</div>
         <ul class="price-features">
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Alles uit Essential, plus:</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Tot 12 pagina's + dienstenpagina's</li>
@@ -3613,7 +3629,7 @@ details[open] .faq-toggle {
         <div class="price-tier-sub">E-commerce, klantportalen, multi-language of complexe integraties.</div>
         <div class="price-amount">vanaf <em>€</em>7.500</div>
         <div class="price-meta">eenmalig · excl. btw</div>
-        <div class="price-care-line">+ €45/m Care</div>
+        <div class="price-care-line">+ Care vanaf €49/m</div>
         <ul class="price-features">
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Alles uit Pro, plus:</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Onbeperkt aantal pagina's</li>
@@ -3633,48 +3649,36 @@ details[open] .faq-toggle {
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
           </svg>
-          Webcraftiq Care
+          Webcraftiq Care · Maandelijks
         </div>
-        <h3 class="care-h">Inbegrepen bij elk pakket — <em>€45/maand</em>.</h3>
-        <p class="care-sub">Hosting, beveiliging, backups en monitoring zit standaard bij je website. Eén partij, één factuur, geen losse hosting-account waar je later achterkomt dat de SSL is verlopen of de backups stilliggen.</p>
+        <h3 class="care-h">Een website is een <em>levend product</em>.</h3>
+        <p class="care-sub">Drie Care-pakketten om je site online te houden, actueel te krijgen of te laten groeien via Google. Verplicht inbegrepen bij elk webdesign-pakket.</p>
       </div>
 
-      <div class="care-features">
-        <div class="care-feat">
-          <div class="care-feat-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-          </div>
-          <h4 class="care-feat-h">Premium hosting</h4>
-          <p class="care-feat-p">Cloudflare-infrastructuur, wereldwijd snel laden. Zelfde stack als Vercel, Linear, Stripe.</p>
-        </div>
-
-        <div class="care-feat">
-          <div class="care-feat-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h4 class="care-feat-h">Security &amp; SSL</h4>
-          <p class="care-feat-p">HTTPS-certificaat, DDoS-bescherming en beveiligings-updates altijd up-to-date.</p>
-        </div>
-
-        <div class="care-feat">
-          <div class="care-feat-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0118 0M3 12a9 9 0 009 9M3 12h18"/><path d="M12 3a9 9 0 019 9"/></svg>
-          </div>
-          <h4 class="care-feat-h">Daily backups</h4>
-          <p class="care-feat-p">Automatische dagelijkse backups met 30 dagen historiek. Site terugzetten op één klik.</p>
-        </div>
-
-        <div class="care-feat">
-          <div class="care-feat-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h4 class="care-feat-h">24/7 monitoring</h4>
-          <p class="care-feat-p">Uptime-monitoring elke minuut. Bij problemen krijgen we direct een melding — vaak voor jij het merkt.</p>
-        </div>
+      <div class="care-tiers">
+        <a href="/care#basis" class="care-tier">
+          <div class="care-tier-name">Care Basis</div>
+          <div class="care-tier-price"><em>€</em>49<span>/m</span></div>
+          <div class="care-tier-tagline">Hosting, security en monitoring</div>
+          <div class="care-tier-arrow">→</div>
+        </a>
+        <a href="/care#actief" class="care-tier featured">
+          <div class="care-tier-badge">Aanbevolen</div>
+          <div class="care-tier-name">Care Actief</div>
+          <div class="care-tier-price"><em>€</em>179<span>/m</span></div>
+          <div class="care-tier-tagline">+ 2u maandelijkse updates</div>
+          <div class="care-tier-arrow">→</div>
+        </a>
+        <a href="/care#groei" class="care-tier">
+          <div class="care-tier-name">Care Groei</div>
+          <div class="care-tier-price"><em>€</em>449<span>/m</span></div>
+          <div class="care-tier-tagline">+ 1 SEO-pagina per maand</div>
+          <div class="care-tier-arrow">→</div>
+        </a>
       </div>
 
       <div class="care-foot">
-        <p><strong>Wat NIET inbegrepen:</strong> content-aanpassingen of nieuwe pagina's. Die rekenen we apart aan €85/u ex BTW. <a href="/contact">Vraag een voorstel</a> voor de volledige uitleg.</p>
+        <p style="text-align: center;"><a href="/care" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 500; font-size: 14px;">Bekijk volledige Care-pakketten <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></p>
       </div>
     </div>
   </div>
@@ -3758,7 +3762,7 @@ details[open] .faq-toggle {
           <span class="faq-q">Wat na de lancering?</span>
           <span class="faq-toggle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
-        <div class="faq-a">Bij elk pakket zit <strong>Webcraftiq Care</strong> standaard inbegrepen: €45/maand voor premium hosting (Cloudflare), SSL, daily backups, security-updates en 24/7 monitoring. Geen losse hosting-rekeningen, geen verrassingen. Content-aanpassingen of nieuwe pagina's worden apart gefactureerd aan €85/u ex BTW.</div>
+        <div class="faq-a">Bij elk pakket zit <strong>Webcraftiq Care</strong> verplicht inbegrepen — drie pakketten beschikbaar:<br><br><strong>Care Basis (€49/m)</strong>: hosting, SSL, daily backups, security en monitoring.<br><strong>Care Actief (€179/m)</strong>: + 2u maandelijkse content-updates + performance-rapport.<br><strong>Care Groei (€449/m)</strong>: + maandelijks 1 SEO-pagina + ranking-monitoring.<br><br><a href="/care" style="color: var(--accent-deep); border-bottom: 1px solid var(--accent-line);">Bekijk de volledige Care-uitleg</a>.</div>
       </details>
       <details class="faq-item">
         <summary>
@@ -3772,7 +3776,7 @@ details[open] .faq-toggle {
           <span class="faq-q">Wat kost een website laten maken in België?</span>
           <span class="faq-toggle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
-        <div class="faq-a">In België ligt de prijs voor een professionele website tussen €1.500 en €10.000 — afhankelijk van complexiteit, sector en functionaliteiten. Bij Webcraftiq starten onze pakketten vanaf €2.999 (Essential) en €4.999 (Pro met multi-step formulier). Bekijk onze <a href="/website-laten-maken" style="color: var(--accent); border-bottom: 1px solid var(--accent);">volledige uitleg over website laten maken</a> voor meer details.</div>
+        <div class="faq-a">In België ligt de prijs voor een professionele website tussen €1.500 en €10.000 — afhankelijk van complexiteit, sector en functionaliteiten. Bij Webcraftiq starten onze pakketten vanaf €2.499 (Essential) en €4.499 (Pro met multi-step formulier). Bekijk onze <a href="/website-laten-maken" style="color: var(--accent); border-bottom: 1px solid var(--accent);">volledige uitleg over website laten maken</a> voor meer details.</div>
       </details>
       <details class="faq-item">
         <summary>
@@ -3830,6 +3834,7 @@ details[open] .faq-toggle {
           <li><a href="/aanpak">Onze aanpak</a></li>
           <li><a href="/website-laten-maken">Website laten maken</a></li>
           <li><a href="/redesign">Redesign</a></li>
+          <li><a href="/care">Care</a></li>
           <li><a href="/cases">Portfolio</a></li>
           <li><a href="/over">Over ons</a></li>
           <li><a href="/blog">Blog</a></li>
