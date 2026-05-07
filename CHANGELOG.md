@@ -4,9 +4,37 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.8.3 — 7 mei 2026 ✅ ACTIEF
+## V2.8.4 — 7 mei 2026 ✅ ACTIEF
 
-**Status:** Echte Voltrix screenshot ook in homepage "Recent werk" en op /cases pagina.
+**Status:** Portfolio cards leiden nu naar case-study pagina's i.p.v. live website.
+
+### Wijzigingen
+- ✅ **/cases (Portfolio) pagina**:
+  - Voltrix card: `https://voltrix.be` → **`/cases/voltrix`**
+  - Gevanti card: `https://gevanti.be` → **`/cases/gevanti`**
+  - Card-meta tekst: "VOLTRIX.BE ↗" / "GEVANTI.BE ↗" → "**Bekijk case study →**"
+- ✅ **Homepage "Recent werk" sectie**:
+  - Voltrix work-card → `/cases/voltrix`
+  - Gevanti work-card → `/cases/gevanti`
+- ✅ **Homepage hero-trust regel** ("Recente projecten: ..."):
+  - Voltrix link → `/cases/voltrix`
+  - Gevanti link → `/cases/gevanti`
+
+### Wat blijft naar live site linken (intentioneel)
+- ✅ "Lokaal vindbaar" sectie: caption onder browser-frame screenshot — *"voltrix.be · live website"* link blijft naar de live site
+- ✅ "Lokaal vindbaar" sectie: kleine "Bekijk live site →" link onder beschikbaarheids-blok blijft naar de live site
+
+### Reden
+Case-study tonen eerst de aanpak en het verhaal, daarna kan de bezoeker doorklikken naar de live site. Veel betere conversie-flow — bezoeker leert WAT we doen voor hij naar concurrent-werk navigeert.
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.8.4 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.8.3 — 7 mei 2026
+
+**Status:** Echte Voltrix screenshot in homepage Recent werk en /cases. Vervangen door V2.8.4.
 
 ### Wijzigingen
 - ✅ **Homepage "Recent werk" sectie** (id="work"): Voltrix work-card vervangen — fake mini-site mockup → echte screenshot in browser-frame met traffic-light dots + URL bar (voltrix.be)
