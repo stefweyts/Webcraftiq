@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-<!-- Webcraftiq v2.8.1 | 2026-05-07 | Stef Weyts -->
+<!-- Webcraftiq v2.8.2 | 2026-05-07 | Stef Weyts -->
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -1458,22 +1458,78 @@ section { padding: 120px 0; position: relative; }
 .local-avail-add { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: var(--dark-fg); }
 
 .local-visual { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.local-card { width: 100%; max-width: 360px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; box-shadow: 0 8px 24px -8px rgba(20,20,20,0.12); position: relative; }
-.local-card-head { margin-bottom: 14px; }
-.local-card-name { font-family: var(--font-display); font-size: 18px; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 4px; }
-.local-card-rating { display: flex; align-items: center; gap: 8px; font-size: 13px; }
-.local-stars { color: #f59e0b; letter-spacing: 0.04em; font-size: 14px; }
-.local-rating-text { color: var(--ink-3); }
-.local-card-meta { display: flex; flex-direction: column; gap: 7px; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-bottom: 14px; }
-.local-card-meta-row { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ink-2); }
-.local-card-icon { width: 18px; text-align: center; opacity: 0.7; }
-.local-card-actions { display: flex; gap: 8px; margin-bottom: 14px; }
-.local-card-btn { flex: 1; padding: 10px 12px; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px; font-family: inherit; font-size: 12px; color: var(--ink); cursor: default; }
-.local-card-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-.local-card-photo { aspect-ratio: 1; background: linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-soft) 60%, #e9e3d3 100%); border-radius: 6px; }
-.local-card-photo:nth-child(2) { background: linear-gradient(135deg, #2a2a28 0%, #56524d 100%); }
-.local-card-photo:nth-child(3) { background: linear-gradient(135deg, var(--accent-soft) 0%, #f4d8a8 100%); }
-.local-visual-caption { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-4); }
+
+/* BROWSER FRAME — for real website screenshots */
+.browser-frame {
+  width: 100%;
+  max-width: 560px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px -12px rgba(20, 20, 20, 0.18), 0 8px 16px -8px rgba(20, 20, 20, 0.08);
+  transform: translateY(0);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.browser-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 60px -16px rgba(20, 20, 20, 0.22), 0 12px 20px -10px rgba(20, 20, 20, 0.1);
+}
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 14px;
+  background: linear-gradient(to bottom, #f5f0e6, #ece6d8);
+  border-bottom: 1px solid var(--line);
+}
+.browser-dots { display: flex; gap: 6px; flex-shrink: 0; }
+.browser-dot { width: 11px; height: 11px; border-radius: 50%; }
+.browser-dot-red { background: #ff5f56; }
+.browser-dot-yellow { background: #ffbd2e; }
+.browser-dot-green { background: #27c93f; }
+.browser-url {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(214, 205, 184, 0.6);
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  max-width: 320px;
+  margin: 0 auto;
+}
+.browser-url svg { color: var(--ink-4); flex-shrink: 0; }
+.browser-content {
+  background: #0F172A;
+  position: relative;
+}
+.browser-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.local-visual-caption {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  text-align: center;
+}
+.local-visual-caption a {
+  color: var(--accent-deep);
+  border-bottom: 1px solid var(--accent-line);
+}
+.local-visual-caption a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
 
 .care-block { margin-top: 50px; background: var(--ink); color: var(--dark-fg); border-radius: 22px; padding: 50px 44px; position: relative; overflow: hidden; }
 .care-block::before { content: ""; position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(217, 119, 6, 0.18), transparent 60%); pointer-events: none; }
@@ -3666,7 +3722,7 @@ details[open] .faq-toggle {
         </div>
         <h2 class="local-h">Een website is niet genoeg. Je moet vindbaar zijn waar klanten <em>écht zoeken</em>.</h2>
         <p class="local-p">Tik <em>"loodgieter Antwerpen"</em> in Google. Wat zie je als eerste? <strong>Niet websites.</strong> Drie kaartjes met foto's, sterren en routebeschrijvingen. Dat zijn Google Bedrijfsprofielen — en <strong>70% van de klikken gaan ernaartoe</strong>, niet naar de websites eronder.</p>
-        <p class="local-p">Voor lokale KMO's is je Google Bedrijfsprofiel <em>vaak belangrijker dan je website zelf</em>. Onvolledig profiel = onzichtbaar in lokale zoekresultaten. Half ingevulde categorieën = je verschijnt niet voor de juiste zoektermen.</p>
+        <p class="local-p">Voor lokale KMO's is je Google Bedrijfsprofiel <em>vaak belangrijker dan je website zelf</em>. Onvolledig profiel = onzichtbaar in lokale zoekresultaten. Daarom doen wij <strong>allebei</strong> — een professionele website (zie Voltrix hiernaast) plus een volledig opgezet Google Bedrijfsprofiel.</p>
         
         <div class="local-includes">
           <div class="local-includes-h">Wat we doen:</div>
@@ -3689,31 +3745,25 @@ details[open] .faq-toggle {
       </div>
 
       <div class="local-visual">
-        <div class="local-card">
-          <div class="local-card-head">
-            <div class="local-card-name">Voltrix Elektriciteitswerken</div>
-            <div class="local-card-rating">
-              <span class="local-stars">★★★★★</span>
-              <span class="local-rating-text">4.9 · 47 reviews</span>
+        <div class="browser-frame">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span class="browser-dot browser-dot-red"></span>
+              <span class="browser-dot browser-dot-yellow"></span>
+              <span class="browser-dot browser-dot-green"></span>
+            </div>
+            <div class="browser-url">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>voltrix.be</span>
             </div>
           </div>
-          <div class="local-card-meta">
-            <div class="local-card-meta-row"><span class="local-card-icon">📍</span>Italieleï 161, 2000 Antwerpen</div>
-            <div class="local-card-meta-row"><span class="local-card-icon">🕐</span>Open · sluit om 17:00</div>
-            <div class="local-card-meta-row"><span class="local-card-icon">📞</span>0493 71 00 68</div>
-          </div>
-          <div class="local-card-actions">
-            <button class="local-card-btn">Bel</button>
-            <button class="local-card-btn">Route</button>
-            <button class="local-card-btn">Website</button>
-          </div>
-          <div class="local-card-photos">
-            <div class="local-card-photo"></div>
-            <div class="local-card-photo"></div>
-            <div class="local-card-photo"></div>
+          <div class="browser-content">
+            <img src="/images/voltrix-hero-snapshot.jpg" alt="voltrix.be — Webcraftiq website voor Voltrix Elektricien Antwerpen" loading="lazy" />
           </div>
         </div>
-        <div class="local-visual-caption">Voorbeeld Google Bedrijfsprofiel</div>
+        <div class="local-visual-caption">
+          <a href="https://voltrix.be" target="_blank" rel="noopener">voltrix.be</a> · live website · gebouwd door Webcraftiq
+        </div>
       </div>
     </div>
   </div>

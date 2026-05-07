@@ -4,9 +4,28 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.8.1 — 7 mei 2026 ✅ ACTIEF
+## V2.8.2 — 7 mei 2026 ✅ ACTIEF
 
-**Status:** Pro pakket: multi-step formulieren + prijs-calculators als specialiteit benadrukt.
+**Status:** Echte Voltrix screenshot vervangt fake mockup op homepage.
+
+### Wijzigingen
+- ✅ **Echte voltrix.be screenshot** geüpload (1600×890px, 106KB) als `/images/voltrix-hero-snapshot.jpg`
+- ✅ Browser tabs uit screenshot weggecropt voor cleane look (URL bar + content behouden)
+- ✅ **Lokaal vindbaar sectie** op homepage: nepkaart van Google Bedrijfsprofiel vervangen door **echte website-snapshot in browser-frame** met:
+  - Browser chrome (3 traffic-light dots + URL bar met "voltrix.be")
+  - Echte screenshot van voltrix.be hero
+  - Hover-effect (subtiele lift + grotere shadow)
+  - Caption: "voltrix.be · live website · gebouwd door Webcraftiq" (met link naar live site)
+- ✅ Sectie-tekst aangepast: laatste paragraaf vermeldt nu expliciet *"daarom doen wij allebei — een professionele website (zie Voltrix hiernaast) plus een volledig opgezet Google Bedrijfsprofiel"*
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.8.2 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.8.1 — 7 mei 2026
+
+**Status:** Pro pakket: multi-step formulieren + prijs-calculators als specialiteit. Vervangen door V2.8.2.
 
 ### Wijzigingen Pro feature-lists
 **Toegevoegd / herbenoemd op alle 3 pagina's** (homepage, /website-laten-maken, /contact):
