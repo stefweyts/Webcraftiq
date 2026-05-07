@@ -4,9 +4,64 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.6 — 7 mei 2026 ✅ ACTIEF
+## V2.7.1 — 7 mei 2026 ✅ ACTIEF
 
-**Status:** Care-pakketten herzien — 1u inbegrepen vanaf Basis, prijzen aangepast.
+**Status:** Prijs-consistentie hotfix.
+
+### Probleem
+Stef merkte dat prijzen niet overal hetzelfde waren. Audit toonde drie bugs:
+- ✗ `index.html` toonde nog **€2.999 + €4.999** (V2.3 prijzen) in tier-cards
+- ✗ `contact.html` toonde nog **€2.999 + €4.999** in pricing recap
+- ✗ `website-laten-maken.html` toonde nog **€2.999 + €4.999** in pricing tabel
+- ✗ `voorwaarden.html` vermeldde nog **€45/maand** (oude Care-prijs uit V2.3)
+
+### Oorzaak
+De oude prijzen waren ge-wrapped in `<em>€</em>2.999` HTML, waardoor mijn eerdere globale find-en-replace ze miste (zocht op `€2.999` als string, vond niet de gesplitste versie).
+
+### Fix
+- ✅ Alle 6 instances van `<em>€</em>2.999` → `<em>€</em>2.499`
+- ✅ Alle 6 instances van `<em>€</em>4.999` → `<em>€</em>4.499`
+- ✅ `voorwaarden.html`: oude Care-vermelding bijgewerkt naar drie pakketten met link naar /care
+
+### Definitieve prijzen overal nu
+| Pakket | Prijs |
+|---|---|
+| Essential | €2.499 ex BTW |
+| Pro | €4.499 ex BTW |
+| Custom | vanaf €7.500 ex BTW |
+| Care Basis | €89/m |
+| Care Actief | €189/m |
+| Care Groei | €449/m |
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.7.1 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.7 — 7 mei 2026
+
+**Status:** Rolloff-beleid: 3 maanden maximum. Vervangen door V2.7.1 (prijsfix).
+
+### Wijziging
+- ✅ **Niet-gebruikte uren stapelen op tot maximaal 3 maanden** (was: onbeperkt)
+- Reden: voorspelbaar plafond per klant (max 9u tegoed bij Actief), voorkomt einde-relatie ruzies, industriestandaard
+
+### Bijgewerkt op /care
+- ✅ Tier-cards (Basis + Actief) feature: "Niet-gebruikte uren stapelen op" → "Tegoed stapelt op tot **3 maanden**"
+- ✅ Deep-dive paragraaf: vervangen "stapelen onbeperkt op" met concreet voorbeeld (jan/feb/mrt) en uitleg over plafond
+- ✅ Nieuwe FAQ-item toegevoegd: "Wat gebeurt er met uren die ik in een maand niet gebruik?" met cijfervoorbeeld
+
+### Andere pagina's
+- Geen wijziging nodig — homepage, /contact, /website-laten-maken en /redesign verwijzen naar /care voor details, geen specifieke rolloff-tekst.
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.7 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.6 — 7 mei 2026
+
+**Status:** Care-pakketten herzien — 1u inbegrepen vanaf Basis. Vervangen door V2.7.
 
 ### Care-pakketten herzien
 
