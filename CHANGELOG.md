@@ -4,9 +4,37 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.8.4 — 7 mei 2026 ✅ ACTIEF
+## V2.9 — 7 mei 2026 ✅ ACTIEF
 
-**Status:** Portfolio cards leiden nu naar case-study pagina's i.p.v. live website.
+**Status:** Voltrix case-study herschreven — focus op tijdwinning via slim multi-step formulier.
+
+### Nieuwe focus
+De vorige case-study beschreef de **website** in algemene termen ("3 pijlers, lokale SEO, multi-step, WhatsApp"). De nieuwe versie focust op het **kernverhaal**: hoe het slimme multi-step formulier Voltrix uren per week bespaart door complete intakes te leveren zonder mailpingpong.
+
+### Wijzigingen
+- ✅ **Nieuwe titel**: "Voltrix · Een offerte-flow die uren bespaart per week" (was: "Een lokale website voor een elektricien")
+- ✅ **De uitdaging** — concreter: vermeldt nu dat per aanvraag *meer dan tien stukjes informatie* nodig zijn, met echte voorbeelden (kookvuur 7,4/11/22 kW, asbest-risico bij bouwjaar < 1981, slim laden bij zonnepanelen)
+- ✅ **De aanpak** — nieuwe kernzin: *"Eén formulier dat zich aanpast per dienst"* met uitleg over conditionele vraagpaden + nieuwe sectie met concreet keukenrenovatie-voorbeeld (klant invult / Voltrix krijgt)
+- ✅ **Technische keuzes** herschreven met focus op adaptiviteit, klant-educatie ("wij leggen uit wat 7,4 kW betekent"), foto-upload als huisbezoek-besparing
+- ✅ **Resultaat-sectie** vervangen — nieuwe titel: *"Van 3 dagen mailpingpong naar offerte op dezelfde dag"* met visueel **Vóór/Nu vergelijkblok** (lichte vs donkere kaart)
+- ✅ **Eerlijke disclaimer toegevoegd**: "Concrete cijfers verzamelen we momenteel met Voltrix" — geen verzonnen claims
+- ✅ **Meta description + OG description** aangepast aan nieuwe focus
+
+### Onderzoek-basis
+Case-study geschreven na grondige bestudering van:
+- voltrix.be homepage (services, USPs, reviews)
+- voltrix.be/contact (het volledige multi-step formulier met conditionele vraagpaden voor 7 diensten)
+
+Echte details uit het formulier verwerkt: BTW-onderscheid particulier/syndicus, kookvuur-vermogen-uitleg, asbest-warning bij bouwjaren, foto-upload voor zekeringkasten, etc.
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.9 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.8.4 — 7 mei 2026
+
+**Status:** Portfolio cards leiden naar case-studies. Vervangen door V2.9.
 
 ### Wijzigingen
 - ✅ **/cases (Portfolio) pagina**:
