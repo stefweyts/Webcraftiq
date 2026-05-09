@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-<!-- Webcraftiq v2.11 | 2026-05-09 | Stef Weyts -->
+<!-- Webcraftiq v2.11.1 | 2026-05-09 | Stef Weyts -->
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -114,36 +114,13 @@ section.story-section { padding: 100px 0; border-bottom: 1px solid var(--line); 
   overflow: hidden;
   box-shadow: 0 14px 32px -12px rgba(20,20,20,0.18), 0 4px 8px -4px rgba(20,20,20,0.06);
   transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
-  height: 560px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
 }
 .flow-browser:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -16px rgba(20,20,20,0.22), 0 8px 14px -8px rgba(20,20,20,0.08); }
-.flow-browser-bar { display: flex; align-items: center; gap: 12px; padding: 9px 13px; background: linear-gradient(to bottom, #f5f0e6, #ece6d8); border-bottom: 1px solid var(--line); flex-shrink: 0; z-index: 2; position: relative; }
+.flow-browser-bar { display: flex; align-items: center; gap: 12px; padding: 9px 13px; background: linear-gradient(to bottom, #f5f0e6, #ece6d8); border-bottom: 1px solid var(--line); }
 .flow-dots { display: flex; gap: 5px; flex-shrink: 0; }
 .flow-dot { width: 9px; height: 9px; border-radius: 50%; }
 .flow-url { flex: 1; background: rgba(255,255,255,0.7); border: 1px solid rgba(214, 205, 184, 0.6); border-radius: 5px; padding: 4px 10px; font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); text-align: center; max-width: 260px; margin: 0 auto; }
-.flow-browser img { display: block; width: 100%; height: auto; background: #fff; }
-.flow-browser-scroll {
-  flex: 1;
-  overflow: hidden;
-  position: relative;
-}
-.flow-browser-scroll::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0), var(--bg-card) 95%);
-  pointer-events: none;
-  z-index: 1;
-}
-@media (max-width: 1100px) {
-  .flow-browser { height: 640px; }
-}
+.flow-browser img { display: block; width: 100%; height: auto; }
 .flow-step-desc { font-size: 14px; line-height: 1.65; color: var(--ink-2); margin: 6px 0 0; }
 .flow-step-desc strong { color: var(--ink); font-weight: 600; }
 
@@ -163,10 +140,6 @@ section.story-section { padding: 100px 0; border-bottom: 1px solid var(--line); 
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
-  position: relative;
-  height: 480px;
-  display: flex;
-  flex-direction: column;
 }
 .adaptive-bar {
   display: flex;
@@ -174,10 +147,6 @@ section.story-section { padding: 100px 0; border-bottom: 1px solid var(--line); 
   padding: 6px 8px;
   background: linear-gradient(to bottom, #f5f0e6, #ece6d8);
   border-bottom: 1px solid var(--line);
-  height: 22px;
-  flex-shrink: 0;
-  z-index: 2;
-  position: relative;
 }
 .adaptive-dots { display: flex; gap: 4px; }
 .adaptive-dot { width: 7px; height: 7px; border-radius: 50%; }
@@ -185,22 +154,6 @@ section.story-section { padding: 100px 0; border-bottom: 1px solid var(--line); 
   display: block;
   width: 100%;
   height: auto;
-}
-.adaptive-browser-scroll {
-  flex: 1;
-  overflow: hidden;
-  position: relative;
-}
-.adaptive-browser::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 80px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0), var(--bg-card) 90%);
-  pointer-events: none;
-  z-index: 1;
 }
 .adaptive-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
 .adaptive-list li { font-size: 13px; line-height: 1.55; color: var(--ink-2); padding-left: 18px; position: relative; }
@@ -631,9 +584,7 @@ body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
             </div>
             <div class="flow-url">voltrix.be/contact</div>
           </div>
-          <div class="flow-browser-scroll">
-          <img src="/images/voltrix-form-step1-dienst.jpg" alt="Stap 1 — particulier vs syndicus + keuze uit 7 diensten" loading="lazy" />
-          </div>
+            <img src="/images/voltrix-form-step1-dienst.jpg" alt="Stap 1 — particulier vs syndicus + keuze uit 7 diensten" loading="lazy" />
         </div>
         <p class="flow-step-desc">
           Eerste filter: <strong>particulier of syndicus/VME</strong> (verschillende BTW-tarieven, andere planning). Dan de dienst — zeven keuzes met korte uitleg per icoon. Acute storingen worden hier al weggeleid naar telefoon/WhatsApp.
@@ -653,9 +604,7 @@ body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
             </div>
             <div class="flow-url">voltrix.be/contact</div>
           </div>
-          <div class="flow-browser-scroll">
-          <img src="/images/voltrix-form-step2-keuken.jpg" alt="Stap 2 — keukenrenovatie met apparaten en kookvuur-vermogen" loading="lazy" />
-          </div>
+            <img src="/images/voltrix-form-step2-keuken.jpg" alt="Stap 2 — keukenrenovatie met apparaten en kookvuur-vermogen" loading="lazy" />
         </div>
         <p class="flow-step-desc">
           Nu wordt het slim: het formulier toont enkel <strong>vragen die op de gekozen dienst van toepassing zijn</strong>. Een keukenrenovatie vraagt naar apparaten + kookvuur-vermogen. Een laadpaal vraagt naar wagen + zonnepanelen. Een keuring naar het verslag.
@@ -675,9 +624,7 @@ body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
             </div>
             <div class="flow-url">voltrix.be/contact</div>
           </div>
-          <div class="flow-browser-scroll">
-          <img src="/images/voltrix-form-step3-gegevens.jpg" alt="Stap 3 — uw gegevens met foto-upload zone" loading="lazy" />
-          </div>
+            <img src="/images/voltrix-form-step3-gegevens.jpg" alt="Stap 3 — uw gegevens met foto-upload zone" loading="lazy" />
         </div>
         <p class="flow-step-desc">
           Contactgegevens, type pand, postcode, planning-voorkeur en bereikbaarheid. <strong>Plus een foto-upload zone</strong> — voor zekeringkast-foto's, keuringsverslagen of keukenplannen. Eén foto bespaart vaak een huisbezoek.
@@ -710,9 +657,7 @@ body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
               <span class="adaptive-dot" style="background:#27c93f"></span>
             </div>
           </div>
-          <div class="adaptive-browser-scroll">
-          <img src="/images/voltrix-form-step2-keuken.jpg" alt="Stap 2 voor keukenrenovatie" loading="lazy" />
-          </div>
+            <img src="/images/voltrix-form-step2-keuken.jpg" alt="Stap 2 voor keukenrenovatie" loading="lazy" />
         </div>
         <ul class="adaptive-list">
           <li>Type renovatie (volledig / keuken / badkamer)</li>
@@ -733,9 +678,7 @@ body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
               <span class="adaptive-dot" style="background:#27c93f"></span>
             </div>
           </div>
-          <div class="adaptive-browser-scroll">
-          <img src="/images/voltrix-form-step2-keuring.jpg" alt="Stap 2 voor keuring" loading="lazy" />
-          </div>
+            <img src="/images/voltrix-form-step2-keuring.jpg" alt="Stap 2 voor keuring" loading="lazy" />
         </div>
         <ul class="adaptive-list">
           <li><strong>Keuringsverslag</strong> (afgekeurd / positief / geen)</li>
@@ -756,9 +699,7 @@ body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
               <span class="adaptive-dot" style="background:#27c93f"></span>
             </div>
           </div>
-          <div class="adaptive-browser-scroll">
-          <img src="/images/voltrix-form-step2-laadpaal.jpg" alt="Stap 2 voor laadpaal" loading="lazy" />
-          </div>
+            <img src="/images/voltrix-form-step2-laadpaal.jpg" alt="Stap 2 voor laadpaal" loading="lazy" />
         </div>
         <ul class="adaptive-list">
           <li>Welke wagen (Tesla, Volvo, …)</li>
