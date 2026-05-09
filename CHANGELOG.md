@@ -4,9 +4,32 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.11.1 — 9 mei 2026 ✅ ACTIEF
+## V2.11.2 — 9 mei 2026 ✅ ACTIEF
 
-**Status:** Hotfix — case-study screenshots tonen nu correct.
+**Status:** Hotfix — feature-grids in case-studies krijgen volle breedte.
+
+### Probleem
+De drie "Stap 1 / Stap 2 / Stap 3" cards in de Voltrix en Gevanti case-studies stonden binnen een `.prose` (720px) container. Op desktop met een 1360px container = drie kolommen van slechts ~240px elk. Tekst brak elke 2-3 woorden, kaartjes oogden cramped en amateuristisch.
+
+### Fix
+- ✅ **Voltrix**: feature-grid en briefing-voorbeeld blok uit `.prose` gehaald, in eigen `.container-narrow` (1080px) gezet
+- ✅ **Gevanti**: zelfde aanpak — feature-grid uit `.prose` naar `.container-narrow`
+- ✅ Briefing-voorbeeld blok in Voltrix nu `max-width: 800px` met meer padding (36px 40px) voor balans
+
+### Resultaat
+- Drie cards van ~340px elk i.p.v. ~240px
+- Tekst breekt natuurlijker (meer woorden per regel)
+- Briefing-blok blijft visueel compact maar krijgt meer ademruimte
+- Tekst-paragrafen erboven blijven in 720px (leesbaarheid behouden)
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.11.2 | 2026-05-09 | Stef Weyts -->`
+
+---
+
+## V2.11.1 — 9 mei 2026
+
+**Status:** Case-study screenshots tonen volledig. Vervangen door V2.11.2.
 
 ### Probleem
 In V2.10.1 had ik geprobeerd "preview window with fade-out" te maken voor de flow-cards en adaptive-cards in de Voltrix case-study. Mijn CSS-aanpak met `height: 480px` + `flex: 1` wrappers mislukte: afbeeldingen werden mini-thumbnails met grote witte ruimte eronder. Onleesbaar.
