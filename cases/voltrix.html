@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-<!-- Webcraftiq v2.9 | 2026-05-07 | Stef Weyts -->
+<!-- Webcraftiq v2.10 | 2026-05-09 | Stef Weyts -->
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -92,6 +92,51 @@ section.story-section { padding: 100px 0; border-bottom: 1px solid var(--line); 
 .prose-content p strong { font-weight: 600; color: var(--ink); }
 .prose-content p em { font-style: italic; color: var(--ink); }
 .prose-content a { color: var(--accent-deep); border-bottom: 1px solid var(--accent-line); }
+
+/* ============================================
+   FLOW SECTION — 3 stappen visueel
+   ============================================ */
+.flow-section { padding-top: 100px; padding-bottom: 100px; }
+@media (max-width: 768px) { .flow-section { padding-top: 70px; padding-bottom: 70px; } }
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+@media (max-width: 1100px) { .flow-grid { grid-template-columns: 1fr; max-width: 540px; margin: 0 auto; gap: 48px; } }
+.flow-step { display: flex; flex-direction: column; gap: 18px; }
+.flow-step-num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--accent-deep); font-weight: 600; }
+.flow-step-label { font-family: var(--font-display); font-size: 22px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.2; color: var(--ink); margin-bottom: 4px; }
+.flow-browser { background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 14px 32px -12px rgba(20,20,20,0.18), 0 4px 8px -4px rgba(20,20,20,0.06); transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease); }
+.flow-browser:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -16px rgba(20,20,20,0.22), 0 8px 14px -8px rgba(20,20,20,0.08); }
+.flow-browser-bar { display: flex; align-items: center; gap: 12px; padding: 9px 13px; background: linear-gradient(to bottom, #f5f0e6, #ece6d8); border-bottom: 1px solid var(--line); }
+.flow-dots { display: flex; gap: 5px; flex-shrink: 0; }
+.flow-dot { width: 9px; height: 9px; border-radius: 50%; }
+.flow-url { flex: 1; background: rgba(255,255,255,0.7); border: 1px solid rgba(214, 205, 184, 0.6); border-radius: 5px; padding: 4px 10px; font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); text-align: center; max-width: 260px; margin: 0 auto; }
+.flow-browser img { display: block; width: 100%; height: auto; background: #f5f0e6; }
+.flow-step-desc { font-size: 14px; line-height: 1.65; color: var(--ink-2); margin: 6px 0 0; }
+.flow-step-desc strong { color: var(--ink); font-weight: 600; }
+
+/* ============================================
+   ADAPTIVE PROOF — 3 versies van stap 2
+   ============================================ */
+.adaptive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+@media (max-width: 1100px) { .adaptive-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; gap: 36px; } }
+.adaptive-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 18px; }
+.adaptive-tag { display: inline-flex; align-self: flex-start; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-deep); background: var(--accent-soft); border: 1px solid var(--accent-line); padding: 6px 12px; border-radius: 999px; font-weight: 600; }
+.adaptive-browser { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; position: relative; aspect-ratio: 16/10; }
+.adaptive-bar { display: flex; align-items: center; padding: 6px 8px; background: linear-gradient(to bottom, #f5f0e6, #ece6d8); border-bottom: 1px solid var(--line); }
+.adaptive-dots { display: flex; gap: 4px; }
+.adaptive-dot { width: 7px; height: 7px; border-radius: 50%; }
+.adaptive-browser img { display: block; width: 100%; height: calc(100% - 24px); object-fit: cover; object-position: top center; }
+.adaptive-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.adaptive-list li { font-size: 13px; line-height: 1.55; color: var(--ink-2); padding-left: 18px; position: relative; }
+.adaptive-list li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.adaptive-list li strong { color: var(--ink); font-weight: 600; }
 
 .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 50px 0; }
 @media (max-width: 768px) { .feature-grid { grid-template-columns: 1fr; } }
@@ -488,6 +533,165 @@ body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
           Voltrix kan zonder bellen of mailen een correcte offerte opstellen. <strong>Drie groepen voor de keuken, één 3-fasen kabel naar inductie, totaal materiaal becijferbaar.</strong>
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE FLOW: 3 STEPS WITH REAL SCREENSHOTS -->
+<section class="story-section flow-section">
+  <div class="container">
+    <div class="reveal" style="max-width: 760px; margin: 0 auto 60px; text-align: center;">
+      <span class="eyebrow eyebrow-amber" style="display: inline-block; margin-bottom: 18px;">— De flow</span>
+      <h2 class="story-h" style="margin-bottom: 22px;">Drie stappen — meer hoeft een klant <em>niet te zien</em>.</h2>
+      <p style="font-size: 16px; line-height: 1.65; color: var(--ink-2); margin: 0;">
+        Onder de motorkap zit complexiteit. Aan de oppervlakte: één duidelijke voortgang. Een klant ziet 1 → 2 → 3 en weet meteen waar hij is. Hieronder de drie stappen zoals een klant ze ziet — echte screenshots van de live site.
+      </p>
+    </div>
+
+    <div class="flow-grid reveal" data-delay="1">
+      <!-- Step 1 -->
+      <div class="flow-step">
+        <div class="flow-step-num">01</div>
+        <div class="flow-step-label">Wat heeft u nodig?</div>
+        <div class="flow-browser">
+          <div class="flow-browser-bar">
+            <div class="flow-dots">
+              <span class="flow-dot" style="background:#ff5f56"></span>
+              <span class="flow-dot" style="background:#ffbd2e"></span>
+              <span class="flow-dot" style="background:#27c93f"></span>
+            </div>
+            <div class="flow-url">voltrix.be/contact</div>
+          </div>
+          <img src="/images/voltrix-form-step1-dienst.jpg" alt="Stap 1 — particulier vs syndicus + keuze uit 7 diensten" loading="lazy" />
+        </div>
+        <p class="flow-step-desc">
+          Eerste filter: <strong>particulier of syndicus/VME</strong> (verschillende BTW-tarieven, andere planning). Dan de dienst — zeven keuzes met korte uitleg per icoon. Acute storingen worden hier al weggeleid naar telefoon/WhatsApp.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flow-step">
+        <div class="flow-step-num">02</div>
+        <div class="flow-step-label">Details — adaptief</div>
+        <div class="flow-browser">
+          <div class="flow-browser-bar">
+            <div class="flow-dots">
+              <span class="flow-dot" style="background:#ff5f56"></span>
+              <span class="flow-dot" style="background:#ffbd2e"></span>
+              <span class="flow-dot" style="background:#27c93f"></span>
+            </div>
+            <div class="flow-url">voltrix.be/contact</div>
+          </div>
+          <img src="/images/voltrix-form-step2-keuken.jpg" alt="Stap 2 — keukenrenovatie met apparaten en kookvuur-vermogen" loading="lazy" />
+        </div>
+        <p class="flow-step-desc">
+          Nu wordt het slim: het formulier toont enkel <strong>vragen die op de gekozen dienst van toepassing zijn</strong>. Een keukenrenovatie vraagt naar apparaten + kookvuur-vermogen. Een laadpaal vraagt naar wagen + zonnepanelen. Een keuring naar het verslag.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flow-step">
+        <div class="flow-step-num">03</div>
+        <div class="flow-step-label">Uw gegevens + foto's</div>
+        <div class="flow-browser">
+          <div class="flow-browser-bar">
+            <div class="flow-dots">
+              <span class="flow-dot" style="background:#ff5f56"></span>
+              <span class="flow-dot" style="background:#ffbd2e"></span>
+              <span class="flow-dot" style="background:#27c93f"></span>
+            </div>
+            <div class="flow-url">voltrix.be/contact</div>
+          </div>
+          <img src="/images/voltrix-form-step3-gegevens.jpg" alt="Stap 3 — uw gegevens met foto-upload zone" loading="lazy" />
+        </div>
+        <p class="flow-step-desc">
+          Contactgegevens, type pand, postcode, planning-voorkeur en bereikbaarheid. <strong>Plus een foto-upload zone</strong> — voor zekeringkast-foto's, keuringsverslagen of keukenplannen. Eén foto bespaart vaak een huisbezoek.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADAPTIVE PROOF: 3 versions of step 2 side by side -->
+<section class="story-section" style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="reveal" style="max-width: 760px; margin: 0 auto 50px; text-align: center;">
+      <span class="eyebrow eyebrow-amber" style="display: inline-block; margin-bottom: 18px;">— Het bewijs</span>
+      <h2 class="story-h" style="margin-bottom: 22px;">Per dienst <em>andere</em> vragen.</h2>
+      <p style="font-size: 16px; line-height: 1.65; color: var(--ink-2); margin: 0;">
+        Drie klanten, drie totaal verschillende intakes — allemaal in dezelfde "stap 2". Dat is wat we bedoelen met een formulier dat zich aanpast. Een keukenrenovatie vraagt om compleet andere informatie dan een keuring of een laadpaal — en het formulier weet dat.
+      </p>
+    </div>
+
+    <div class="adaptive-grid reveal" data-delay="1">
+      <!-- Version 1: Keukenrenovatie -->
+      <div class="adaptive-card">
+        <div class="adaptive-tag">Keukenrenovatie</div>
+        <div class="adaptive-browser">
+          <div class="adaptive-bar">
+            <div class="adaptive-dots">
+              <span class="adaptive-dot" style="background:#ff5f56"></span>
+              <span class="adaptive-dot" style="background:#ffbd2e"></span>
+              <span class="adaptive-dot" style="background:#27c93f"></span>
+            </div>
+          </div>
+          <img src="/images/voltrix-form-step2-keuken.jpg" alt="Stap 2 voor keukenrenovatie" loading="lazy" />
+        </div>
+        <ul class="adaptive-list">
+          <li>Type renovatie (volledig / keuken / badkamer)</li>
+          <li>Apparaten (oven, vaatwas, microgolf, …)</li>
+          <li><strong>Kookvuur-vermogen</strong> (7,4 / 11 / 22 kW)</li>
+          <li>Optioneel: keukenplan + afstand zekeringkast</li>
+        </ul>
+      </div>
+
+      <!-- Version 2: Keuring -->
+      <div class="adaptive-card">
+        <div class="adaptive-tag">Keuring</div>
+        <div class="adaptive-browser">
+          <div class="adaptive-bar">
+            <div class="adaptive-dots">
+              <span class="adaptive-dot" style="background:#ff5f56"></span>
+              <span class="adaptive-dot" style="background:#ffbd2e"></span>
+              <span class="adaptive-dot" style="background:#27c93f"></span>
+            </div>
+          </div>
+          <img src="/images/voltrix-form-step2-keuring.jpg" alt="Stap 2 voor keuring" loading="lazy" />
+        </div>
+        <ul class="adaptive-list">
+          <li><strong>Keuringsverslag</strong> (afgekeurd / positief / geen)</li>
+          <li>Aanleiding (verkoop, renovatie, oude installatie)</li>
+          <li><strong>Bouwjaar woning</strong> (vóór 1981 = asbest-risico)</li>
+          <li>Optioneel: oppervlakte in m²</li>
+        </ul>
+      </div>
+
+      <!-- Version 3: Laadpaal -->
+      <div class="adaptive-card">
+        <div class="adaptive-tag">Laadpaal</div>
+        <div class="adaptive-browser">
+          <div class="adaptive-bar">
+            <div class="adaptive-dots">
+              <span class="adaptive-dot" style="background:#ff5f56"></span>
+              <span class="adaptive-dot" style="background:#ffbd2e"></span>
+              <span class="adaptive-dot" style="background:#27c93f"></span>
+            </div>
+          </div>
+          <img src="/images/voltrix-form-step2-laadpaal.jpg" alt="Stap 2 voor laadpaal" loading="lazy" />
+        </div>
+        <ul class="adaptive-list">
+          <li>Welke wagen (Tesla, Volvo, …)</li>
+          <li><strong>Gewenst laadvermogen</strong> (7,4 / 11 / 22 kW)</li>
+          <li>Afstand zekeringkast tot parkeerplek</li>
+          <li><strong>Zonnepanelen?</strong> (voor slim laden op overschot)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reveal" data-delay="2" style="max-width: 720px; margin: 50px auto 0; text-align: center;">
+      <p style="font-size: 15px; line-height: 1.65; color: var(--ink-3); font-style: italic; margin: 0; padding: 22px 28px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px;">
+        Geen klant moet door 50 vragen die niet voor hem gelden. Voltrix krijgt een briefing die exact past bij de dienst — niet meer, niet minder. <strong style="color: var(--ink); font-style: normal;">Dat is het verschil tussen een formulier en een intake-tool.</strong>
+      </p>
     </div>
   </div>
 </section>
