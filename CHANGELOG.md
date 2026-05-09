@@ -4,9 +4,76 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.10 — 9 mei 2026 ✅ ACTIEF
+## V2.11 — 9 mei 2026 ✅ ACTIEF
 
-**Status:** Voltrix case-study versterkt met echte form-screenshots. Visueel bewijs van het adaptieve formulier.
+**Status:** Bredere containers — minder lege ruimte op desktop schermen.
+
+### Probleem
+Op desktop (1920px+ schermen) gebruikten paginas slechts 1240px breed = ~35% lege ruimte aan elke kant. Voelde cramped en verspild.
+
+### Wijzigingen
+- ✅ **`.container`** (wide layout): `1240px` → **`1360px`** — gebruikt nu 71% van 1920px ipv 65%
+- ✅ **`.container-narrow`** (medium layout): `920px` → **`1080px`** — meer ademruimte voor feature-grids
+- ✅ **`.case-real-preview`** (big image preview op /cases/voltrix): `1100px` → **`1240px`** — past nu beter bij verbrede containers
+- ✅ Padding op `<768px`: blijft `22px` voor mobiel comfort
+
+### Wat NIET breder is geworden (bewust)
+- ✅ `.prose` blijft `720px` voor optimale leesbaarheid (60-75 chars per regel = wetenschappelijk optimaal)
+- ✅ Lange tekst-paragrafen blijven gecentreerd in 720px-blok ook op brede containers
+- ✅ Reden: te lange regels = ogen worden moe, mensen verliezen de regel terug naar links
+
+### Bijgewerkt op
+- ✅ `styles.css` (gedeelde container — automatisch geldt voor cases.html, over.html, blog.html, voorwaarden.html, privacy.html, cookies.html, website-laten-maken.html, blog/multi-step-formulier-vs-klassiek.html, cases/voltrix.html, cases/gevanti.html)
+- ✅ `index.html`, `aanpak.html`, `care.html`, `contact.html`, `redesign.html` (inline container CSS)
+- ✅ `blog/website-geen-visitekaartje.html` (inline container CSS)
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.11 | 2026-05-09 | Stef Weyts -->`
+
+---
+
+## V2.10.1 — 9 mei 2026
+
+**Status:** Form-screenshots leesbaar gemaakt. Vervangen door V2.11.
+
+### Probleem dat we oplosten
+In V2.10 was het hele browser-window zichtbaar — maar de form-card nam slechts 32% van de breedte in (612px van 1920px). Op mobiel was tekst nauwelijks leesbaar zonder uit te zoomen.
+
+### Oplossing: Smart cropping
+- ✅ Pixel-perfecte detectie van form-card grenzen (x=626 tot x=1278 = exact de witte form-card)
+- ✅ Top + bottom auto-detectie zodat geen browser-tabs of nav-strips meer zichtbaar zijn
+- ✅ Resize naar 900px breed (perfect voor retina-mobiel rendering op ~450px logical)
+- ✅ JPEG met **4:4:4 chroma subsampling** (`subsampling=0`) voor scherpe tekst
+- ✅ Progressive encoding voor sneller perceived load
+- ✅ Quality 82 — sweet spot voor screenshots met tekst
+
+### Resultaat
+| Bestand | Was | Nu |
+|---|---|---|
+| voltrix-form-step1-dienst.jpg | 1200×665 (52 KB) | 900×1297 (123 KB) |
+| voltrix-form-step2-keuken.jpg | 1200×665 (52 KB) | 900×1398 (136 KB) |
+| voltrix-form-step3-gegevens.jpg | 1200×665 (39 KB) | 900×1290 (89 KB) |
+| voltrix-form-step2-keuring.jpg | 1200×665 (52 KB) | 900×1217 (107 KB) |
+| voltrix-form-step2-laadpaal.jpg | 1200×665 (56 KB) | 900×1372 (129 KB) |
+
+Totaal: 251 KB → 583 KB (+332 KB), maar **letters zijn ~3x groter en glashelder leesbaar zonder zoomen**. Alle 5 zijn lazy-loaded dus laadtijd op homepage is niet beïnvloed.
+
+### CSS-aanpassing voor portrait images
+- ✅ `.flow-browser`: vaste hoogte 560px desktop / 640px mobile, met `<div class="flow-browser-scroll">` wrapper en fade-out aan onderkant — voelt als een echte browser preview window
+- ✅ `.adaptive-browser`: vaste hoogte 480px met dezelfde fade-out techniek
+- ✅ Beide tonen het bovenste deel van het formulier (de meest informatieve sectie) met een subtiele "fade" aan onderkant die suggereert dat het formulier doorgaat
+
+### Nieuwe CTA toegevoegd
+Onder het quote-blok in "Per dienst andere vragen" sectie: link naar `voltrix.be/contact` zodat lezers het formulier zelf kunnen ervaren — krachtige call-to-action voor case-study credibility.
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.10.1 | 2026-05-09 | Stef Weyts -->`
+
+---
+
+## V2.10 — 9 mei 2026
+
+**Status:** Voltrix case study versterkt met form-screenshots. Vervangen door V2.10.1.
 
 ### Nieuwe assets
 5 echte screenshots van het Voltrix multi-step formulier opgeschoond, geoptimaliseerd en opgeslagen in `/images/`:
