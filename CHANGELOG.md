@@ -4,9 +4,33 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.11 — 9 mei 2026 ✅ ACTIEF
+## V2.11.1 — 9 mei 2026 ✅ ACTIEF
 
-**Status:** Bredere containers — minder lege ruimte op desktop schermen.
+**Status:** Hotfix — case-study screenshots tonen nu correct.
+
+### Probleem
+In V2.10.1 had ik geprobeerd "preview window with fade-out" te maken voor de flow-cards en adaptive-cards in de Voltrix case-study. Mijn CSS-aanpak met `height: 480px` + `flex: 1` wrappers mislukte: afbeeldingen werden mini-thumbnails met grote witte ruimte eronder. Onleesbaar.
+
+### Fix
+- ✅ Verwijderd: `height: 480px` op `.adaptive-browser` en `height: 560px` op `.flow-browser`
+- ✅ Verwijderd: `<div class="flow-browser-scroll">` en `<div class="adaptive-browser-scroll">` wrappers
+- ✅ Verwijderd: fade-out gradients (`::after` pseudo-elements)
+- ✅ Resultaat: afbeeldingen worden nu **gewoon volledig getoond** met `width: 100%; height: auto`
+
+### Nieuwe gedrag
+- Flow-cards (3 stappen) tonen nu het **complete formulier** in browser-frame
+- Adaptive-cards (Per dienst) tonen ook **volledige screenshot** per dienst
+- Browser-frame met traffic-light dots + URL bar werkt zoals bedoeld
+- Geen fade-effect — gewoon: scherp, leesbaar, compleet
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.11.1 | 2026-05-09 | Stef Weyts -->`
+
+---
+
+## V2.11 — 9 mei 2026
+
+**Status:** Bredere containers (1240→1360, 920→1080). Vervangen door V2.11.1.
 
 ### Probleem
 Op desktop (1920px+ schermen) gebruikten paginas slechts 1240px breed = ~35% lege ruimte aan elke kant. Voelde cramped en verspild.
