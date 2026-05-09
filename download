@@ -1,0 +1,41 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies (als je later Node toevoegt)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build output (als je later een build step toevoegt)
+dist/
+build/
+.next/
+out/
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Netlify / Vercel local
+.netlify/
+.vercel/

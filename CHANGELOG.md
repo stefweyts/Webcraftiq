@@ -4,9 +4,101 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.9 — 7 mei 2026 ✅ ACTIEF
+## V2.10 — 9 mei 2026 ✅ ACTIEF
 
-**Status:** Voltrix case-study herschreven — focus op tijdwinning via slim multi-step formulier.
+**Status:** Voltrix case-study versterkt met echte form-screenshots. Visueel bewijs van het adaptieve formulier.
+
+### Nieuwe assets
+5 echte screenshots van het Voltrix multi-step formulier opgeschoond, geoptimaliseerd en opgeslagen in `/images/`:
+- `voltrix-form-step1-dienst.jpg` (53 KB) — Stap 1: particulier/syndicus + 7 diensten
+- `voltrix-form-step2-keuken.jpg` (52 KB) — Stap 2: keukenrenovatie (apparaten + kookvuur)
+- `voltrix-form-step2-keuring.jpg` (52 KB) — Stap 2: keuring (verslag + bouwjaar)
+- `voltrix-form-step2-laadpaal.jpg` (56 KB) — Stap 2: laadpaal (kW + zonnepanelen)
+- `voltrix-form-step3-gegevens.jpg` (39 KB) — Stap 3: gegevens + foto-upload
+
+### Nieuwe secties op `/cases/voltrix`
+**1. "De flow — Drie stappen, meer hoeft een klant niet te zien"**
+3-koloms grid met de echte screenshots in browser-frames met traffic-light dots + URL bar. Per stap: nummer (01/02/03), label, screenshot, en uitleg-paragraaf. Subtiele hover-lift.
+
+**2. "Het bewijs — Per dienst andere vragen"**
+3-koloms grid met **drie versies van stap 2** zij-aan-zij (Keukenrenovatie / Keuring / Laadpaal). Elke kaart heeft:
+- Amber tag-pill met dienst-naam
+- Compact browser-frame met de echte screenshot
+- Bullet-lijst met de specifieke vragen die per dienst worden gesteld
+Dit is het sterkste visuele bewijs dat het formulier zich aanpast — niet "we zeggen dat het slim is" maar "kijk hier zijn drie compleet andere intakes".
+
+Onder de adaptieve grid: een quote-blok dat de betekenis uitlegt: *"Geen klant moet door 50 vragen die niet voor hem gelden... Dat is het verschil tussen een formulier en een intake-tool."*
+
+### Section order nu
+```
+Header → Big preview → De uitdaging → Onze aanpak (3 cards + briefing-voorbeeld)
+  → 🆕 De flow (3 stappen visueel met screenshots)
+  → 🆕 Het bewijs (3 versies van stap 2)
+  → Technische keuzes → Resultaat (Vóór/Nu)
+```
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.10 | 2026-05-09 | Stef Weyts -->`
+
+---
+
+## V2.9.2 — 7 mei 2026
+
+**Status:** Care prijzen €225 / €499. Vervangen door V2.10.
+
+### Wijziging
+- ✅ **Care Groei**: €449/m → **€499/m** ex BTW
+
+### Bijgewerkt op 6 pagina's
+- ✅ `/care` — tier-card prijs + JSON-LD Service-schema
+- ✅ Homepage — mini-tier-card in Care-blok + FAQ-antwoord (zichtbaar + JSON-LD)
+- ✅ `/contact` — Care-blok onderaan
+- ✅ `/website-laten-maken` — FAQ over Care
+- ✅ `/redesign` — Care-vermelding in tarieven-sectie
+- ✅ `/voorwaarden` — Care-vermelding
+
+### Care-prijzen nu (definitief)
+| Pakket | Prijs | Inbegrepen |
+|---|---|---|
+| Care Basis | €89/m | 1u updates |
+| Care Actief ⭐ | €225/m | 3u updates + rapport + prioriteit |
+| Care Groei | **€499/m** | 5u + 1 SEO-pagina |
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.9.2 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.9.1 — 7 mei 2026
+
+**Status:** Care Actief €189 → €225. Vervangen door V2.9.2.
+
+### Wijziging
+- ✅ **Care Actief**: €189/m → **€225/m** ex BTW
+
+### Bijgewerkt op 6 pagina's
+- ✅ `/care` — tier-card prijs + JSON-LD Service-schema's
+- ✅ Homepage — mini-tier-card in Care-blok + FAQ-antwoord (zichtbaar + JSON-LD)
+- ✅ `/contact` — Care-blok onderaan
+- ✅ `/website-laten-maken` — FAQ over Care
+- ✅ `/redesign` — Care-vermelding in tarieven-sectie
+- ✅ `/voorwaarden` — Care-vermelding
+
+### Care-prijzen nu
+| Pakket | Prijs | Inbegrepen |
+|---|---|---|
+| Care Basis | €89/m | 1u updates |
+| Care Actief ⭐ | **€225/m** | 3u updates + rapport + prioriteit |
+| Care Groei | €449/m | 5u + 1 SEO-pagina |
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.9.1 | 2026-05-07 | Stef Weyts -->`
+
+---
+
+## V2.9 — 7 mei 2026
+
+**Status:** Voltrix case-study herschreven met focus op tijdwinning. Vervangen door V2.9.1.
 
 ### Nieuwe focus
 De vorige case-study beschreef de **website** in algemene termen ("3 pijlers, lokale SEO, multi-step, WhatsApp"). De nieuwe versie focust op het **kernverhaal**: hoe het slimme multi-step formulier Voltrix uren per week bespaart door complete intakes te leveren zonder mailpingpong.
