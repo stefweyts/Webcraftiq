@@ -4,9 +4,114 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.11.2 — 9 mei 2026 ✅ ACTIEF
+## V2.12.3 — 9 mei 2026 ✅ ACTIEF
 
-**Status:** Hotfix — feature-grids in case-studies krijgen volle breedte.
+**Status:** Care Groei: strategie-call vervangen door strategie-analyse per mail.
+
+### Wijziging
+- ✅ Care Groei: "Maandelijkse strategie-call (30 min)" → **"Maandelijkse strategie-analyse per mail"**
+- ✅ Bijgewerkt op 3 plekken in `/care`:
+  - Tier-card feature
+  - Deep-dive sectie ("Wat is een SEO-pagina per maand?")
+  - JSON-LD Service-schema description
+
+### Reden
+Asynchroon werken via mail past beter bij workflow — geen agenda-coördinatie nodig, klant kan in eigen tempo lezen en reageren, alles documenteerbaar voor later. Bovendien vertegenwoordigt 30 min call ongeveer 0.5u tegoed van de Care Groei uren — die kunnen nu beter besteed worden aan effectieve SEO-uitvoering.
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.12.3 | 2026-05-09 | Stef Weyts -->`
+
+---
+
+## V2.12.2 — 9 mei 2026
+
+**Status:** Custom prijs naar €9.500. Vervangen door V2.12.3.
+
+### Wijziging
+- ✅ **Custom**: vanaf €7.500 → **vanaf €9.500** ex BTW
+
+### Reden
+Custom-projecten (e-commerce, klantportalen, multi-language, complexe integraties) zijn 100+ uur werk. €7.500 was structureel te laag — eerder een Pro-prijs dan een Custom-prijs. €9.500 positioneert Custom correct als premium-tier en houdt de gezonde 2x-factor tussen Pro (€4.999) en Custom.
+
+### Bijgewerkt op 4 pagina's
+- ✅ Homepage tier-card + JSON-LD Service-schema's + FAQ
+- ✅ /website-laten-maken intro + tier-card + JSON-LD + FAQ
+- ✅ /contact form Custom-optie + tier-recap onderaan
+- ✅ /redesign Custom-vermelding in tarieven-sectie
+
+### Definitieve prijzen (V2.12.2)
+| Product | Prijs |
+|---|---|
+| Essential | €2.499 eenmalig |
+| Pro ⭐ | €4.999 eenmalig + verplicht Care Actief €249/m |
+| **Custom** | **vanaf €9.500** eenmalig |
+| Care Basis | €89/m |
+| Care Actief (verplicht bij Pro) | €249/m |
+| Care Groei | €499/m |
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.12.2 | 2026-05-09 | Stef Weyts -->`
+
+---
+
+## V2.12.1 — 9 mei 2026
+
+**Status:** Care Actief verplicht bij Pro. Vervangen door V2.12.2.
+
+### Beslissing
+Pro-websites bevatten levende code (multi-step formulieren, prijs-calculators, CRM-integraties, GBP) die continu onderhoud vraagt — security-patches, dependency-updates, browser-changes, form-tweaks. Care Basis 1u/m volstaat hier niet voor: we zouden uren tekort komen. Daarom is Care Actief nu een **harde minimum** bij Pro.
+
+### Wijzigingen — terminologie naar "verplicht"
+- ✅ **Homepage Pro tier-card**: "Care Actief vanaf €249/m (aanbevolen)" → "**Care Actief €249/m (verplicht bij Pro)**"
+- ✅ **Homepage Care-blok mini badge**: "Aanbevolen bij Pro" → "**Verplicht bij Pro**"
+- ✅ **/care Care Actief featured badge**: "Aanbevolen bij Pro" → "**Verplicht bij Pro**"
+- ✅ **/website-laten-maken Pro card**: "+ Care Actief vanaf €249/m" → "**+ verplicht Care Actief €249/m**"
+- ✅ **/contact Pro tier-card**: zelfde update
+- ✅ **/contact form Pro option**: "Pro — €4.999 + Care Actief €249/m" → "**Pro — €4.999 (incl. verplichte Care Actief €249/m)**"
+
+### FAQ uitgebreid
+- ✅ Bestaande FAQ uitgebreid met technische uitleg waarom Pro Care Actief vereist (form-flows, calculators, CRM-integraties, security-patches, GBP-posts, conversie-tracking)
+- ✅ Nieuwe FAQ toegevoegd: *"Kan ik later van Care Actief naar Care Basis downgraden?"* — duidelijk antwoord: bij Essential ja, bij Pro nee, met logica-uitleg
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.12.1 | 2026-05-09 | Stef Weyts -->`
+
+---
+
+## V2.12 — 9 mei 2026
+
+**Status:** Care Actief €249 + gekoppeld aan Pro (aanbevolen). Vervangen door V2.12.1 met verplichte koppeling.
+
+### Prijswijziging
+- ✅ **Care Actief**: €225/m → **€249/m** ex BTW
+
+### Nieuw: Pro koppeling met Care Actief
+Pro-pakket is nu duidelijk gekoppeld aan **Care Actief als minimum aanbevolen** maandelijks beheer. Een Pro-website (multi-step formulieren, prijs-calculators, CRM-integratie, GBP) heeft meer dan 1u/m onderhoud nodig — Care Basis volstaat niet bij dit niveau van complexiteit.
+
+### Wijzigingen per pagina
+- ✅ **Homepage**: Pro tier-card meta-regel veranderd: "+ Care vanaf €89/m" → "**+ Care Actief vanaf €249/m (aanbevolen)**"
+- ✅ **Homepage Care-blok mini**: Care Actief badge "Aanbevolen" → "**Aanbevolen bij Pro**"
+- ✅ **/care pagina**: Care Actief featured badge ("::before content") veranderd naar "**Aanbevolen bij Pro**"
+- ✅ **/care pagina**: Nieuwe FAQ toegevoegd: *"Waarom heeft een Pro-website minimum Care Actief nodig?"* met uitleg over actieve elementen (form-flows, GBP-posts, conversie-tracking) die meer dan 1u/m vragen
+- ✅ **/website-laten-maken**: Pro card krijgt nieuwe meta-regel onder de prijs: "eenmalig · excl. btw · **+ Care Actief vanaf €249/m**"
+- ✅ **/contact**: Pro tier-card op pricing-recap krijgt zelfde Care Actief koppeling
+- ✅ **/contact**: Pro option in form: "Pro — €4.999 + Care" → "**Pro — €4.999 + Care Actief €249/m**"
+
+### Definitieve prijzen
+| Pakket | Prijs | Inbegrepen |
+|---|---|---|
+| Care Basis | €89/m | 1u updates |
+| Care Actief ⭐ Aanbevolen bij Pro | **€249/m** | 3u updates + rapport + prioriteit |
+| Care Groei | €499/m | 5u + 1 SEO-pagina |
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.12 | 2026-05-09 | Stef Weyts -->`
+
+---
+
+## V2.11.2 — 9 mei 2026
+
+**Status:** Feature-grids breder in case-studies. Vervangen door V2.12.
 
 ### Probleem
 De drie "Stap 1 / Stap 2 / Stap 3" cards in de Voltrix en Gevanti case-studies stonden binnen een `.prose` (720px) container. Op desktop met een 1360px container = drie kolommen van slechts ~240px elk. Tekst brak elke 2-3 woorden, kaartjes oogden cramped en amateuristisch.
