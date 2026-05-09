@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+<!-- Webcraftiq v2.10 | 2026-05-09 | Stef Weyts -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Voltrix · Case Study | Webcraftiq</title>
+<meta name="description" content="Hoe we voor Voltrix — elektricien Antwerpen — een slim multi-step formulier bouwden dat zich aanpast per dienst. Resultaat: complete intakes, geen mailpingpong, offertes op dezelfde dag." />
+<meta name="keywords" content="voltrix case study, webdesign elektricien, multi-step formulier, lokale SEO Antwerpen" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://webcraftiq.be/cases/voltrix" />
+
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="nl_BE" />
+<meta property="og:url" content="https://webcraftiq.be/cases/voltrix" />
+<meta property="og:title" content="Voltrix · Case Study | Webcraftiq" />
+<meta property="og:description" content="Een offerte-flow die uren bespaart per week. Zo bouwden we een slim multi-step formulier voor Voltrix." />
+
+<meta name="theme-color" content="#f5f1ea" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23141414'/%3E%3Cpath d='M7 11h3l1.5 7L13 12l1.5 6L16 11h3M19 18l3-7' stroke='%23d97706' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+
+<style>
+.case-header {
+  padding: 160px 0 60px;
+  background: var(--bg);
+}
+.case-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 768px) { .case-meta-grid { grid-template-columns: 1fr 1fr; gap: 20px; } }
+.case-meta-item .label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-bottom: 8px;
+}
+.case-meta-item .value {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.case-preview { background: var(--bg-soft); padding: 80px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.case-preview-frame { background: var(--ink); border-radius: 16px; overflow: hidden; aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center; padding: 40px; color: var(--bg); position: relative; box-shadow: 0 24px 60px -20px rgba(20, 20, 20, 0.25); }
+
+/* CASE REAL PREVIEW — actual screenshot in browser frame */
+.case-real-preview { background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: 0 24px 60px -20px rgba(20, 20, 20, 0.22), 0 8px 16px -8px rgba(20, 20, 20, 0.08); max-width: 1100px; margin: 0 auto; transition: transform 0.4s var(--ease); }
+.case-real-preview:hover { transform: translateY(-4px); }
+.case-real-bar { display: flex; align-items: center; gap: 14px; padding: 13px 16px; background: linear-gradient(to bottom, #f5f0e6, #ece6d8); border-bottom: 1px solid var(--line); }
+.case-real-dots { display: flex; gap: 7px; flex-shrink: 0; }
+.case-real-dot { width: 12px; height: 12px; border-radius: 50%; }
+.case-real-url { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 7px; background: rgba(255,255,255,0.7); border: 1px solid rgba(214, 205, 184, 0.6); border-radius: 6px; padding: 6px 14px; font-family: var(--font-mono); font-size: 13px; color: var(--ink-3); max-width: 360px; margin: 0 auto; }
+.case-real-url svg { color: var(--ink-4); flex-shrink: 0; }
+.case-real-img { display: block; width: 100%; height: auto; background: #0F172A; }
+
+.preview-content { width: 100%; height: 100%; display: flex; flex-direction: column; }
+.preview-bar { display: flex; align-items: center; gap: 16px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 30px; }
+.preview-logo { font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: -0.02em; }
+.preview-logo em { color: var(--accent); }
+.preview-menu { display: flex; gap: 22px; font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 0.05em; text-transform: uppercase; }
+.preview-cta { margin-left: auto; background: var(--accent); color: var(--ink); padding: 8px 16px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+.preview-hero { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.preview-hero-tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+.preview-hero-h { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 400; letter-spacing: -0.04em; line-height: 0.95; margin-bottom: 20px; max-width: 80%; }
+.preview-hero-h em { font-style: italic; color: var(--accent); font-variation-settings: "wdth" 85; }
+.preview-hero-sub { font-size: 14px; color: rgba(255,255,255,0.6); max-width: 60%; margin-bottom: 24px; line-height: 1.5; }
+.preview-buttons { display: flex; gap: 10px; }
+.preview-btn-1 { background: var(--accent); color: var(--ink); padding: 10px 18px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+.preview-btn-2 { border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.85); padding: 10px 18px; border-radius: 999px; font-size: 13px; font-weight: 500; }
+
+section.story-section { padding: 100px 0; border-bottom: 1px solid var(--line); }
+@media (max-width: 768px) { section.story-section { padding: 70px 0; } }
+
+.story-h { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; letter-spacing: -0.04em; line-height: 1; margin-bottom: 32px; }
+.story-h em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+
+.prose-content p { font-size: 17px; line-height: 1.7; color: var(--ink-2); margin-bottom: 22px; }
+.prose-content p strong { font-weight: 600; color: var(--ink); }
+.prose-content p em { font-style: italic; color: var(--ink); }
+.prose-content a { color: var(--accent-deep); border-bottom: 1px solid var(--accent-line); }
+
+/* ============================================
+   FLOW SECTION — 3 stappen visueel
+   ============================================ */
+.flow-section { padding-top: 100px; padding-bottom: 100px; }
+@media (max-width: 768px) { .flow-section { padding-top: 70px; padding-bottom: 70px; } }
+.flow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+@media (max-width: 1100px) { .flow-grid { grid-template-columns: 1fr; max-width: 540px; margin: 0 auto; gap: 48px; } }
+.flow-step { display: flex; flex-direction: column; gap: 18px; }
+.flow-step-num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--accent-deep); font-weight: 600; }
+.flow-step-label { font-family: var(--font-display); font-size: 22px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.2; color: var(--ink); margin-bottom: 4px; }
+.flow-browser { background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 14px 32px -12px rgba(20,20,20,0.18), 0 4px 8px -4px rgba(20,20,20,0.06); transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease); }
+.flow-browser:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -16px rgba(20,20,20,0.22), 0 8px 14px -8px rgba(20,20,20,0.08); }
+.flow-browser-bar { display: flex; align-items: center; gap: 12px; padding: 9px 13px; background: linear-gradient(to bottom, #f5f0e6, #ece6d8); border-bottom: 1px solid var(--line); }
+.flow-dots { display: flex; gap: 5px; flex-shrink: 0; }
+.flow-dot { width: 9px; height: 9px; border-radius: 50%; }
+.flow-url { flex: 1; background: rgba(255,255,255,0.7); border: 1px solid rgba(214, 205, 184, 0.6); border-radius: 5px; padding: 4px 10px; font-family: var(--font-mono); font-size: 11px; color: var(--ink-3); text-align: center; max-width: 260px; margin: 0 auto; }
+.flow-browser img { display: block; width: 100%; height: auto; background: #f5f0e6; }
+.flow-step-desc { font-size: 14px; line-height: 1.65; color: var(--ink-2); margin: 6px 0 0; }
+.flow-step-desc strong { color: var(--ink); font-weight: 600; }
+
+/* ============================================
+   ADAPTIVE PROOF — 3 versies van stap 2
+   ============================================ */
+.adaptive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+@media (max-width: 1100px) { .adaptive-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; gap: 36px; } }
+.adaptive-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 18px; }
+.adaptive-tag { display: inline-flex; align-self: flex-start; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-deep); background: var(--accent-soft); border: 1px solid var(--accent-line); padding: 6px 12px; border-radius: 999px; font-weight: 600; }
+.adaptive-browser { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; position: relative; aspect-ratio: 16/10; }
+.adaptive-bar { display: flex; align-items: center; padding: 6px 8px; background: linear-gradient(to bottom, #f5f0e6, #ece6d8); border-bottom: 1px solid var(--line); }
+.adaptive-dots { display: flex; gap: 4px; }
+.adaptive-dot { width: 7px; height: 7px; border-radius: 50%; }
+.adaptive-browser img { display: block; width: 100%; height: calc(100% - 24px); object-fit: cover; object-position: top center; }
+.adaptive-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.adaptive-list li { font-size: 13px; line-height: 1.55; color: var(--ink-2); padding-left: 18px; position: relative; }
+.adaptive-list li::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.adaptive-list li strong { color: var(--ink); font-weight: 600; }
+
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 50px 0; }
+@media (max-width: 768px) { .feature-grid { grid-template-columns: 1fr; } }
+.feat-card { background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; padding: 32px 28px; }
+.feat-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); border: 1px solid var(--accent-line); display: flex; align-items: center; justify-content: center; color: var(--accent-deep); margin-bottom: 22px; }
+.feat-h { font-family: var(--font-display); font-size: 19px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.2; }
+.feat-p { font-size: 14px; color: var(--ink-3); line-height: 1.6; }
+
+.timeline-list { list-style: none; display: flex; flex-direction: column; gap: 28px; margin: 36px 0; }
+.timeline-item { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.timeline-item:last-child { border-bottom: 0; }
+.timeline-day { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); padding-top: 6px; }
+.timeline-content h4 { font-family: var(--font-display); font-size: 20px; font-weight: 500; letter-spacing: -0.02em; margin-bottom: 6px; }
+.timeline-content p { font-size: 15px; color: var(--ink-3); line-height: 1.6; }
+
+.next-case-section { background: var(--bg); padding: 80px 0; border-bottom: 1px solid var(--line); }
+.next-case-row { display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; }
+.next-case-h { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; letter-spacing: -0.03em; }
+.next-case-h em { font-style: italic; color: var(--accent-deep); font-variation-settings: "wdth" 85; }
+.next-case-link { display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500; }
+.next-case-link:hover { color: var(--accent-deep); }
+
+/* HAMBURGER MENU (mobile) */
+.nav-burger {
+  display: none;
+  width: 38px; height: 38px;
+  border: 0;
+  background: transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+.nav-burger:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.nav-burger-icon {
+  position: relative;
+  width: 18px; height: 14px;
+}
+.nav-burger-icon span {
+  display: block;
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 1px;
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease), top 0.3s var(--ease);
+}
+.nav-burger-icon span:nth-child(1) { top: 0; }
+.nav-burger-icon span:nth-child(2) { top: 6px; }
+.nav-burger-icon span:nth-child(3) { top: 12px; }
+body.menu-open .nav-burger-icon span:nth-child(1) { top: 6px; transform: rotate(45deg); }
+body.menu-open .nav-burger-icon span:nth-child(2) { opacity: 0; }
+body.menu-open .nav-burger-icon span:nth-child(3) { top: 6px; transform: rotate(-45deg); }
+.mobile-menu {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--bg);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s var(--ease), visibility 0.35s var(--ease);
+  display: flex;
+  flex-direction: column;
+  padding: 80px 28px 32px;
+  overflow-y: auto;
+}
+body.menu-open .mobile-menu { opacity: 1; visibility: visible; }
+.mobile-menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 24px 0;
+  flex: 1;
+}
+.mobile-menu-list li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+}
+body.menu-open .mobile-menu-list li { opacity: 1; transform: translateY(0); }
+body.menu-open .mobile-menu-list li:nth-child(1) { transition-delay: 0.06s; }
+body.menu-open .mobile-menu-list li:nth-child(2) { transition-delay: 0.10s; }
+body.menu-open .mobile-menu-list li:nth-child(3) { transition-delay: 0.14s; }
+body.menu-open .mobile-menu-list li:nth-child(4) { transition-delay: 0.18s; }
+body.menu-open .mobile-menu-list li:nth-child(5) { transition-delay: 0.22s; }
+body.menu-open .mobile-menu-list li:nth-child(6) { transition-delay: 0.26s; }
+.mobile-menu-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 4px;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  transition: color 0.2s, padding-left 0.3s var(--ease);
+}
+.mobile-menu-list a:hover, .mobile-menu-list a:focus-visible {
+  color: var(--accent-deep);
+  padding-left: 12px;
+  outline: none;
+}
+.mobile-menu-list a.active {
+  color: var(--accent-deep);
+  font-style: italic;
+  font-variation-settings: "wdth" 90;
+}
+.mobile-menu-list a svg {
+  opacity: 0.4;
+  transition: transform 0.3s var(--ease), opacity 0.2s;
+}
+.mobile-menu-list a:hover svg { opacity: 1; transform: translateX(4px); }
+.mobile-menu-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.mobile-menu-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 16px 20px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.mobile-menu-cta a:hover { background: var(--accent-deep); }
+.mobile-menu-foot {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-4);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+}
+@media (max-width: 1080px) { .nav-burger { display: flex; } }
+@media (min-width: 1181px) { .mobile-menu { display: none !important; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://webcraftiq.be/#organization",
+  "name": "Webcraftiq",
+  "url": "https://webcraftiq.be",
+  "logo": "https://webcraftiq.be/logo.svg",
+  "email": "info@webcraftiq.be",
+  "vatID": "BE0803343103",
+  "foundingDate": "2026",
+  "founder": {"@type": "Person", "name": "Stef Weyts"},
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Antwerpen",
+    "addressRegion": "Antwerpen",
+    "addressCountry": "BE"
+  },
+  "areaServed": [
+    {"@type": "AdministrativeArea", "name": "Vlaanderen"},
+    {"@type": "AdministrativeArea", "name": "Brussels Hoofdstedelijk Gewest"}
+  ],
+  "priceRange": "€€€",
+  "knowsAbout": ["Webdesign", "Webdevelopment", "SEO", "Conversie-optimalisatie"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://webcraftiq.be/"},
+    {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://webcraftiq.be/cases"},
+    {"@type": "ListItem", "position": 3, "name": "Voltrix", "item": "https://webcraftiq.be/cases/voltrix"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-brand">
+    <div class="brand-mark">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+      </svg>
+    </div>
+    <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/aanpak">Onze aanpak</a>
+    <a href="/website-laten-maken">Website laten maken</a>
+    <a href="/redesign">Redesign</a>
+    <a href="/care">Care</a>
+    <a href="/cases" class="active">Portfolio</a>
+    <a href="/over">Over ons</a>
+  </div>
+  <button class="nav-burger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false" id="navBurger">
+    <span class="nav-burger-icon" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </span>
+  </button>
+  <a href="/contact" class="nav-cta">Contacteer ons →</a>
+</nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Hoofdmenu" aria-modal="true">
+  <ul class="mobile-menu-list">
+    <li><a href="/aanpak">Onze aanpak<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/website-laten-maken">Website laten maken<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/redesign">Redesign<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/cases" class="active" aria-current="page">Portfolio<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></li>
+    <li><a href="/over">Over ons<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></li>
+  </ul>
+  <div class="mobile-menu-cta">
+    <a href="/contact">Contacteer ons →</a>
+  </div>
+  <div class="mobile-menu-foot">
+    <span>info@webcraftiq.be</span>
+    <span>BTW BE0803.343.103</span>
+    <span>Antwerpen, BE</span>
+  </div>
+</div>
+
+<!-- CASE HEADER -->
+<header class="case-header">
+  <div class="container-narrow">
+    <div class="reveal" style="margin-bottom: 32px;">
+      <a href="/cases" style="font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em; color: var(--ink-3); display: inline-flex; align-items: center; gap: 6px;">
+        ← Alle cases
+      </a>
+    </div>
+
+    <div class="reveal" data-delay="1">
+      <span class="eyebrow eyebrow-amber" style="display: inline-block; margin-bottom: 18px;">— Case study · 2026</span>
+      <h1 class="page-header-h">Voltrix · Een offerte-flow die <em>uren bespaart</em> per week.</h1>
+      <p class="page-header-sub">
+        Voor een Antwerpse elektricien bouwden we geen brochure-website, maar een tool. Het hart: een slim multi-step formulier dat per dienst de juiste vragen stelt — zodat Voltrix niet meer hoeft te bellen voor specs en gewoon kan offreren. Resultaat: minder mailpingpong, complete intakes, snellere doorlooptijd.
+      </p>
+    </div>
+
+    <div class="case-meta-grid reveal" data-delay="2">
+      <div class="case-meta-item">
+        <div class="label">— Klant</div>
+        <div class="value">Voltrix</div>
+      </div>
+      <div class="case-meta-item">
+        <div class="label">— Sector</div>
+        <div class="value">Elektriciteitswerken</div>
+      </div>
+      <div class="case-meta-item">
+        <div class="label">— Locatie</div>
+        <div class="value">Antwerpen, BE</div>
+      </div>
+      <div class="case-meta-item">
+        <div class="label">— Live URL</div>
+        <div class="value"><a href="https://voltrix.be" target="_blank" rel="noopener" style="color: var(--accent-deep); border-bottom: 1px solid var(--accent-line);">voltrix.be ↗</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- BIG PREVIEW -->
+<section class="case-preview">
+  <div class="container">
+    <div class="reveal">
+      <div class="case-real-preview">
+        <div class="case-real-bar">
+          <div class="case-real-dots">
+            <span class="case-real-dot" style="background:#ff5f56"></span>
+            <span class="case-real-dot" style="background:#ffbd2e"></span>
+            <span class="case-real-dot" style="background:#27c93f"></span>
+          </div>
+          <div class="case-real-url">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>voltrix.be</span>
+          </div>
+        </div>
+        <a href="https://voltrix.be" target="_blank" rel="noopener">
+          <img src="/images/voltrix-hero-snapshot.jpg" alt="voltrix.be — live website hero" class="case-real-img" />
+        </a>
+      </div>
+      <div style="text-align: center; margin-top: 20px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-4);">
+        <a href="https://voltrix.be" target="_blank" rel="noopener" style="color: var(--accent-deep); border-bottom: 1px solid var(--accent-line);">Bekijk de live website ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE CHALLENGE -->
+<section class="story-section">
+  <div class="prose">
+    <div class="reveal">
+      <span class="eyebrow eyebrow-amber" style="display: block; margin-bottom: 16px;">— De uitdaging</span>
+      <h2 class="story-h">Een elektricien werkt <em>niet aan zijn telefoon</em>.</h2>
+      <div class="prose-content">
+        <p>
+          Stef van Voltrix staat overdag in een meterkast in Berchem of een keuken in Deurne — niet aan zijn bureau. Maar elke aanvraag die binnenkomt heeft <strong>meer dan tien stukjes informatie nodig</strong> voor er een offerte gemaakt kan worden. Een mailtje "ik wil een offerte voor mijn elektriciteit" is onbruikbaar.
+        </p>
+        <p>
+          Voor een keukenrenovatie wil je weten: <em>welke apparaten</em> komen erin (oven, vaatwas, microgolf, koffiemachine), <em>wat voor kookvuur</em> (inductie 7,4 kW, 11 kW of 22 kW — dat bepaalt of er één fase volstaat of drie nodig zijn), de <em>afstand tussen zekeringkast en keuken</em>, of er een <em>keukenplan</em> is. Voor een keuringsklus: het <em>keuringsverslag</em>, het <em>bouwjaar</em> (vóór 1981 = mogelijk asbest in oude leidingen), de <em>aanleiding</em> (verkoop, renovatie, oude kast). Voor een laadpaal: <em>type wagen</em>, <em>gewenst laadvermogen</em>, of er <em>zonnepanelen</em> zijn voor slim laden.
+        </p>
+        <p>
+          Zonder die info: drie dagen mailpingpong vóór er geöfferteerd kan worden. <strong>Per aanvraag.</strong> Bij twintig aanvragen per maand kost dat een halve week werk — dat <em>niet gefactureerd wordt</em>.
+        </p>
+        <p>
+          De vraag was helder: <em>hoe maken we van de website een tool die de intake doet, zodat Voltrix kan offreren in plaats van uitvragen?</em>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE APPROACH -->
+<section class="story-section" style="background: var(--bg-soft);">
+  <div class="prose">
+    <div class="reveal">
+      <span class="eyebrow eyebrow-amber" style="display: block; margin-bottom: 16px;">— Onze aanpak</span>
+      <h2 class="story-h">Eén formulier dat zich <em>aanpast</em> per dienst.</h2>
+      <div class="prose-content">
+        <p>
+          Het hart van voltrix.be is geen gewoon contactformulier. Het is een <strong>multi-step intake-flow</strong> die zich gedraagt als een ervaren receptioniste — die weet dat je voor een keukenrenovatie andere vragen moet stellen dan voor een laadpaal.
+        </p>
+        <p>
+          Drie hoofdstappen zichtbaar voor de klant. Onder de motorkap: <strong>tientallen conditionele vraagpaden</strong> die zich openvouwen op basis van keuzes. Een particulier krijgt andere vragen dan een syndicus. Een keukenrenovatie triggert vragen over kookvuur-vermogen. Een afgekeurde keuring vraagt om een upload van het verslag.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-grid reveal" data-delay="1">
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h3 class="feat-h">Stap 1: type aanvrager + dienst</h3>
+        <p class="feat-p">Particulier of syndicus/VME (verschillende BTW-tarieven, andere planning). Daarna één van zeven diensten: elektriciteitswerken, renovatie, keuring, zekeringkast, domotica, laadpaal, andere.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 class="feat-h">Stap 2: dienst-specifieke vragen</h3>
+        <p class="feat-p">Het formulier vraagt enkel wat relevant is. Keukenrenovatie? Welke apparaten + kookvuur-vermogen + afstand zekeringkast. Keuring? Aanleiding + bouwjaar + verslag. Laadpaal? Wagen + vermogen + zonnepanelen.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </div>
+        <h3 class="feat-h">Stap 3: contact + uploads</h3>
+        <p class="feat-p">Contactgegevens, bereikbaarheid (voormiddag/namiddag/avond), <strong>én foto-upload</strong>. Eén foto van een zekeringkast bespaart vaak een huisbezoek. Keuringsverslagen of keukenplannen versnellen de offerte.</p>
+      </div>
+    </div>
+
+    <div class="reveal" data-delay="2" style="margin-top: 50px;">
+      <div style="background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; padding: 32px 36px;">
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 14px;">— Voorbeeld: keukenrenovatie</div>
+        <h3 style="font-family: var(--font-display); font-size: 22px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 16px;">Wat een klant invult vs. wat Voltrix krijgt</h3>
+        <p style="font-size: 15px; line-height: 1.65; color: var(--ink-2); margin-bottom: 16px;">
+          Een klant klikt zich in 3-4 minuten door het formulier. Aan de andere kant ontvangt Voltrix een briefing met:
+        </p>
+        <ul style="list-style: none; padding-left: 0; margin: 0 0 16px;">
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--line); display: flex; gap: 12px;"><strong style="color: var(--accent-deep); min-width: 140px;">Type werk:</strong><span>Keukenrenovatie · gedeeltelijke renovatie</span></li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--line); display: flex; gap: 12px;"><strong style="color: var(--accent-deep); min-width: 140px;">Apparaten:</strong><span>Oven, microgolf, vaatwas, koffiemachine, dampkap</span></li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--line); display: flex; gap: 12px;"><strong style="color: var(--accent-deep); min-width: 140px;">Kookvuur:</strong><span>Inductie 11 kW (3-fasen vereist)</span></li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--line); display: flex; gap: 12px;"><strong style="color: var(--accent-deep); min-width: 140px;">Afstand kast:</strong><span>5–15 m</span></li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--line); display: flex; gap: 12px;"><strong style="color: var(--accent-deep); min-width: 140px;">Keukenplan:</strong><span>PDF bijgevoegd</span></li>
+          <li style="padding: 8px 0; border-bottom: 1px solid var(--line); display: flex; gap: 12px;"><strong style="color: var(--accent-deep); min-width: 140px;">Bouwjaar pand:</strong><span>1981–2000</span></li>
+          <li style="padding: 8px 0; display: flex; gap: 12px;"><strong style="color: var(--accent-deep); min-width: 140px;">Bereikbaar:</strong><span>Namiddag (13–17u) · postcode 2018 · timing 1–2 maanden</span></li>
+        </ul>
+        <p style="font-size: 14px; color: var(--ink-3); font-style: italic; line-height: 1.6; margin: 0;">
+          Voltrix kan zonder bellen of mailen een correcte offerte opstellen. <strong>Drie groepen voor de keuken, één 3-fasen kabel naar inductie, totaal materiaal becijferbaar.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE FLOW: 3 STEPS WITH REAL SCREENSHOTS -->
+<section class="story-section flow-section">
+  <div class="container">
+    <div class="reveal" style="max-width: 760px; margin: 0 auto 60px; text-align: center;">
+      <span class="eyebrow eyebrow-amber" style="display: inline-block; margin-bottom: 18px;">— De flow</span>
+      <h2 class="story-h" style="margin-bottom: 22px;">Drie stappen — meer hoeft een klant <em>niet te zien</em>.</h2>
+      <p style="font-size: 16px; line-height: 1.65; color: var(--ink-2); margin: 0;">
+        Onder de motorkap zit complexiteit. Aan de oppervlakte: één duidelijke voortgang. Een klant ziet 1 → 2 → 3 en weet meteen waar hij is. Hieronder de drie stappen zoals een klant ze ziet — echte screenshots van de live site.
+      </p>
+    </div>
+
+    <div class="flow-grid reveal" data-delay="1">
+      <!-- Step 1 -->
+      <div class="flow-step">
+        <div class="flow-step-num">01</div>
+        <div class="flow-step-label">Wat heeft u nodig?</div>
+        <div class="flow-browser">
+          <div class="flow-browser-bar">
+            <div class="flow-dots">
+              <span class="flow-dot" style="background:#ff5f56"></span>
+              <span class="flow-dot" style="background:#ffbd2e"></span>
+              <span class="flow-dot" style="background:#27c93f"></span>
+            </div>
+            <div class="flow-url">voltrix.be/contact</div>
+          </div>
+          <img src="/images/voltrix-form-step1-dienst.jpg" alt="Stap 1 — particulier vs syndicus + keuze uit 7 diensten" loading="lazy" />
+        </div>
+        <p class="flow-step-desc">
+          Eerste filter: <strong>particulier of syndicus/VME</strong> (verschillende BTW-tarieven, andere planning). Dan de dienst — zeven keuzes met korte uitleg per icoon. Acute storingen worden hier al weggeleid naar telefoon/WhatsApp.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flow-step">
+        <div class="flow-step-num">02</div>
+        <div class="flow-step-label">Details — adaptief</div>
+        <div class="flow-browser">
+          <div class="flow-browser-bar">
+            <div class="flow-dots">
+              <span class="flow-dot" style="background:#ff5f56"></span>
+              <span class="flow-dot" style="background:#ffbd2e"></span>
+              <span class="flow-dot" style="background:#27c93f"></span>
+            </div>
+            <div class="flow-url">voltrix.be/contact</div>
+          </div>
+          <img src="/images/voltrix-form-step2-keuken.jpg" alt="Stap 2 — keukenrenovatie met apparaten en kookvuur-vermogen" loading="lazy" />
+        </div>
+        <p class="flow-step-desc">
+          Nu wordt het slim: het formulier toont enkel <strong>vragen die op de gekozen dienst van toepassing zijn</strong>. Een keukenrenovatie vraagt naar apparaten + kookvuur-vermogen. Een laadpaal vraagt naar wagen + zonnepanelen. Een keuring naar het verslag.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flow-step">
+        <div class="flow-step-num">03</div>
+        <div class="flow-step-label">Uw gegevens + foto's</div>
+        <div class="flow-browser">
+          <div class="flow-browser-bar">
+            <div class="flow-dots">
+              <span class="flow-dot" style="background:#ff5f56"></span>
+              <span class="flow-dot" style="background:#ffbd2e"></span>
+              <span class="flow-dot" style="background:#27c93f"></span>
+            </div>
+            <div class="flow-url">voltrix.be/contact</div>
+          </div>
+          <img src="/images/voltrix-form-step3-gegevens.jpg" alt="Stap 3 — uw gegevens met foto-upload zone" loading="lazy" />
+        </div>
+        <p class="flow-step-desc">
+          Contactgegevens, type pand, postcode, planning-voorkeur en bereikbaarheid. <strong>Plus een foto-upload zone</strong> — voor zekeringkast-foto's, keuringsverslagen of keukenplannen. Eén foto bespaart vaak een huisbezoek.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADAPTIVE PROOF: 3 versions of step 2 side by side -->
+<section class="story-section" style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="reveal" style="max-width: 760px; margin: 0 auto 50px; text-align: center;">
+      <span class="eyebrow eyebrow-amber" style="display: inline-block; margin-bottom: 18px;">— Het bewijs</span>
+      <h2 class="story-h" style="margin-bottom: 22px;">Per dienst <em>andere</em> vragen.</h2>
+      <p style="font-size: 16px; line-height: 1.65; color: var(--ink-2); margin: 0;">
+        Drie klanten, drie totaal verschillende intakes — allemaal in dezelfde "stap 2". Dat is wat we bedoelen met een formulier dat zich aanpast. Een keukenrenovatie vraagt om compleet andere informatie dan een keuring of een laadpaal — en het formulier weet dat.
+      </p>
+    </div>
+
+    <div class="adaptive-grid reveal" data-delay="1">
+      <!-- Version 1: Keukenrenovatie -->
+      <div class="adaptive-card">
+        <div class="adaptive-tag">Keukenrenovatie</div>
+        <div class="adaptive-browser">
+          <div class="adaptive-bar">
+            <div class="adaptive-dots">
+              <span class="adaptive-dot" style="background:#ff5f56"></span>
+              <span class="adaptive-dot" style="background:#ffbd2e"></span>
+              <span class="adaptive-dot" style="background:#27c93f"></span>
+            </div>
+          </div>
+          <img src="/images/voltrix-form-step2-keuken.jpg" alt="Stap 2 voor keukenrenovatie" loading="lazy" />
+        </div>
+        <ul class="adaptive-list">
+          <li>Type renovatie (volledig / keuken / badkamer)</li>
+          <li>Apparaten (oven, vaatwas, microgolf, …)</li>
+          <li><strong>Kookvuur-vermogen</strong> (7,4 / 11 / 22 kW)</li>
+          <li>Optioneel: keukenplan + afstand zekeringkast</li>
+        </ul>
+      </div>
+
+      <!-- Version 2: Keuring -->
+      <div class="adaptive-card">
+        <div class="adaptive-tag">Keuring</div>
+        <div class="adaptive-browser">
+          <div class="adaptive-bar">
+            <div class="adaptive-dots">
+              <span class="adaptive-dot" style="background:#ff5f56"></span>
+              <span class="adaptive-dot" style="background:#ffbd2e"></span>
+              <span class="adaptive-dot" style="background:#27c93f"></span>
+            </div>
+          </div>
+          <img src="/images/voltrix-form-step2-keuring.jpg" alt="Stap 2 voor keuring" loading="lazy" />
+        </div>
+        <ul class="adaptive-list">
+          <li><strong>Keuringsverslag</strong> (afgekeurd / positief / geen)</li>
+          <li>Aanleiding (verkoop, renovatie, oude installatie)</li>
+          <li><strong>Bouwjaar woning</strong> (vóór 1981 = asbest-risico)</li>
+          <li>Optioneel: oppervlakte in m²</li>
+        </ul>
+      </div>
+
+      <!-- Version 3: Laadpaal -->
+      <div class="adaptive-card">
+        <div class="adaptive-tag">Laadpaal</div>
+        <div class="adaptive-browser">
+          <div class="adaptive-bar">
+            <div class="adaptive-dots">
+              <span class="adaptive-dot" style="background:#ff5f56"></span>
+              <span class="adaptive-dot" style="background:#ffbd2e"></span>
+              <span class="adaptive-dot" style="background:#27c93f"></span>
+            </div>
+          </div>
+          <img src="/images/voltrix-form-step2-laadpaal.jpg" alt="Stap 2 voor laadpaal" loading="lazy" />
+        </div>
+        <ul class="adaptive-list">
+          <li>Welke wagen (Tesla, Volvo, …)</li>
+          <li><strong>Gewenst laadvermogen</strong> (7,4 / 11 / 22 kW)</li>
+          <li>Afstand zekeringkast tot parkeerplek</li>
+          <li><strong>Zonnepanelen?</strong> (voor slim laden op overschot)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reveal" data-delay="2" style="max-width: 720px; margin: 50px auto 0; text-align: center;">
+      <p style="font-size: 15px; line-height: 1.65; color: var(--ink-3); font-style: italic; margin: 0; padding: 22px 28px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px;">
+        Geen klant moet door 50 vragen die niet voor hem gelden. Voltrix krijgt een briefing die exact past bij de dienst — niet meer, niet minder. <strong style="color: var(--ink); font-style: normal;">Dat is het verschil tussen een formulier en een intake-tool.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL CHOICES -->
+<section class="story-section">
+  <div class="container-narrow reveal">
+    <span class="eyebrow eyebrow-amber" style="display: block; margin-bottom: 16px;">— Technische keuzes</span>
+    <h2 class="story-h">Geen plug-ins. Geen overhead. <em>Snel</em>.</h2>
+    <div class="prose-content" style="max-width: 720px; margin: 0 auto; padding: 0 32px;">
+      <p>
+        De site is gebouwd in pure HTML/CSS/JS — geen WordPress, geen page-builders, geen plug-ins. Het multi-step formulier is custom-code, geen template-tool. Resultaat: laadtijd onder 1 seconde op mobiel, perfecte Lighthouse-scores, en een setup die Voltrix nooit moet updaten omdat er niets is dat kan breken.
+      </p>
+    </div>
+
+    <ol class="timeline-list" style="max-width: 720px; margin: 36px auto;">
+      <li class="timeline-item">
+        <div class="timeline-day">Adaptief</div>
+        <div class="timeline-content">
+          <h4>Conditionele vraagpaden</h4>
+          <p>Het formulier toont alleen de vragen die op jouw situatie van toepassing zijn. Een particulier ziet andere velden dan een syndicus. Een keukenrenovatie triggert kookvuur-vragen, een laadpaal triggert vragen over zonnepanelen. Geen formulier-vermoeidheid.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-day">Slim</div>
+        <div class="timeline-content">
+          <h4>Vragen die de klant educeren</h4>
+          <p>Bij kookvuur-vermogen leggen we kort uit: <em>"Inductie 7,4 kW = standaard 1-fase. 11 kW of meer = drie fasen vaak nodig."</em> De klant kiest geïnformeerd. Voltrix krijgt geen "ik wil inductie" maar "ik wil 11 kW inductie, drie fasen nodig".</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-day">Foto-upload</div>
+        <div class="timeline-content">
+          <h4>Bewijs vóór huisbezoek</h4>
+          <p>Klanten kunnen direct in stap 3 hun zekeringkast fotograferen, hun keuringsverslag uploaden of hun keukenplan delen. <strong>Eén foto van een zekeringkast bespaart vaak een huisbezoek</strong> — en dus reistijd, parkeertijd, koffie-tijd.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-day">SEO</div>
+        <div class="timeline-content">
+          <h4>Lokale vindbaarheid per dienst</h4>
+          <p>Aparte SEO-pagina's voor zekeringkast vervangen, AREI-keuring, laadpalen, domotica, B2B/vastgoed, spoedinterventie. Wie googelt "zekeringkast vervangen Antwerpen" komt direct op de juiste pagina — niet op de homepage.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- WHAT IT SOLVES -->
+<section class="story-section" style="background: var(--bg-soft);">
+  <div class="prose">
+    <div class="reveal">
+      <span class="eyebrow eyebrow-amber" style="display: block; margin-bottom: 16px;">— Resultaat</span>
+      <h2 class="story-h">Van <em>3 dagen mailpingpong</em> naar offerte op dezelfde dag.</h2>
+      <div class="prose-content">
+        <p>
+          De website doet drie dingen die voorheen Voltrix' tijd opaten:
+        </p>
+        <p>
+          <strong>1. Volledige intake zonder bellen.</strong> Aanvragen die binnenkomen bevatten alle info die nodig is voor een concrete offerte: type werk, materiaal-specificaties, urgentie, foto's. Voltrix kan binnen 24u een echte offerte sturen — geen vragen meer terug.
+        </p>
+        <p>
+          <strong>2. Foto's vervangen huisbezoeken.</strong> Een foto van een zekeringkast geeft 80% van de info die anders een plaatsbezoek vraagt. Bij 4-5 aanvragen per maand waar dat genoeg is = <em>4-5 uur per maand bespaard aan reistijd</em>.
+        </p>
+        <p>
+          <strong>3. Klanten filteren zichzelf.</strong> Wie alleen een prijsinschatting zoekt voor een mini-klus, krijgt via de FAQ-sectie en dienst-pagina's al een eerste antwoord. Wie écht een offerte wil, vult het formulier in — en Voltrix krijgt enkel kwalitatieve aanvragen.
+        </p>
+      </div>
+    </div>
+
+    <div class="reveal" data-delay="1" style="margin-top: 48px;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div style="background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; padding: 28px 26px;">
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-4); margin-bottom: 8px;">Vóór</div>
+          <div style="font-family: var(--font-display); font-size: 24px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 12px;">3 dagen</div>
+          <p style="font-size: 14px; line-height: 1.55; color: var(--ink-3); margin: 0;">
+            Aanvraag binnen → terugbellen → mailen voor specs → wachten op antwoord → opnieuw mailen → eindelijk offerte versturen. Per aanvraag.
+          </p>
+        </div>
+        <div style="background: var(--ink); color: var(--dark-fg); border-radius: 14px; padding: 28px 26px;">
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Nu</div>
+          <div style="font-family: var(--font-display); font-size: 24px; font-weight: 500; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 12px; color: var(--dark-fg);">Zelfde dag</div>
+          <p style="font-size: 14px; line-height: 1.55; color: var(--dark-fg-2); margin: 0;">
+            Aanvraag komt binnen mét alle specs en foto's. Voltrix bekijkt 's avonds, stuurt de volgende ochtend een complete offerte — en focust overdag op echt vakwerk.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" data-delay="2" style="margin-top: 32px; max-width: 640px; margin-left: auto; margin-right: auto;">
+      <p style="font-size: 14px; color: var(--ink-4); font-style: italic; line-height: 1.6; text-align: center; padding: 18px 22px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; margin: 0;">
+        <strong style="color: var(--ink-2); font-style: normal;">Belangrijke nuance:</strong> deze case is gebaseerd op de aanpak en het ontwerp van het systeem. Concrete cijfers (aantal aanvragen, exacte tijdwinst) verzamelen we momenteel met Voltrix — die voegen we toe wanneer we voldoende data hebben.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT CASE -->
+<section class="next-case-section">
+  <div class="container">
+    <div class="next-case-row">
+      <div>
+        <div class="eyebrow" style="margin-bottom: 8px;">— Volgende case</div>
+        <h3 class="next-case-h">Gevanti BV · <em>maatwerk-interieur uit Rijkevorsel</em></h3>
+      </div>
+      <a href="/cases" class="next-case-link">
+        Bekijk alle cases
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="cta-h">Word de <em>volgende</em>?</h2>
+    <p class="cta-sub">
+      3 plekken open in juni 2026. Plan een vrijblijvende intake-call van 45 minuten.
+    </p>
+    <div class="cta-actions">
+      <a href="/contact" class="btn btn-amber">
+        Plan een intake-call
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="/aanpak" class="btn btn-ghost-dark">Lees onze aanpak</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="brand-mark">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 9 L7.5 16 L10 9 L12 14 L14 9 L16.5 16 L19 9"/>
+            </svg>
+          </div>
+          <span class="brand-text"><span class="ink">webcraft</span><span class="accent">iq</span></span>
+        </div>
+        <p class="footer-tag">Premium webdesign voor Belgische KMO's. Volledige sites, op maat ontworpen, met slimme conversie-features.</p>
+      </div>
+      <div>
+        <div class="footer-h">Pagina's</div>
+        <ul class="footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/aanpak">Onze aanpak</a></li>
+          <li><a href="/website-laten-maken">Website laten maken</a></li>
+          <li><a href="/redesign">Redesign</a></li>
+          <li><a href="/care">Care</a></li>
+          <li><a href="/cases">Portfolio</a></li>
+          <li><a href="/over">Over ons</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Contact</div>
+        <ul class="footer-list">
+          <li>info@webcraftiq.be</li>
+          <li>BTW BE0803.343.103</li>
+          <li>Antwerpen, BE</li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Legal</div>
+        <ul class="footer-list">
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/voorwaarden">Voorwaarden</a></li>
+          <li><a href="/cookies">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Webcraftiq · Stef Weyts · BTW BE0803.343.103</span>
+      <span>Built in Belgium · Made with care</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+reveals.forEach((el) => io.observe(el));
+
+const sp = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  sp.style.width = ((scrolled / docHeight) * 100) + '%';
+});
+</script>
+
+<script>
+(function() {
+  const burger = document.getElementById('navBurger');
+  const menu = document.getElementById('mobileMenu');
+  if (!burger || !menu) return;
+  function toggle(force) {
+    const isOpen = force !== undefined ? force : !document.body.classList.contains('menu-open');
+    document.body.classList.toggle('menu-open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    burger.setAttribute('aria-label', isOpen ? 'Sluit menu' : 'Open menu');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function() { toggle(); });
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() { toggle(false); });
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.body.classList.contains('menu-open')) toggle(false);
+  });
+})();
+</script>
+</body>
+</html>
