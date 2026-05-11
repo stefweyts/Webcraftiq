@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
 <head>
-<!-- Webcraftiq v2.12.3 | 2026-05-09 | Stef Weyts -->
+<!-- Webcraftiq v2.14 | 2026-05-11 | Stef Weyts -->
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -165,7 +165,7 @@
             "@type": "Offer",
             "name": "Pro",
             "description": "Compleet pakket inclusief multi-step offerteformulier, CRM-integratie en booking-flow",
-            "price": "4999",
+            "price": "4499",
             "priceCurrency": "EUR"
           },
           {
@@ -241,7 +241,7 @@
           "name": "Wat na de lancering?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bij elk pakket zit Webcraftiq Care verplicht inbegrepen — drie pakketten beschikbaar: Care Basis (€89/m) voor hosting + 1u maandelijkse updates, Care Actief (€249/m) voor 3u updates per maand, en Care Groei (€499/m) voor maandelijkse SEO-pagina + 5u totaal. Bekijk /care voor de volledige uitleg."
+            "text": "Bij elk pakket zit Webcraftiq Care verplicht inbegrepen — drie pakketten beschikbaar: Care Basis (€49/m) voor hosting + security + backup (0u werk inbegrepen), Care Actief (€199/m) voor 2u updates op calculators en content per maand, en Care Groei (prijs op maat) voor 1 SEO-pagina per maand + maandelijkse project-updates op maat. Bekijk /care voor de volledige uitleg."
           }
         },
         {
@@ -257,7 +257,7 @@
           "name": "Wat kost een website laten maken in België?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "In België ligt de prijs voor een professionele website tussen €1.500 en €10.000 — afhankelijk van complexiteit, sector en functionaliteiten. Bij Webcraftiq starten onze pakketten vanaf €2.499 (Essential) en €4.999 (Pro met multi-step formulier). Custom projecten beginnen vanaf €9.500."
+            "text": "In België ligt de prijs voor een professionele website tussen €1.500 en €10.000 — afhankelijk van complexiteit, sector en functionaliteiten. Bij Webcraftiq starten onze pakketten vanaf €2.499 (Essential) en €4.499 (Pro met multi-step formulier). Custom projecten beginnen vanaf €9.500."
           }
         },
         {
@@ -604,37 +604,11 @@ section { padding: 120px 0; position: relative; }
   .hero { padding: 130px 0 60px; }
 }
 .hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  background: var(--bg-card);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 12px;
+  display: inline-block;
+  font-size: 13px;
   color: var(--ink-3);
-  font-family: var(--font-mono);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
   margin-bottom: 32px;
-}
-.hero-badge-dot {
-  width: 6px; height: 6px;
-  background: var(--green);
-  border-radius: 50%;
-  position: relative;
-}
-.hero-badge-dot::after {
-  content: "";
-  position: absolute;
-  inset: -4px;
-  background: var(--green);
-  opacity: 0.3;
-  border-radius: 50%;
-  animation: ping 2s ease-out infinite;
-}
-@keyframes ping {
-  0% { transform: scale(0.5); opacity: 0.5; }
-  100% { transform: scale(2); opacity: 0; }
 }
 
 .hero-display {
@@ -1446,16 +1420,16 @@ section { padding: 120px 0; position: relative; }
 .local-p strong { font-weight: 600; color: var(--ink); }
 .local-p em { font-style: italic; color: var(--ink); }
 .local-includes { background: var(--bg-card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin: 26px 0; }
-.local-includes-h { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
+.local-includes-h { font-size: 14px; font-weight: 600; color: var(--ink-2); margin-bottom: 14px; }
 .local-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
 .local-list li { font-size: 14px; line-height: 1.5; display: flex; gap: 10px; align-items: flex-start; color: var(--ink-2); }
 .local-check { flex-shrink: 0; width: 18px; height: 18px; border-radius: 50%; background: var(--accent-soft); border: 1px solid var(--accent-line); color: var(--accent-deep); display: flex; align-items: center; justify-content: center; margin-top: 1px; }
 .local-availability { display: flex; flex-direction: column; gap: 10px; padding: 22px 24px; background: var(--ink); color: var(--dark-fg); border-radius: 14px; margin-top: 28px; }
 .local-avail-row { display: flex; align-items: center; gap: 14px; font-size: 14px; line-height: 1.4; color: var(--dark-fg-2); }
 .local-avail-row strong { color: var(--dark-fg); font-weight: 600; }
-.local-avail-tag { flex-shrink: 0; min-width: 90px; text-align: center; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; font-weight: 600; }
-.local-avail-yes { background: rgba(217, 119, 6, 0.18); border: 1px solid rgba(217, 119, 6, 0.4); color: var(--accent); }
-.local-avail-add { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: var(--dark-fg); }
+.local-avail-tag { flex-shrink: 0; min-width: 90px; text-align: center; font-size: 12px; padding: 3px 10px; border-radius: 4px; font-weight: 600; letter-spacing: 0.01em; }
+.local-avail-yes { background: rgba(217, 119, 6, 0.15); color: var(--accent); }
+.local-avail-add { background: rgba(255,255,255,0.06); color: var(--dark-fg-2); }
 
 .local-visual { display: flex; flex-direction: column; align-items: center; gap: 16px; }
 
@@ -1535,7 +1509,7 @@ section { padding: 120px 0; position: relative; }
 .care-block::before { content: ""; position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(217, 119, 6, 0.18), transparent 60%); pointer-events: none; }
 @media (max-width: 768px) { .care-block { padding: 40px 24px; border-radius: 18px; margin-top: 32px; } }
 .care-header { position: relative; text-align: center; max-width: 640px; margin: 0 auto 40px; }
-.care-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); background: rgba(217, 119, 6, 0.16); border: 1px solid rgba(217, 119, 6, 0.3); padding: 7px 14px; border-radius: 999px; margin-bottom: 20px; }
+.care-eyebrow { display: inline-block; font-size: 13px; color: var(--accent); margin-bottom: 20px; opacity: 0.75; letter-spacing: 0.01em; }
 .care-h { font-family: var(--font-display); font-size: clamp(1.7rem, 3.4vw, 2.4rem); font-weight: 400; letter-spacing: -0.035em; line-height: 1.1; margin-bottom: 14px; }
 .care-h em { font-style: italic; color: var(--accent); font-variation-settings: "wdth" 85; }
 .care-sub { font-size: 15px; line-height: 1.6; color: var(--dark-fg-2); margin: 0; }
@@ -1560,7 +1534,7 @@ section { padding: 120px 0; position: relative; }
 .care-tier.featured { background: rgba(217, 119, 6, 0.1); border-color: rgba(217, 119, 6, 0.4); }
 .care-tier.featured:hover { background: rgba(217, 119, 6, 0.16); }
 .care-tier-badge { position: absolute; top: -10px; right: 18px; background: var(--accent); color: #fff; font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; font-weight: 600; }
-.care-tier-name { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+.care-tier-name { font-family: var(--font-display); font-size: 17px; font-weight: 500; letter-spacing: -0.01em; color: var(--accent); margin-bottom: 12px; }
 .care-tier-price { font-family: var(--font-display); font-size: 38px; font-weight: 400; letter-spacing: -0.04em; line-height: 1; color: var(--dark-fg); margin-bottom: 10px; }
 .care-tier-price em { font-style: italic; color: var(--accent); font-variation-settings: "wdth" 85; }
 .care-tier-price span { font-size: 14px; color: var(--dark-fg-2); margin-left: 2px; font-style: normal; font-family: var(--font-mono); letter-spacing: 0.05em; }
@@ -3078,7 +3052,6 @@ details[open] .faq-toggle {
     <div class="hero-grid">
       <div class="reveal">
       <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
         Beschikbaar voor projecten — start juni 2026
       </div>
       <h1 class="hero-display">
@@ -3256,7 +3229,6 @@ details[open] .faq-toggle {
   <div class="container">
     <div class="redesign-promo-card reveal">
       <div class="redesign-promo-content">
-        <span class="eyebrow eyebrow-amber">— Bestaande website</span>
         <h2 class="redesign-promo-h">Heb je al een site die <em>niet werkt</em>?</h2>
         <p class="redesign-promo-p">Geen aanvragen, traag op mobiel, plug-in chaos? Een redesign is goedkoper en sneller dan opnieuw beginnen — én je behoudt je SEO-rankings.</p>
         <div class="redesign-promo-actions">
@@ -3276,7 +3248,6 @@ details[open] .faq-toggle {
   <div class="container">
     <div class="work-head reveal">
       <div class="work-head-text">
-        <span class="eyebrow eyebrow-amber">— Recent gebouwd</span>
         <h2 class="section-h" style="margin-top: 18px;">Recent webdesign werk,<br /><em>2024 — 2026</em>.</h2>
       </div>
       <a href="/cases" class="btn btn-secondary">Volledige portfolio →</a>
@@ -3342,7 +3313,7 @@ details[open] .faq-toggle {
 
     <!-- Honest placeholder — geen fake cases -->
     <div class="reveal" style="margin-top: 60px; padding: 60px 40px; background: var(--bg-soft); border: 1px dashed var(--line-2); border-radius: 22px; text-align: center;">
-      <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 18px;">— Beschikbaar in juni 2026</div>
+      <div style="font-size: 13px; color: var(--accent-deep); margin-bottom: 18px;">Beschikbaar in juni 2026</div>
       <h3 style="font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 18px;">Wordt jouw project de <em style="font-style: italic; color: var(--accent-deep); font-variation-settings: 'wdth' 85;">volgende</em> case?</h3>
       <p style="font-size: 16px; color: var(--ink-3); max-width: 520px; margin: 0 auto 28px; line-height: 1.6;">
         Webcraftiq is jong en bouwt aan zijn portfolio. Bovenstaande projecten zijn gemaakt — er is plaats voor 3 nieuwe klanten in juni 2026. Eerste projecten krijgen een launch-tarief.
@@ -3359,7 +3330,6 @@ details[open] .faq-toggle {
 <section class="industries">
   <div class="container">
     <div class="ind-head reveal">
-      <span class="eyebrow eyebrow-amber">— Voor wie we bouwen</span>
       <h2 class="section-h" style="margin-top: 18px;">Websites voor <em>elke sector</em>.</h2>
       <p style="font-size: 16px; color: var(--ink-3); margin-top: 18px; max-width: 540px; margin-left: auto; margin-right: auto;">
         We werken vooral met Belgische KMO's. Of je nu installateur bent of restaurant — we kennen jouw klanten en wat hen converteert.
@@ -3417,7 +3387,6 @@ details[open] .faq-toggle {
 <section class="pillars" id="how">
   <div class="container">
     <div class="pillars-head reveal">
-      <span class="eyebrow eyebrow-amber">— Wat ons anders maakt</span>
       <h2 class="section-h" style="margin-top: 18px;">Drie redenen waarom<br />onze sites <em>werken</em>.</h2>
     </div>
 
@@ -3469,7 +3438,6 @@ details[open] .faq-toggle {
   <div class="container">
     <div class="svc-head reveal">
       <div class="svc-head-text">
-        <span class="eyebrow eyebrow-amber">— Wat we precies bouwen</span>
         <h2 class="section-h" style="margin-top: 18px;">Volledige websites op maat,<br /><em>handgemaakt</em>.</h2>
       </div>
       <a href="/contact" class="btn btn-secondary">Vraag voorstel →</a>
@@ -3558,7 +3526,6 @@ details[open] .faq-toggle {
   <div class="container">
     <div class="feature-grid">
       <div class="feature-text reveal">
-        <span class="eyebrow eyebrow-amber">— Onze signature feature</span>
         <h2 class="feature-h">Het slimme<br /><em>offerteformulier</em>.</h2>
         <p class="feature-p">
           De meeste contactformulieren zijn een tekstvak en een verzendknop. Wij bouwen iets anders: een gestructureerde flow die je klant <em>door</em> de juiste vragen leidt. Resultaat? Compleet ingevulde aanvragen, géén heen-en-weer mailen, en offertes die je in minuten verstuurt. <a href="/blog/multi-step-formulier-vs-klassiek" style="color: var(--accent-deep); border-bottom: 1px solid var(--accent-line);">Lees waarom multi-step formulieren 3.5x beter converteren</a>.
@@ -3663,7 +3630,6 @@ details[open] .faq-toggle {
   <div class="container">
     <div class="testimonial-grid">
       <div class="testimonial-side reveal">
-        <span class="eyebrow">— Recente case</span>
         <h3>Voltrix · <em>Elektricien Antwerpen</em></h3>
         <p style="color: var(--dark-fg-2); font-size: 15px; line-height: 1.6;">
           Erkend elektricien uit Antwerpen, gespecialiseerd in zekeringkasten, AREI-keuringen, renovaties, laadpalen en domotica. We bouwden een snelle, conversiegerichte site met een 3-staps offerteflow en directe WhatsApp-integratie.
@@ -3685,7 +3651,7 @@ details[open] .faq-toggle {
       </div>
 
       <div class="testimonial-quote-block reveal" data-delay="1">
-        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px;">— Wat de site oplost</div>
+        <div style="font-size: 13px; color: var(--accent); margin-bottom: 18px; opacity: 0.85;">Wat de site oplost</div>
         <p style="font-family: var(--font-display); font-size: clamp(20px, 2.4vw, 28px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.25; color: var(--dark-fg); margin-bottom: 28px;">
           Een elektricien werkt niet aan zijn telefoon. De site doet het aanvraag-werk: <em style="color: var(--accent);">3 stappen, foto-upload via WhatsApp, en een AREI-conforme briefing</em> — vóór de eerste contactmoment.
         </p>
@@ -3713,7 +3679,6 @@ details[open] .faq-toggle {
   <div class="container">
     <div class="process-head reveal">
       <div>
-        <span class="eyebrow eyebrow-amber">— Werkwijze</span>
         <h2 class="section-h" style="margin-top: 18px;">Van eerste call<br />naar live in <em>14 dagen</em>.</h2>
       </div>
       <p class="process-head-text">
@@ -3758,13 +3723,6 @@ details[open] .faq-toggle {
   <div class="container">
     <div class="local-grid reveal">
       <div class="local-content">
-        <div class="local-eyebrow">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-          Lokaal vindbaar
-        </div>
         <h2 class="local-h">Een website is niet genoeg. Je moet vindbaar zijn waar klanten <em>écht zoeken</em>.</h2>
         <p class="local-p">Tik <em>"loodgieter Antwerpen"</em> in Google. Wat zie je als eerste? <strong>Niet websites.</strong> Drie kaartjes met foto's, sterren en routebeschrijvingen. Dat zijn Google Bedrijfsprofielen — en <strong>70% van de klikken gaan ernaartoe</strong>, niet naar de websites eronder.</p>
         <p class="local-p">Voor lokale KMO's is je Google Bedrijfsprofiel <em>vaak belangrijker dan je website zelf</em>. Onvolledig profiel = onzichtbaar in lokale zoekresultaten. Daarom doen wij <strong>allebei</strong> — een professionele website (zie Voltrix hiernaast) plus een volledig opgezet Google Bedrijfsprofiel.</p>
@@ -3818,9 +3776,8 @@ details[open] .faq-toggle {
 <section class="pricing" id="pricing">
   <div class="container">
     <div class="pricing-head reveal">
-      <span class="eyebrow eyebrow-amber">— Investering</span>
       <h2 class="section-h" style="margin-top: 18px;">Eén vaste prijs.<br /><em>Care inbegrepen.</em></h2>
-      <p style="margin-top: 18px; font-size: 16px; color: var(--ink-3); max-width: 600px; line-height: 1.6;">Eenmalige bouw + Webcraftiq Care voor hosting, security en maandelijks onderhoud. <a href="/care" style="color: var(--accent-deep); border-bottom: 1px solid var(--accent-line);">Drie Care-pakketten vanaf €89/m</a> — kies wat past bij je situatie.</p>
+      <p style="margin-top: 18px; font-size: 16px; color: var(--ink-3); max-width: 600px; line-height: 1.6;">Eenmalige bouw + Webcraftiq Care voor hosting, security en maandelijks onderhoud. <a href="/care" style="color: var(--accent-deep); border-bottom: 1px solid var(--accent-line);">Drie Care-pakketten vanaf €49/m</a> — kies wat past bij je situatie.</p>
     </div>
 
     <div class="pricing-grid">
@@ -3829,7 +3786,7 @@ details[open] .faq-toggle {
         <div class="price-tier-sub">Voor zaakvoerders die snel online willen met een sterke basis en goede SEO.</div>
         <div class="price-amount"><em>€</em>2.499</div>
         <div class="price-meta">eenmalig · excl. btw</div>
-        <div class="price-care-line">+ Care vanaf €89/m</div>
+        <div class="price-care-line">+ Care vanaf €49/m</div>
         <ul class="price-features">
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Tot 5 pagina's, op maat ontworpen</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>SEO-optimalisatie + Search Console</li>
@@ -3846,9 +3803,9 @@ details[open] .faq-toggle {
         <div class="price-tag">Meest gekozen</div>
         <div class="price-tier">Pro</div>
         <div class="price-tier-sub">Een werkpaard voor je business — geen digitaal visitekaartje.</div>
-        <div class="price-amount"><em>€</em>4.999</div>
+        <div class="price-amount"><em>€</em>4.499</div>
         <div class="price-meta">eenmalig · excl. btw</div>
-        <div class="price-care-line">+ <strong>Care Actief €249/m</strong> <em>(verplicht bij Pro)</em></div>
+        <div class="price-care-line">+ <strong>Care Actief €199/m</strong> <em>(verplicht bij Pro, 2u/m)</em></div>
         <ul class="price-features">
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Alles uit Essential, plus:</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Tot 12 pagina's + dienstenpagina's</li>
@@ -3867,7 +3824,7 @@ details[open] .faq-toggle {
         <div class="price-tier-sub">E-commerce, klantportalen, multi-language of complexe integraties.</div>
         <div class="price-amount">vanaf <em>€</em>9.500</div>
         <div class="price-meta">eenmalig · excl. btw</div>
-        <div class="price-care-line">+ Care vanaf €89/m</div>
+        <div class="price-care-line">+ Care vanaf €49/m</div>
         <ul class="price-features">
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Alles uit Pro, plus:</li>
           <li class="price-feature"><span class="price-feat-check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span>Onbeperkt aantal pagina's</li>
@@ -3884,9 +3841,6 @@ details[open] .faq-toggle {
     <div class="care-block reveal" data-delay="2">
       <div class="care-header">
         <div class="care-eyebrow">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
-          </svg>
           Webcraftiq Care · Maandelijks
         </div>
         <h3 class="care-h">Een website is een <em>levend product</em>.</h3>
@@ -3896,21 +3850,21 @@ details[open] .faq-toggle {
       <div class="care-tiers">
         <a href="/care#basis" class="care-tier">
           <div class="care-tier-name">Care Basis</div>
-          <div class="care-tier-price"><em>€</em>89<span>/m</span></div>
-          <div class="care-tier-tagline">Hosting + 1u updates per maand</div>
+          <div class="care-tier-price"><em>€</em>49<span>/m</span></div>
+          <div class="care-tier-tagline">Hosting + security + monitoring</div>
           <div class="care-tier-arrow">→</div>
         </a>
         <a href="/care#actief" class="care-tier featured">
           <div class="care-tier-badge">Verplicht bij Pro</div>
           <div class="care-tier-name">Care Actief</div>
-          <div class="care-tier-price"><em>€</em>249<span>/m</span></div>
-          <div class="care-tier-tagline">+ 3u maandelijkse updates</div>
+          <div class="care-tier-price"><em>€</em>199<span>/m</span></div>
+          <div class="care-tier-tagline">+ 2u maandelijkse updates</div>
           <div class="care-tier-arrow">→</div>
         </a>
         <a href="/care#groei" class="care-tier">
           <div class="care-tier-name">Care Groei</div>
-          <div class="care-tier-price"><em>€</em>499<span>/m</span></div>
-          <div class="care-tier-tagline">+ 1 SEO-pagina per maand</div>
+          <div class="care-tier-price"><em>op maat</em></div>
+          <div class="care-tier-tagline">+ 1 SEO-pagina per maand + maandelijkse project-updates</div>
           <div class="care-tier-arrow">→</div>
         </a>
       </div>
@@ -3927,7 +3881,6 @@ details[open] .faq-toggle {
   <div class="container">
     <div class="contact-teaser-card reveal">
       <div class="contact-teaser-content">
-        <span class="eyebrow eyebrow-amber" style="display: inline-block; margin-bottom: 16px;">— Klaar om te bouwen?</span>
         <h2 class="contact-teaser-h">Vraag <em>vrijblijvend</em> een voorstel aan.</h2>
         <p class="contact-teaser-p">
           Vier korte vragen op een eigen contactpagina — daarna krijg je binnen 24 uur een persoonlijk antwoord van Stef. Geen chatbot, geen sales-tactieken, geen verplichting.
@@ -3955,7 +3908,6 @@ details[open] .faq-toggle {
 <section class="faq" id="faq">
   <div class="container-narrow">
     <div class="reveal" style="text-align: center; margin: 0 auto 60px;">
-      <span class="eyebrow eyebrow-amber" style="display: inline-block; margin-bottom: 18px;">— FAQ</span>
       <h2 class="section-h">Veelgestelde vragen over een <em>website laten maken</em>.</h2>
     </div>
 
@@ -4000,7 +3952,7 @@ details[open] .faq-toggle {
           <span class="faq-q">Wat na de lancering?</span>
           <span class="faq-toggle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
-        <div class="faq-a">Bij elk pakket zit <strong>Webcraftiq Care</strong> verplicht inbegrepen — drie pakketten beschikbaar:<br><br><strong>Care Basis (€89/m)</strong>: hosting + 1u updates per maand.<br><strong>Care Actief (€249/m)</strong>: hosting + 3u updates per maand + performance-rapport.<br><strong>Care Groei (€499/m)</strong>: hosting + 5u totaal incl. 1 SEO-pagina per maand + ranking-monitoring.<br><br><a href="/care" style="color: var(--accent-deep); border-bottom: 1px solid var(--accent-line);">Bekijk de volledige Care-uitleg</a>.</div>
+        <div class="faq-a">Bij elk pakket zit <strong>Webcraftiq Care</strong> verplicht inbegrepen — drie pakketten beschikbaar:<br><br><strong>Care Basis (€49/m)</strong>: hosting, security, backup en monitoring. 0u werk inbegrepen — extra werk aan €75/u.<br><strong>Care Actief (€199/m)</strong>: alles van Basis + 2u updates voor calculators en content + onderhoud calculators.<br><strong>Care Groei (prijs op maat)</strong>: alles van Actief + 1 SEO-pagina per maand + maandelijkse project-updates, volledig op maat besproken voor optimale groei.<br><br><a href="/care" style="color: var(--accent-deep); border-bottom: 1px solid var(--accent-line);">Bekijk de volledige Care-uitleg</a>.</div>
       </details>
       <details class="faq-item">
         <summary>
@@ -4014,7 +3966,7 @@ details[open] .faq-toggle {
           <span class="faq-q">Wat kost een website laten maken in België?</span>
           <span class="faq-toggle"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
         </summary>
-        <div class="faq-a">In België ligt de prijs voor een professionele website tussen €1.500 en €10.000 — afhankelijk van complexiteit, sector en functionaliteiten. Bij Webcraftiq starten onze pakketten vanaf €2.499 (Essential) en €4.999 (Pro met multi-step formulier). Bekijk onze <a href="/website-laten-maken" style="color: var(--accent); border-bottom: 1px solid var(--accent);">volledige uitleg over website laten maken</a> voor meer details.</div>
+        <div class="faq-a">In België ligt de prijs voor een professionele website tussen €1.500 en €10.000 — afhankelijk van complexiteit, sector en functionaliteiten. Bij Webcraftiq starten onze pakketten vanaf €2.499 (Essential) en €4.499 (Pro met multi-step formulier). Bekijk onze <a href="/website-laten-maken" style="color: var(--accent); border-bottom: 1px solid var(--accent);">volledige uitleg over website laten maken</a> voor meer details.</div>
       </details>
       <details class="faq-item">
         <summary>

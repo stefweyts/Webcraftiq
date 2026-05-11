@@ -4,9 +4,113 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.12.3 — 9 mei 2026 ✅ ACTIEF
+## V2.14 — 11 mei 2026 ✅ ACTIEF
 
-**Status:** Care Groei: strategie-call vervangen door strategie-analyse per mail.
+**Status:** Care-pricing volledig herzien — Basis €49 zonder werk, Actief €199 voor calculators, Groei op maat, uurtarief €75.
+
+### Wijzigingen
+
+**Care Basis: €89/m → €49/m**
+- Was: €89 + 1u updates inbegrepen
+- Nu: €49, **0u werk inbegrepen**, alleen hosting + security + backup + monitoring
+- Extra werk: €75/u (was €85/u)
+
+**Care Actief: €249/m → €199/m**
+- Was: €249 + 3u updates per maand
+- Nu: €199 + **2u updates per maand**
+- Focus verschoven: **specifiek voor calculators + onderhoud calculators + content-updates**
+- Blijft verplicht bij Pro
+
+**Care Groei: €499/m → prijs op maat**
+- Was: €499 vast met 5u inbegrepen
+- Nu: **prijs op maat** besproken per klant
+- Inbegrepen: 1 SEO-pagina per maand + maandelijkse project-updates op maat besproken voor optimale groei
+
+**Uurtarief: €85/u → €75/u**
+- Markt-conformere prijspositionering voor extra werk buiten Care-uren
+
+### Bijgewerkt op 6 pagina's
+- ✅ Homepage tier-cards + JSON-LD + FAQ
+- ✅ /care: 3 tier-cards + deep-dive + FAQ + voorbeelden cumulatieve uren aangepast (2u maandelijks ipv 3u)
+- ✅ /contact form Pro-option + tier-recap
+- ✅ /website-laten-maken Pro-card meta + FAQ + JSON-LD
+- ✅ /redesign Care-vermelding
+- ✅ /voorwaarden uurtarief + Care-bullet
+
+### Definitieve pricing (V2.14)
+| Product | Prijs |
+|---|---|
+| Essential | €2.499 + Care Basis €49/m |
+| **Pro** ⭐ | **€4.499** + Care Actief €199/m verplicht |
+| Custom | vanaf €9.500 + Care Groei op maat |
+| Care Basis | €49/m (0u werk) |
+| Care Actief | €199/m (2u calculators/content) — verplicht bij Pro |
+| Care Groei | op maat (1 SEO-pagina/m + project-updates) |
+| Extra werk | €75/u |
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.14 | 2026-05-11 | Stef Weyts -->`
+
+---
+
+## V2.13.1 — 9 mei 2026
+
+## V2.13.1 — 9 mei 2026
+
+**Status:** Pro pakket prijs verlaagd naar €4.499. Vervangen door V2.14.
+
+### Wijziging
+- ✅ **Pro**: €4.999 → **€4.499** ex BTW
+
+### Reden
+Lichte tegemoetkoming voor de doelgroep (vakmannen €100-300K). €4.499 zit onder de psychologische €4.500-grens — klanten lezen "ongeveer €4.000" eerder dan "ongeveer €5.000". Voor lichtere instap zonder de kwaliteit-positionering te verliezen.
+
+### Bijgewerkt op 4 pagina's
+- ✅ Homepage Pro tier-card + JSON-LD Service-schema's
+- ✅ /website-laten-maken Pro card + FAQ + JSON-LD
+- ✅ /contact form Pro option + tier-recap onderaan
+- ✅ /redesign Pro-vermelding
+
+### Definitieve prijzen (V2.13.1)
+| Product | Prijs |
+|---|---|
+| Essential | €2.499 + Care Basis €89/m |
+| **Pro** ⭐ | **€4.499** + Care Actief €249/m verplicht |
+| Custom | vanaf €9.500 + Care Groei €499/m aanbevolen |
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.13.1 | 2026-05-09 | Stef Weyts -->`
+
+---
+
+## V2.13 — 9 mei 2026
+
+**Status:** AI-look opgeruimd. Pillen weg, subtieler bureau-gevoel.
+
+### Probleem
+De site oogde "AI-gegenereerd" door 89 eyebrow-pillen overal: `— ONZE AANPAK`, `— INVESTERING`, `— DE FLOW`, `— HET BEWIJS`, etc. Dat is een typische tell van V0/Lovable/Cursor-tools. Echte bureau-sites (Mast, Linear, Stripe, Mercury) gebruiken dit zelden.
+
+### Wijzigingen
+- ✅ **89 eyebrow-pillen verwijderd** uit alle pagina's (52 + 37 in aparte ronden)
+- ✅ **Care-eyebrow** op homepage care-block: pill-shape weggehaald, behoud subtiele mono-tekst met hartje-icoon
+- ✅ **Local-eyebrow** op homepage Lokaal vindbaar sectie verwijderd
+- ✅ **Wettelijk-eyebrow** op privacy/voorwaarden/cookies pages verwijderd
+- ✅ **404-eyebrow** verwijderd
+- ✅ **HTML structuur** intact gelaten — geen layout-breaking changes
+- ✅ **Pricing structure** intact gelaten — alle prijzen 1-op-1
+- ✅ **Italics in headings** behouden — die zijn niet AI-tells maar legitieme accents
+
+### Wat dit doet voor de site
+Pagina's beginnen nu direct met de **echte boodschap** in een h2, niet met een mini-pill die de boodschap aankondigt. Dat is hoe echte bureau-sites schrijven. Minder "marketing-feel", meer "publication-feel".
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.13 | 2026-05-09 | Stef Weyts -->`
+
+---
+
+## V2.12.3 — 9 mei 2026
+
+**Status:** Strategie-call → strategie-analyse per mail. Vervangen door V2.13.
 
 ### Wijziging
 - ✅ Care Groei: "Maandelijkse strategie-call (30 min)" → **"Maandelijkse strategie-analyse per mail"**
