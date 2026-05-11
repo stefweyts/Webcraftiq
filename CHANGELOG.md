@@ -4,9 +4,106 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.14 — 11 mei 2026 ✅ ACTIEF
+## V2.14.2 — 11 mei 2026 ✅ ACTIEF
 
-**Status:** Care-pricing volledig herzien — Basis €49 zonder werk, Actief €199 voor calculators, Groei op maat, uurtarief €75.
+**Status:** SEO-launch ready — favicons, OG image, sitemap, alle metadata compleet voor domain-upload.
+
+### Nieuwe assets gegenereerd
+- ✅ **favicon.ico** (multi-size: 16x16, 32x32, 48x48) — voor oudere browsers
+- ✅ **favicon-16x16.png + favicon-32x32.png** — moderne browsers
+- ✅ **apple-touch-icon.png** (180x180) — iOS Home Screen
+- ✅ **android-chrome-192x192.png + 512x512.png** — Android PWA icons
+- ✅ **og-image.jpg** (1200x630) — Open Graph social sharing image
+  - Design: cream achtergrond + Webcraftiq logo + "Premium webdesign voor Belgische KMO's" headline + waveform decoratie
+  - File size: 60 KB geoptimaliseerd
+
+### Pagina-updates
+- ✅ Alle 17 pagina's: complete favicon-set toegevoegd (was alleen SVG inline)
+- ✅ privacy/voorwaarden/cookies: complete OG-tags toegevoegd (was missing)
+- ✅ aanpak/redesign/blog/multi-step: OG image-pad gestandaardiseerd naar `/og-image.jpg`
+
+### Sitemap.xml herzien
+- ✅ Lastmod datum bijgewerkt naar 2026-05-11 voor alle URLs
+- ✅ 16 URLs (404 niet opgenomen — correct gedrag)
+- ✅ Prioriteit-structuur: homepage 1.0 → service pages 0.95 → cases 0.85 → blog 0.7 → legal 0.3
+
+### site.webmanifest uitgebreid
+- ✅ Icons array toegevoegd (alle 5 PNG-sizes)
+- ✅ Beschrijving verbeterd voor PWA-installatie
+- ✅ Maskable-purpose voor Android adaptive icons
+
+### SEO eindstatus
+| Element | Status |
+|---|---|
+| Title tags | ✅ Alle 17 pagina's (26-73 chars) |
+| Meta descriptions | ✅ Alle 17 pagina's (100-194 chars) |
+| Open Graph | ✅ Alle 17 pagina's |
+| Canonical URLs | ✅ Alle 17 pagina's |
+| Favicon-set | ✅ Alle 17 pagina's |
+| JSON-LD structured data | ✅ 16/17 pagina's (404 niet nodig) |
+| Sitemap.xml | ✅ 16 URLs |
+| Robots.txt | ✅ Compleet met AI-blocking |
+
+### Klaar voor
+- ✅ Domain upload (webcraftiq.be)
+- ✅ Google Search Console submission
+- ✅ Bing Webmaster Tools submission
+- ✅ Social media sharing (Facebook, LinkedIn, Twitter, WhatsApp previews)
+- ✅ PWA installeerbaar als app op smartphone
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.14.2 | 2026-05-11 | Stef Weyts -->`
+
+---
+
+## V2.14.1 — 11 mei 2026
+
+**Status:** Care Custom verplicht bij Custom-websites. Vervangen door V2.14.2.
+
+### Wijzigingen
+
+**Care Groei hernoemd naar Care Custom**
+- Naam: Care Groei → **Care Custom**
+- Prijs: was "prijs op maat" → **vanaf €299/m**
+- Status: was aanbevolen → **verplicht bij Custom-websites**
+
+**Custom website krijgt verplichte Care**
+- Custom websites (vanaf €9.500) hebben nu **Care Custom verplicht vanaf €299/m**
+- Logica gelijk aan Pro = Care Actief verplicht
+- Reden: Custom-projecten (webshops, klantportalen, complexe integraties) hebben continu onderhoud nodig voor security-patches, API-changes, dependency updates
+
+### Bijgewerkt op pagina's
+- ✅ Homepage Custom tier-card: "+ Care vanaf €49/m" → "+ Care Custom vanaf €299/m (verplicht bij Custom)"
+- ✅ Homepage mini Care-tier: hernoemd + "Verplicht bij Custom-websites"
+- ✅ Homepage JSON-LD + FAQ aangepast
+- ✅ /care: Care Custom tier-card volledig herwerkt met "vanaf €299" prijs + "Verplicht bij Custom" tagline + CTA "Bespreek Custom"
+- ✅ /care FAQ: Care Custom verplicht-uitleg bijgewerkt
+- ✅ /contact form Custom-option + tier-recap + Care-block onderaan
+- ✅ /website-laten-maken Custom card meta-regel + FAQ
+
+### Definitieve Care-structuur (V2.14.1)
+| Pakket | Prijs | Voor |
+|---|---|---|
+| Care Basis | €49/m (0u werk) | Essential (optioneel) |
+| **Care Actief** | **€199/m** (2u calculators/content) | **Verplicht bij Pro** |
+| **Care Custom** | **vanaf €299/m** (op maat) | **Verplicht bij Custom** |
+| Extra werk | €75/u | (15 min minimum) |
+
+### Verkoop-logica
+- Essential €2.499 → Care Basis €49/m (optioneel)
+- Pro €4.499 → Care Actief €199/m (verplicht)
+- Custom €9.500+ → Care Custom vanaf €299/m (verplicht)
+
+Mooie progressie: €49 → €199 → €299
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.14.1 | 2026-05-11 | Stef Weyts -->`
+
+---
+
+## V2.14 — 11 mei 2026
+
+**Status:** Care pricing herzien. Vervangen door V2.14.1.
 
 ### Wijzigingen
 

@@ -2,116 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- HOMEPAGE -->
   <url>
     <loc>https://webcraftiq.be/</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="nl-BE" href="https://webcraftiq.be/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://webcraftiq.be/" />
   </url>
 
+  <!-- PRIMARY SERVICE PAGES (high priority) -->
   <url>
     <loc>https://webcraftiq.be/website-laten-maken</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://webcraftiq.be/redesign</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://webcraftiq.be/care</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://webcraftiq.be/contact</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://webcraftiq.be/aanpak</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- CASES -->
   <url>
     <loc>https://webcraftiq.be/cases</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://webcraftiq.be/cases/voltrix</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://webcraftiq.be/cases/gevanti</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.8</priority>
   </url>
 
+  <!-- ABOUT + BLOG -->
   <url>
     <loc>https://webcraftiq.be/over</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://webcraftiq.be/blog</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://webcraftiq.be/blog/website-geen-visitekaartje</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
+  <!-- BLOG ARTICLES -->
   <url>
-    <loc>https://webcraftiq.be/blog/multi-step-formulier-vs-klassiek</loc>
-    <lastmod>2026-05-06</lastmod>
+    <loc>https://webcraftiq.be/blog/website-geen-visitekaartje</loc>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
+    <loc>https://webcraftiq.be/blog/multi-step-formulier-vs-klassiek</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- LEGAL (low priority but indexed) -->
+  <url>
     <loc>https://webcraftiq.be/privacy</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://webcraftiq.be/voorwaarden</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://webcraftiq.be/cookies</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
