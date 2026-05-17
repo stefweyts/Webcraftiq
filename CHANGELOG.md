@@ -4,9 +4,54 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.14.6 — 11 mei 2026 ✅ ACTIEF
+## V2.14.8 — 11 mei 2026 ✅ ACTIEF
 
-**Status:** Self-edit claims + "Beschikbaar"-badge + build-with strip verwijderd.
+**Status:** Leftover Care Basis €49 op homepage mini-tier card gefixed.
+
+### Wijziging
+- ✅ Homepage Care-mini-tier "Care Basis": €49/m → **€99/m** (was vergeten bij V2.14.4)
+- ✅ Tagline bijgewerkt: "Hosting + security + monitoring" → **"Hosting + security + 1u content-updates"**
+
+### Reden
+Bij de V2.14.4 prijs-update (Care Basis €49 → €99 met 1u content-updates) was deze ene plek over het hoofd gezien. Alle andere pagina's waren correct.
+
+### Volledig consistent
+Care Basis €99/m staat nu correct op:
+- ✅ Homepage tier-mini-card (gefixed)
+- ✅ Homepage FAQ
+- ✅ /care tier-card (volledig met features-lijst)
+- ✅ /care FAQ + deep-dive
+- ✅ /contact form + tier-recap onderaan
+- ✅ /website-laten-maken FAQ + JSON-LD
+- ✅ /voorwaarden Care-bullet
+- ✅ Alle JSON-LD Service-schemas
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.14.8 | 2026-05-11 | Stef Weyts -->`
+
+---
+
+## V2.14.7 — 11 mei 2026
+
+**Status:** Bureautje-prijs €2.500 → €1.500. Vervangen door V2.14.8.
+
+### Wijziging
+- ✅ `/aanpak` intro: "Je hebt drie jaar geleden €2.500 betaald aan een lokaal bureautje" → **"€1.500 betaald"**
+- ✅ `/aanpak` pull-quote: "Je website kost niet €2.500. Hij kost €2.500 plus..." → **"€1.500"** (beide bedragen)
+- ✅ `/blog/website-geen-visitekaartje` zelfde intro-tekst bijgewerkt
+- ✅ `/blog/website-geen-visitekaartje` zelfde pull-quote bijgewerkt
+
+### Reden
+Realistischer prijspunt voor wat lokale Belgische bureautjes 3 jaar geleden vroegen voor een simpele website. €2.500 was eerder een **bovengrens** van wat sommige bureaus rekenden, €1.500 is dichter bij de **mediaan** voor template-WordPress sites bij kleine zaken.
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.14.7 | 2026-05-11 | Stef Weyts -->`
+
+---
+
+## V2.14.6 — 11 mei 2026
+
+**Status:** Self-edit claims weg + homepage cleanup. Vervangen door V2.14.7.
 
 ### Wat is gewijzigd
 
