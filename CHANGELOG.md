@@ -4,9 +4,131 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.14.2 — 11 mei 2026 ✅ ACTIEF
+## V2.14.6 — 11 mei 2026 ✅ ACTIEF
 
-**Status:** SEO-launch ready — favicons, OG image, sitemap, alle metadata compleet voor domain-upload.
+**Status:** Self-edit claims + "Beschikbaar"-badge + build-with strip verwijderd.
+
+### Wat is gewijzigd
+
+**Verwijderd:**
+- ✅ Hero-badge "Beschikbaar voor projecten — start juni 2026" (homepage)
+- ✅ "Build with" logo strip met Astro/Next.js/Figma/Sanity/Stripe/Vercel/Cal.com (homepage)
+
+**Self-edit claims herschreven:**
+- ✅ Homepage FAQ "Kan ik zelf content aanpassen?" — antwoord nu: **"Nee, updates lopen via ons Care-pakket"** (was: ja, via Sanity/Tina editor)
+- ✅ /website-laten-maken zelfde FAQ-update
+- ✅ Framework FAQ — "De site blijft volledig van jou" verwijderd
+- ✅ Contact form probleem-checklist: "Ik kan zelf geen content aanpassen" → "Updates duren te lang"
+- ✅ JSON-LD FAQ synchroon bijgewerkt voor Google indexering
+- ✅ Multi-language service-cell: "Sanity CMS" tag → "Multi-language", "blogs met editor" → "blogs en meer"
+- ✅ Project-builder feature: "Blog / Met eenvoudige editor" → "Blog / Posts via ons Care-pakket"
+
+**Budget-opties contact form bijgewerkt** (synchroon met nieuwe pricing):
+- € 2.5k — 4k (Essential) → **€ 2k — 3.5k**
+- € 7k+ (Custom) → **€ 7.5k+**
+
+### Waarom deze wijzigingen
+- **Geen editors aanbieden** is een bewuste business-keuze: alle updates lopen via Stef → garandeert kwaliteit + drijft Care-recurring revenue
+- **Build-with strip weghalen** maakt homepage minder "tech-showcase" en meer business-focused
+- **Hero-badge weghalen** verkleint visuele ruis bovenaan hero
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.14.6 | 2026-05-11 | Stef Weyts -->`
+
+---
+
+## V2.14.5 — 11 mei 2026
+
+**Status:** Essential €1.999 + Pro €3.999. Vervangen door V2.14.6.
+
+### Wijzigingen
+- ✅ **Essential**: €2.499 → **€1.999**
+- ✅ **Pro**: €4.499 → **€3.999**
+
+### Definitieve pricing (V2.14.5)
+| Product | Prijs |
+|---|---|
+| Essential | **€1.999** + Care Basis €99/m |
+| **Pro** ⭐ | **€3.999** + Care Actief €199/m verplicht |
+| Custom | vanaf €7.500 + Care Custom vanaf €299/m verplicht |
+| Care Basis | €99/m (1u content-updates) |
+| Care Actief | €199/m (2u calculators/content) — verplicht bij Pro |
+| Care Custom | vanaf €299/m (op maat) — verplicht bij Custom |
+| Extra werk | €75/u (15 min minimum) |
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.14.5 | 2026-05-11 | Stef Weyts -->`
+
+---
+
+## V2.14.4 — 11 mei 2026
+
+**Status:** Custom €7.500 + Care Basis €99 met 1u. Vervangen door V2.14.5.
+
+### Wijzigingen
+
+**Custom: €9.500 → €7.500**
+- Verlaging om Custom-pakket toegankelijker te maken voor eerste klanten
+- Ratio Pro → Custom: was 2.1x (€4.499 → €9.500), nu **1.67x** (€4.499 → €7.500)
+- Effectief uurtarief Custom (100u werk): €75/u — gelijk aan losse-uren tarief
+
+**Care Basis: €49/m (0u) → €99/m (1u content-updates inbegrepen)**
+- Service-pakket model ipv pure hosting
+- 1 uur content-updates per maand inbegrepen (tekst, foto's, kleine wijzigingen)
+- Effectief uurtarief Care Basis: ~€89/u (na hosting-kosten) — premium tov losse-tarief €75/u
+- Reden: klant ervaart méér waarde door inbegrepen uur, motiveert hoger maandtarief
+
+### Bijgewerkt op pagina's
+- ✅ Homepage Custom tier-card: vanaf €7.500
+- ✅ Homepage Care Basis mini-card: €99/m
+- ✅ /care Care Basis tier-card: tagline + features list met "1u content-updates"
+- ✅ /contact form Custom-option + tier-recap
+- ✅ /website-laten-maken Custom card + FAQ + JSON-LD
+- ✅ /redesign Custom-vermelding
+- ✅ /voorwaarden Care-bullet
+
+### Definitieve pricing (V2.14.4)
+| Product | Prijs |
+|---|---|
+| Essential | €2.499 + Care Basis €99/m |
+| **Pro** ⭐ | **€4.499** + Care Actief €199/m verplicht |
+| Custom | vanaf **€7.500** + Care Custom vanaf €299/m verplicht |
+| Care Basis | €99/m (1u content-updates) |
+| Care Actief | €199/m (2u calculators/content) — verplicht bij Pro |
+| Care Custom | vanaf €299/m (op maat) — verplicht bij Custom |
+| Extra werk | €75/u (15 min minimum) |
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.14.4 | 2026-05-11 | Stef Weyts -->`
+
+---
+
+## V2.14.3 — 11 mei 2026
+
+**Status:** Homepage demo-form vervangen (schilder → voegwerken). Vervangen door V2.14.4.
+
+### Wijziging
+- ✅ Demo-form "Het slimme offerteformulier" op homepage toont nu **voegwerken** ipv schilder
+- ✅ Vraag: "Welke verfkwaliteit verkies je?" → "**Welk type voegwerk?**"
+- ✅ Subtitel: "Hogere kwaliteit gaat langer mee." → "**Bepaalt prijs én levensduur. Niet zeker? Onze vakman adviseert.**"
+- ✅ Opties: Standaard/Premium/Eco-label/Adviseer mij → **Platte voeg / Knipvoeg / Sierwerk / Adviseer mij**
+- ✅ Notificatie: "Schilderwerken · 14:23" → "**Voegwerken · 14:23**"
+
+### Reden
+- Schilders-demo was generiek en weinig prikkelend voor vakman-doelgroep
+- Voegwerken/gevelrenovatie toont **specifieke vakkennis** (verschillende voeg-types) → bewijst dat formulier echte business-logica kan
+- Differentieert Webcraftiq van Wix-template-bouwers — vakman herkent het direct als "iemand die het vak begrijpt"
+- Voegwerken is een zeldzamere niche → minder competitieve positionering
+- Logisch volgende: bij echt project zou stap 3 vragen naar bouwjaar (asbest-check), oppervlakte gevel, verdiepingen (stelling-kost), etc.
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.14.3 | 2026-05-11 | Stef Weyts -->`
+
+---
+
+## V2.14.2 — 11 mei 2026
+
+**Status:** SEO-launch ready. Vervangen door V2.14.3.
 
 ### Nieuwe assets gegenereerd
 - ✅ **favicon.ico** (multi-size: 16x16, 32x32, 48x48) — voor oudere browsers
