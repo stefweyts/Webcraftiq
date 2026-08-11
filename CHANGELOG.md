@@ -4,7 +4,25 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.15.2 — 11 augustus 2026 ✅ ACTIEF
+## V2.15.3 — 11 augustus 2026 ✅ ACTIEF
+
+**Status:** Homepage: AST + Voltrix prominent, Gevanti naar de achtergrond, hero-mockup toont AST-calculator.
+
+### Hero
+- ✅ **Floating mockup**: Voltrix-preview → **AST containercalculator** (astbv.be) — mini-prijsberekening (gemengd 10 m³ · zone Wuustwezel · totaal €570) + CTA "Bestel deze container" + stats 5 afvaltypes / 3 zones / 24-7 live prijs
+- ✅ Bezoeker ziet nu meteen het sterkste product (de calculator) in plaats van een brochure-preview
+
+### Work-grid
+- ✅ Kaart 2: Gevanti mini-site → **Voltrix** (echte hero-snapshot in browser-frame)
+- ✅ Grid toont nu de twee sterkste cases: **AST BV** (betonzagen-werffoto) + **Voltrix** (live screenshot)
+- ✅ Gevanti naar de achtergrond: alleen nog in "Recente projecten"-regel en op /cases
+
+### Versie-marker
+- ✅ Alle 18 pagina's → `<!-- Webcraftiq v2.15.3 | 2026-08-11 | Stef Weyts -->`
+
+---
+
+## V2.15.2 — 11 augustus 2026
 
 **Status:** Voltrix-case bijgewerkt naar de actuele site (v177): Stroomwijzer + 18 pagina's.
 
