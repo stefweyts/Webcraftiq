@@ -4,7 +4,24 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.15.4 — 11 augustus 2026 ✅ ACTIEF
+## V2.15.5 — 11 augustus 2026 ✅ ACTIEF
+
+**Status:** Cache-fix Voltrix-preview — nieuwe bestandsnaam forceert verse load.
+
+### Probleem
+V2.15.4 overschreef voltrix-hero-snapshot.jpg met dezelfde bestandsnaam → Cloudflare-CDN en browsers bleven de oude gecachte versie tonen.
+
+### Fix
+- ✅ Hernoemd: voltrix-hero-snapshot.jpg → **voltrix-hero-snapshot-2.jpg**
+- ✅ Alle 4 referenties bijgewerkt (homepage work-grid, homepage GBP-visual, /cases kaart, case big-preview)
+- ✅ Elke cache is nu machteloos — nieuwe naam = gegarandeerd verse load
+
+### Versie-marker
+- ✅ Alle 18 pagina's → `<!-- Webcraftiq v2.15.5 | 2026-08-11 | Stef Weyts -->`
+
+---
+
+## V2.15.4 — 11 augustus 2026
 
 **Status:** Echte site-screenshots als previews voor AST BV én Voltrix.
 
