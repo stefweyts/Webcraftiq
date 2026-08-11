@@ -4,9 +4,80 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.14.8 — 11 mei 2026 ✅ ACTIEF
+## V2.15 — 11 augustus 2026 ✅ ACTIEF
 
-**Status:** Leftover Care Basis €49 op homepage mini-tier card gefixed.
+**Status:** AST BV case study toegevoegd + alle verouderde juni-2026 claims gefixt.
+
+### Nieuw: /cases/astbv — volledige case study
+- ✅ Nieuwe case-pagina in Voltrix-structuur met AST-verhaal
+- ✅ Meta-grid: Klant AST BV / Grondwerken & aanneming / Wuustwezel / astbv.be / Custom / Care Custom
+- ✅ Hero-preview: echte werffoto (AST containerwagen) in browser-frame
+- ✅ Uitdaging: "Wat kost een container?" — 5 variabelen aan de telefoon
+- ✅ Calculator-flow in 3 stappen (nagebouwde previews met échte data uit calculator.js):
+  - Afvaltype & maat (gemengd €570/€720, steenpuin €305/€330, hout, snoeihout, asbest→offerte)
+  - Leveradres met autocomplete + zone-detectie (zone 1 €0 / zone 2 +€35 / zone 3 +€75)
+  - Periode & live totaalprijs (7 dagen inbegrepen, +€3/dag, particulier/bedrijf BTW-toggle)
+- ✅ Prijsscenario's: 3 rekenvoorbeelden met echte tarieven (€570 / €365 / €317,50)
+- ✅ Platform-sectie: 24 pagina's, machineverhuur + eigen calculator, projectgalerij, inzichten-blog, contactform met foto-upload
+- ✅ 2 echte werffoto's uit projectgalerij
+- ✅ Technische keuzes + vóór/nu resultaatblok + eerlijke nuance (geen verzonnen cijfers)
+- ✅ Next-case → Voltrix; Voltrix next-case → AST BV
+
+### Cases-overzicht + homepage
+- ✅ AST BV-kaart bovenaan /cases (werffoto in browser-frame, tag "Bouw & installatie · 2026")
+- ✅ Homepage "Recente projecten": AST BV · Voltrix · Gevanti
+
+### Verouderde datums gefixt (site zei nog "juni 2026" — het is augustus)
+- ✅ Alle "3 plekken open in juni 2026" → "Beperkt aantal plekken per kwartaal" (CTA's sitewide)
+- ✅ /over: "Twee live projecten" → "Drie projecten" incl. AST BV-link; team-role + bureau-tekst zonder datum
+- ✅ Homepage + /cases portfolio-notes zonder vervaldatum
+
+### Assets
+- ✅ images/astbv-kamion.jpg (echte werffoto, hero)
+- ✅ images/astbv-project-tankpiste.webp + astbv-project-afbraak.webp (projectgalerij)
+- ✅ images/astbv-takeuchi.png (machine-cutout, reserve)
+
+### SEO
+- ✅ sitemap.xml: /cases/astbv toegevoegd (17 URLs, lastmod 2026-08-11)
+- ✅ Volledige meta/OG/canonical/breadcrumb voor nieuwe pagina
+
+### Versie-marker
+- ✅ Alle 18 pagina's bijgewerkt naar `<!-- Webcraftiq v2.15 | 2026-08-11 | Stef Weyts -->`
+
+---
+
+## V2.14.9 — 11 mei 2026
+
+**Status:** Voltrix Pakket + Onderhoud meta-info. Vervangen door V2.15.
+
+### Wijziging op `/cases/voltrix`
+- ✅ **2 extra meta-items** toegevoegd aan case-grid:
+  - **— Pakket**: Pro *(link naar /website-laten-maken#pro)*
+  - **— Onderhoud**: Care Actief *(link naar /care#actief)*
+- ✅ Grid layout aangepast: was 4 kolommen, nu **3 kolommen × 2 rijen** voor mooie 6-items presentatie
+- ✅ Mobiel blijft 2 kolommen (nu 3 rijen)
+
+### Reden
+Maakt Voltrix tastbaar als concrete Pro-case voor prospects. Klant ziet **direct**: "deze site is een Pro-pakket + maandelijkse Care Actief" — koppelt het verhaal direct aan een prijs-categorie. Klikbare links naar Pro/Care Actief pagina's maken doorklikken naar prijs-info naadloos.
+
+### Definitieve Voltrix meta-grid (6 items)
+| Label | Waarde |
+|---|---|
+| — Klant | Voltrix |
+| — Sector | Elektriciteitswerken |
+| — Locatie | Antwerpen, BE |
+| — Live URL | voltrix.be ↗ |
+| **— Pakket** | **Pro** *(link)* |
+| **— Onderhoud** | **Care Actief** *(link)* |
+
+### Versie-marker
+- ✅ Alle 17 pagina's bijgewerkt naar `<!-- Webcraftiq v2.14.9 | 2026-05-11 | Stef Weyts -->`
+
+---
+
+## V2.14.8 — 11 mei 2026
+
+**Status:** Care Basis €49 leftover gefixed op homepage mini-tier. Vervangen door V2.14.9.
 
 ### Wijziging
 - ✅ Homepage Care-mini-tier "Care Basis": €49/m → **€99/m** (was vergeten bij V2.14.4)
