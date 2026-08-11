@@ -4,7 +4,28 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.15.3 — 11 augustus 2026 ✅ ACTIEF
+## V2.15.4 — 11 augustus 2026 ✅ ACTIEF
+
+**Status:** Echte site-screenshots als previews voor AST BV én Voltrix.
+
+### Nieuwe previews (echte browser-screenshots, chrome weggecropt)
+- ✅ **images/astbv-hero-snapshot.jpg** (nieuw, 1600px): AST-homepage — donkere hero met containercalculator-navigatie
+- ✅ **images/voltrix-hero-snapshot.jpg** (overschreven, 1600px): Voltrix /elektricien-antwerpen — actuele versie; alle bestaande referenties (work-grid, cases, case-preview, Google Bedrijfsprofiel-visual) tonen automatisch de nieuwe screenshot
+
+### Ingezet op
+- ✅ Homepage work-grid AST-kaart → astbv-hero-snapshot
+- ✅ /cases AST-kaart → astbv-hero-snapshot
+- ✅ /cases/astbv big preview → astbv-hero-snapshot (alt: "live website hero")
+
+### Betonzagen-werffoto verplaatst
+- ✅ Van browser-frames naar de **werffoto-galerij** in de case (nu 3 foto's: betonzagen + tankpiste + afbraak, responsive grid)
+
+### Versie-marker
+- ✅ Alle 18 pagina's → `<!-- Webcraftiq v2.15.4 | 2026-08-11 | Stef Weyts -->`
+
+---
+
+## V2.15.3 — 11 augustus 2026
 
 **Status:** Homepage: AST + Voltrix prominent, Gevanti naar de achtergrond, hero-mockup toont AST-calculator.
 
