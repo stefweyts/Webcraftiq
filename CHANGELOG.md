@@ -4,7 +4,43 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.15 — 11 augustus 2026 ✅ ACTIEF
+## V2.15.2 — 11 augustus 2026 ✅ ACTIEF
+
+**Status:** Voltrix-case bijgewerkt naar de actuele site (v177): Stroomwijzer + 18 pagina's.
+
+### /cases/voltrix — geactualiseerd
+- ✅ Header-sub: site "intussen uitgegroeid tot 18 pagina's met eigen kennissectie die maandelijks aangroeit onder Care"
+- ✅ Nieuw timeline-item **"Stroomwijzer"**: kennissectie met 7 artikels in gewone taal (stroom valt uit, differentieel vs automaat, aarding, laadtijden, 1→3 fasen, keuringsproces, afgekeurd — wat nu) — maandelijkse aangroei via Care als levend bewijs van het onderhoudsmodel
+- ✅ SEO-item geconcretiseerd: **acht** landingspagina's benoemd (zekeringkast, keuringsklaar, laadpalen, domotica, renovaties, spoed, syndicus/vastgoed, diensten)
+- ✅ Technische intro: schaal (18 pagina's) toegevoegd
+
+### /cases overzicht
+- ✅ Voltrix-kaartbeschrijving verrijkt met Stroomwijzer + 18 pagina's + Care-aangroei
+
+### Versie-marker
+- ✅ Alle 18 pagina's → `<!-- Webcraftiq v2.15.2 | 2026-08-11 | Stef Weyts -->`
+
+---
+
+## V2.15.1 — 11 augustus 2026
+
+**Status:** AST BV is nu de hoofdcase op de homepage; betonzagen-werffoto vervangt de kamion.
+
+### Homepage
+- ✅ **CASE HIGHLIGHT** (donkere hoofdcase-sectie): Voltrix → **AST BV** — calculator-verhaal, stats (5 afvaltypes / 3 leverzones), checkmarks (live calculator, zone-detectie, machineverhuur+galerij+SEO), links naar astbv.be én /cases/astbv
+- ✅ **Work-grid**: eerste kaart Voltrix → **AST BV** met betonzagen-foto (Voltrix blijft bereikbaar via "Recente projecten"-regel en /cases)
+- ✅ **Bug gefixt**: Gevanti-card toonde "Keukens en interieur €299+" (kapotte prijsvervanging uit V2.14.1) → terug "op maat"
+
+### Foto-wissel: kamion → betonzagen
+- ✅ Homepage work-card, /cases-kaart en case-hero gebruiken nu **astbv-betonzagen.jpg** (zaakvoerder achter de vloerzaag — persoonlijker, toont vakwerk)
+- ✅ Ongebruikte astbv-kamion.jpg verwijderd
+
+### Versie-marker
+- ✅ Alle 18 pagina's → `<!-- Webcraftiq v2.15.1 | 2026-08-11 | Stef Weyts -->`
+
+---
+
+## V2.15 — 11 augustus 2026
 
 **Status:** AST BV case study toegevoegd + alle verouderde juni-2026 claims gefixt.
 
