@@ -4,7 +4,37 @@ Versie-geschiedenis van de Webcraftiq website. Elke versie is gebaseerd op de vo
 
 ---
 
-## V2.15.5 — 11 augustus 2026 ✅ ACTIEF
+## V2.15.7 — 12 augustus 2026 ✅ ACTIEF
+
+**Status:** Expliciet Content-Type voor sitemap.xml en robots.txt (GSC-robuustheid).
+
+### Context
+Chrome toont XML zonder stylesheet als platte tekst — dat is normaal browsergedrag, de sitemap-inhoud was correct en live. Maar voor maximale zekerheid richting Google Search Console ("kan niet ophalen") serveren we nu expliciet de juiste MIME-types.
+
+### Wijziging (_headers)
+- ✅ `/sitemap.xml` → `Content-Type: application/xml; charset=utf-8`
+- ✅ `/robots.txt` → `Content-Type: text/plain; charset=utf-8`
+
+### Versie-marker
+- ✅ Alle 18 pagina's → `<!-- Webcraftiq v2.15.7 | 2026-08-12 | Stef Weyts -->`
+
+---
+
+## V2.15.6 — 11 augustus 2026
+
+**Status:** Voltrix-preview opgeschoond — floating WhatsApp-knop uit de screenshot.
+
+### Wijziging
+- ✅ Groene WhatsApp floating-knop rechtsonder programmatisch gedetecteerd en verwijderd
+- ✅ Afbeelding onderaan bijgesneden (1600×822) — schone hero zonder restanten
+- ✅ Nieuwe bestandsnaam **voltrix-hero-snapshot-3.jpg** (cache-proof), 4 refs bijgewerkt, -2 verwijderd
+
+### Versie-marker
+- ✅ Alle 18 pagina's → `<!-- Webcraftiq v2.15.6 | 2026-08-11 | Stef Weyts -->`
+
+---
+
+## V2.15.5 — 11 augustus 2026
 
 **Status:** Cache-fix Voltrix-preview — nieuwe bestandsnaam forceert verse load.
 
